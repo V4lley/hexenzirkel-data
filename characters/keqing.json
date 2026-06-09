@@ -795,7 +795,54 @@
   },
   "buffs": {
     "self_modifiers_json": {},
-    "self_conditional_modifiers_json": [],
+    "self_conditional_modifiers_json": [
+      {
+        "conditionKey": "keqing_a4_burst_active",
+        "source": "Keqing",
+        "description": "A4: After casting Burst, Keqing gains Crit Rate and Energy Recharge.",
+        "states": [
+          {
+            "value": "on",
+            "modifiers": {
+              "critRate_": 0.15,
+              "enerRech_": 0.15
+            }
+          }
+        ]
+      },
+      {
+        "conditionKey": "keqing_c4_reaction_active",
+        "source": "Keqing",
+        "gating": {
+          "constellationMin": 4
+        },
+        "description": "C4: Triggering Electro-related reactions increases ATK.",
+        "states": [
+          {
+            "value": "on",
+            "modifiers": {
+              "atk_": 0.25
+            }
+          }
+        ]
+      },
+      {
+        "conditionKey": "keqing_c6_electro_stacks_full",
+        "source": "Keqing",
+        "gating": {
+          "constellationMin": 6
+        },
+        "description": "C6: Full stack Electro DMG bonus.",
+        "states": [
+          {
+            "value": "on",
+            "modifiers": {
+              "electro_dmg_": 0.24
+            }
+          }
+        ]
+      }
+    ],
     "team_modifiers_json": {},
     "team_conditional_modifiers_json": []
   }

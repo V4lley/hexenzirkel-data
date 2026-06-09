@@ -5,7 +5,20 @@
     "self_modifiers_json": {
       "electro_dmg_": 0.15
     },
-    "self_conditional_modifiers_json": [],
+    "self_conditional_modifiers_json": [
+      {
+        "conditionKey": "4pc_increases_electro_reaction_dmg",
+        "source": "Thundersoother",
+        "description": "4pc: Increases Electro Reaction DMG.",
+        "modifiers": {
+          "overload_dmg_": 0.4,
+          "electrocharged_dmg_": 0.4,
+          "lunar_charged_dmg_": 0.2,
+          "superconduct_dmg_": 0.4,
+          "hyperbloom_dmg_": 0.4,
+          "aggravate_dmg_": 0.2
+        }
+      }],
     "team_modifiers_json": {},
     "team_conditional_modifiers_json": []
   }
