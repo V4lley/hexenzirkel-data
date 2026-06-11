@@ -90,7 +90,23 @@
           {
             "value": "on",
             "modifiers": {
-              "all_dmg_": 0.25
+              "all_dmg_": 0.5
+            }
+          }
+        ]
+      },
+
+      {
+        "conditionKey": "c6TollingRally",
+        "source": "avatar_10000132",
+        "gating": {
+          "constellationMin": 6
+        },
+        "states": [
+          {
+            "value": "on",
+            "modifiers": {
+              "atk": 350
             }
           }
         ]

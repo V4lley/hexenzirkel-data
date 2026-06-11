@@ -7,6 +7,17 @@
     },
     "self_conditional_modifiers_json": [],
     "team_modifiers_json": {},
-    "team_conditional_modifiers_json": []
+    "team_conditional_modifiers_json": [
+      {
+        "conditionKey": "4pc_after_swirling_element",
+        "source": "ViridescentVenerer",
+        "description": "4pc: After swirling an element",
+        "modifiers": {
+          "pyro_enemyRes_": -0.4,
+          "electro_enemyRes_": -0.4,
+          "hydro_enemyRes_": -0.4,
+          "cryo_enemyRes_": -0.4
+        }
+      }]
   }
 }

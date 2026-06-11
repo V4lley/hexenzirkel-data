@@ -264,6 +264,20 @@
           }
         ]
       },
+      "purityDmg": {
+        "element": "pyro",
+        "dmgBonusKeys": [
+          "skill_dmg_",
+          "pyro_dmg_",
+          "all_dmg_"
+        ],
+        "components": [
+          {
+            "scalingKey": "atk",
+            "multKey": "confirmation_mult"
+          }
+        ]
+      },
       "denial": {
         "element": "pyro",
         "dmgBonusKeys": [
@@ -424,6 +438,48 @@
           }
         ]
       },
+      "purityDmg1": {
+        "element": "pyro",
+        "dmgBonusKeys": [
+          "burst_dmg_",
+          "pyro_dmg_",
+          "all_dmg_"
+        ],
+        "components": [
+          {
+            "scalingKey": "atk",
+            "multKey": "purity1_mult"
+          }
+        ]
+      },
+      "purityDmg2": {
+        "element": "pyro",
+        "dmgBonusKeys": [
+          "burst_dmg_",
+          "pyro_dmg_",
+          "all_dmg_"
+        ],
+        "components": [
+          {
+            "scalingKey": "atk",
+            "multKey": "purity2_mult"
+          }
+        ]
+      },
+      "purityDmg3": {
+        "element": "pyro",
+        "dmgBonusKeys": [
+          "burst_dmg_",
+          "pyro_dmg_",
+          "all_dmg_"
+        ],
+        "components": [
+          {
+            "scalingKey": "atk",
+            "multKey": "purity3_mult"
+          }
+        ]
+      },
       "darkness": {
         "element": "pyro",
         "dmgBonusKeys": [
@@ -447,6 +503,33 @@
         ]
       },
       "white_flame": {
+        "element": "pyro",
+        "dmgBonusKeys": [
+          "burst_dmg_",
+          "pyro_dmg_",
+          "all_dmg_"
+        ],
+        "mvMultiplierKeys": [
+          "durin_a4_periodic_base_mult_"
+        ],
+        "components": [
+          {
+            "scalingKey": "atk",
+            "multKey": "white_flame_mult"
+          }
+        ],
+        "consumesStacks": {
+          "poolKey": "durin_a4_primordial_fusion",
+          "initialStacksTalentKey": "a4_primordial_fusion_stacks",
+          "consumePerHit": 1,
+          "consumeByTargetWeight": true,
+          "bonusStatKey": "durin_a4_periodic_base_mult_",
+          "bonusScalingStatKey": "atk",
+          "bonusPer100TalentKey": "a4_primordial_fusion_per_100_atk",
+          "bonusCapTalentKey": "a4_primordial_fusion_cap"
+        }
+      },
+      "whiteDmg": {
         "element": "pyro",
         "dmgBonusKeys": [
           "burst_dmg_",
