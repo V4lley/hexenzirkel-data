@@ -1,0 +1,230 @@
+{
+  "display_name": "Varka",
+  "go_key": "Varka",
+  "avatar_id": 10000128,
+  "character_key": "avatar_10000128",
+  "base_stats_json": {
+    "baseHp": 12613.288084400001,
+    "baseAtk": 352.78811550000006,
+    "baseDef": 795.45377295,
+    "ascStatKey": "critDMG_",
+    "ascStatValue": 0.384
+  },
+  "hit_definitions_json": {
+    "normal": {
+      "hit1Dmg": {
+        "element": "physical",
+        "dmgBonusKeys": ["normal_dmg_", "physical_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p0_mult"}]
+      },
+      "hit2aDmg": {
+        "element": "physical",
+        "dmgBonusKeys": ["normal_dmg_", "physical_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p1_mult"}]
+      },
+      "hit2bDmg": {
+        "element": "physical",
+        "dmgBonusKeys": ["normal_dmg_", "physical_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p2_mult"}]
+      },
+      "hit3aDmg": {
+        "element": "physical",
+        "dmgBonusKeys": ["normal_dmg_", "physical_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p3_mult"}]
+      },
+      "hit3bDmg": {
+        "element": "physical",
+        "dmgBonusKeys": ["normal_dmg_", "physical_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p4_mult"}]
+      },
+      "hit4aDmg": {
+        "element": "physical",
+        "dmgBonusKeys": ["normal_dmg_", "physical_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p5_mult"}]
+      },
+      "hit4bDmg": {
+        "element": "physical",
+        "dmgBonusKeys": ["normal_dmg_", "physical_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p6_mult"}]
+      },
+      "hit5aDmg": {
+        "element": "physical",
+        "dmgBonusKeys": ["normal_dmg_", "physical_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p7_mult"}]
+      },
+      "hit5bDmg": {
+        "element": "physical",
+        "dmgBonusKeys": ["normal_dmg_", "physical_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p8_mult"}]
+      },
+      "chargedDmg1": {
+        "element": "physical",
+        "dmgBonusKeys": ["charged_dmg_", "physical_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p9_mult"}]
+      },
+      "chargedDmg2": {
+        "element": "physical",
+        "dmgBonusKeys": ["charged_dmg_", "physical_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p10_mult"}]
+      },
+      "plungeDmg": {
+        "element": "physical",
+        "dmgBonusKeys": ["plunging_dmg_", "physical_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p12_mult"}]
+      }
+    },
+    "skill": {
+      "skillDmg": {
+        "element": "anemo",
+        "dmgBonusKeys": ["skill_dmg_", "anemo_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p0_mult"}]
+      },
+      "sturmHit1Dmg": {
+        "element": "anemo",
+        "dmgBonusKeys": ["normal_dmg_", "anemo_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p2_mult"}]
+      },
+      "sturmHit2aDmg": {
+        "element": "anemo",
+        "dmgBonusKeys": ["normal_dmg_", "anemo_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p3_mult"}]
+      },
+      "sturmHit2bDmg": {
+        "element": "anemo",
+        "dmgBonusKeys": ["normal_dmg_", "anemo_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p4_mult"}]
+      },
+      "sturmHit3aDmg": {
+        "element": "anemo",
+        "dmgBonusKeys": ["normal_dmg_", "anemo_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p5_mult"}]
+      },
+      "sturmHit3bDmg": {
+        "element": "anemo",
+        "dmgBonusKeys": ["normal_dmg_", "anemo_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p6_mult"}]
+      },
+      "sturmHit4aDmg": {
+        "element": "anemo",
+        "dmgBonusKeys": ["normal_dmg_", "anemo_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p7_mult"}]
+      },
+      "sturmHit4bDmg": {
+        "element": "anemo",
+        "dmgBonusKeys": ["normal_dmg_", "anemo_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p8_mult"}]
+      },
+      "sturmHit5aDmg": {
+        "element": "anemo",
+        "dmgBonusKeys": ["normal_dmg_", "anemo_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p9_mult"}]
+      },
+      "sturmHit5bDmg": {
+        "element": "anemo",
+        "dmgBonusKeys": ["normal_dmg_", "anemo_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p10_mult"}]
+      },
+      "sturmChargedDmg1": {
+        "element": "anemo",
+        "dmgBonusKeys": ["charged_dmg_", "anemo_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p11_mult"}]
+      },
+      "sturmChargedDmg2": {
+        "element": "anemo",
+        "dmgBonusKeys": ["charged_dmg_", "anemo_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p12_mult"}]
+      },
+      "fourWindsAscensionDmg1": {
+        "element": "anemo",
+        "dmgBonusKeys": ["skill_dmg_", "anemo_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p13_mult"}]
+      },
+      "fourWindsAscensionDmg2": {
+        "element": "anemo",
+        "dmgBonusKeys": ["skill_dmg_", "anemo_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p14_mult"}]
+      },
+      "azureDevourDmg1": {
+        "element": "anemo",
+        "dmgBonusKeys": ["skill_dmg_", "anemo_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p15_mult"}]
+      },
+      "azureDevourDmg2": {
+        "element": "anemo",
+        "dmgBonusKeys": ["skill_dmg_", "anemo_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p16_mult"}]
+      }
+    },
+    "burst": {
+      "hit1Dmg": {
+        "element": "anemo",
+        "dmgBonusKeys": ["burst_dmg_", "anemo_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p0_mult"}]
+      },
+      "hit2Dmg": {
+        "element": "anemo",
+        "dmgBonusKeys": ["burst_dmg_", "anemo_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p1_mult"}]
+      }
+    }
+  },
+  "talent_multipliers_json": {
+    "normal": {
+      "p0_mult": 1.293972,
+      "p1_mult": 0.880641,
+      "p2_mult": 0.474191,
+      "p3_mult": 1.19077,
+      "p4_mult": 0.641184,
+      "p5_mult": 1.09574,
+      "p6_mult": 0.590014,
+      "p7_mult": 1.378775,
+      "p8_mult": 0.742417,
+      "p9_mult": 1.69286,
+      "p10_mult": 0.91154,
+      "p12_mult": 1.47441,
+      "p13_mult": 2.948195,
+      "p14_mult": 3.682455
+    },
+    "skill": {
+      "p0_mult": 5.0112,
+      "p2_mult": 1.617465,
+      "p3_mult": 1.100801,
+      "p4_mult": 0.592739,
+      "p5_mult": 1.488463,
+      "p6_mult": 0.80148,
+      "p7_mult": 1.369675,
+      "p8_mult": 0.737517,
+      "p9_mult": 1.723469,
+      "p10_mult": 0.928022,
+      "p11_mult": 2.116075,
+      "p12_mult": 1.139425,
+      "p13_mult": 3.16368,
+      "p14_mult": 1.70352,
+      "p15_mult": 1.6848,
+      "p16_mult": 0.9072
+    },
+    "burst": {
+      "p0_mult": 6.06528,
+      "p1_mult": 3.26592
+    },
+    "source": {
+      "assumptions": {
+        "constellation": 0,
+        "characterLevel": 90,
+        "autoTalentLevel": 10,
+        "burstTalentLevel": 10,
+        "skillTalentLevel": 10
+      },
+      "nanokaVersion": "6.6",
+      "goCharacterKey": "Varka"
+    },
+    "passive": {},
+    "constellation": {}
+  },
+  "buffs": {
+    "self_modifiers_json": {},
+    "self_conditional_modifiers_json": [],
+    "team_modifiers_json": {},
+    "team_conditional_modifiers_json": []
+  }
+}

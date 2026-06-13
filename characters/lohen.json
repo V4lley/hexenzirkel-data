@@ -1,0 +1,182 @@
+{
+  "display_name": "Lohen",
+  "go_key": "Lohen",
+  "avatar_id": 10000129,
+  "character_key": "avatar_10000129",
+  "base_stats_json": {
+    "baseHp": 12858.206654000001,
+    "baseAtk": 344.4168692,
+    "baseDef": 783.9254574000001,
+    "ascStatKey": "critDMG_",
+    "ascStatValue": 0.384
+  },
+  "hit_definitions_json": {
+    "normal": {
+      "hit1Dmg": {
+        "element": "physical",
+        "dmgBonusKeys": ["normal_dmg_", "physical_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p0_mult"}]
+      },
+      "hit2Dmg": {
+        "element": "physical",
+        "dmgBonusKeys": ["normal_dmg_", "physical_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p1_mult"}]
+      },
+      "hit3aDmg": {
+        "element": "physical",
+        "dmgBonusKeys": ["normal_dmg_", "physical_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p2_mult"}]
+      },
+      "hit3bDmg": {
+        "element": "physical",
+        "dmgBonusKeys": ["normal_dmg_", "physical_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p2_mult"}]
+      },
+      "hit3cDmg": {
+        "element": "physical",
+        "dmgBonusKeys": ["normal_dmg_", "physical_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p2_mult"}]
+      },
+      "hit4Dmg": {
+        "element": "physical",
+        "dmgBonusKeys": ["normal_dmg_", "physical_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p3_mult"}]
+      },
+      "hit5aDmg": {
+        "element": "physical",
+        "dmgBonusKeys": ["normal_dmg_", "physical_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p4_mult"}]
+      },
+      "hit5bDmg": {
+        "element": "physical",
+        "dmgBonusKeys": ["normal_dmg_", "physical_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p5_mult"}]
+      },
+      "chargedDmg1": {
+        "element": "physical",
+        "dmgBonusKeys": ["charged_dmg_", "physical_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p6_mult"}]
+      },
+      "chargedDmg2": {
+        "element": "physical",
+        "dmgBonusKeys": ["charged_dmg_", "physical_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p6_mult"}]
+      },
+      "plungeDmg": {
+        "element": "physical",
+        "dmgBonusKeys": ["plunging_dmg_", "physical_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p8_mult"}]
+      }
+    },
+    "skill": {
+      "masterHit1Dmg": {
+        "element": "cryo",
+        "dmgBonusKeys": ["normal_dmg_", "cryo_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p0_mult"}]
+      },
+      "masterHit2Dmg": {
+        "element": "cryo",
+        "dmgBonusKeys": ["normal_dmg_", "cryo_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p1_mult"}]
+      },
+      "masterHit3aDmg": {
+        "element": "cryo",
+        "dmgBonusKeys": ["normal_dmg_", "cryo_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p2_mult"}]
+      },
+      "masterHit3bDmg": {
+        "element": "cryo",
+        "dmgBonusKeys": ["normal_dmg_", "cryo_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p2_mult"}]
+      },
+      "masterHit3cDmg": {
+        "element": "cryo",
+        "dmgBonusKeys": ["normal_dmg_", "cryo_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p2_mult"}]
+      },
+      "masterHit4Dmg": {
+        "element": "cryo",
+        "dmgBonusKeys": ["normal_dmg_", "cryo_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p3_mult"}]
+      },
+      "masterHit5aDmg": {
+        "element": "cryo",
+        "dmgBonusKeys": ["normal_dmg_", "cryo_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p4_mult"}]
+      },
+      "masterHit5bDmg": {
+        "element": "cryo",
+        "dmgBonusKeys": ["normal_dmg_", "cryo_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p5_mult"}]
+      },
+      "masterChargedDmg1": {
+        "element": "cryo",
+        "dmgBonusKeys": ["charged_dmg_", "cryo_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p6_mult"}]
+      },
+      "masterChargedDmg2": {
+        "element": "cryo",
+        "dmgBonusKeys": ["charged_dmg_", "cryo_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p6_mult"}]
+      },
+      "etchedDmg": {
+        "element": "cryo",
+        "dmgBonusKeys": ["skill_dmg_", "cryo_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p16_mult"}]
+      }
+    },
+    "burst": {
+      "burstHit": {
+        "element": "cryo",
+        "dmgBonusKeys": ["burst_dmg_", "cryo_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p0_mult"}]
+      }
+    }
+  },
+  "talent_multipliers_json": {
+    "normal": {
+      "p0_mult": 1.067277,
+      "p1_mult": 1.115727,
+      "p2_mult": 0.502486,
+      "p3_mult": 1.487024,
+      "p4_mult": 0.728586,
+      "p5_mult": 1.092879,
+      "p6_mult": 1.3022,
+      "p8_mult": 1.26378,
+      "p9_mult": 2.527025,
+      "p10_mult": 3.15639
+    },
+    "skill": {
+      "p0_mult": 1.600915,
+      "p1_mult": 1.67359,
+      "p2_mult": 0.753729,
+      "p3_mult": 2.230536,
+      "p4_mult": 1.092879,
+      "p5_mult": 1.639319,
+      "p6_mult": 1.9533,
+      "p16_mult": 1.08
+    },
+    "burst": {
+      "p0_mult": 2.1384
+    },
+    "source": {
+      "assumptions": {
+        "constellation": 0,
+        "characterLevel": 90,
+        "autoTalentLevel": 10,
+        "burstTalentLevel": 10,
+        "skillTalentLevel": 10
+      },
+      "nanokaVersion": "6.6",
+      "goCharacterKey": "Lohen"
+    },
+    "passive": {},
+    "constellation": {}
+  },
+  "buffs": {
+    "self_modifiers_json": {},
+    "self_conditional_modifiers_json": [],
+    "team_modifiers_json": {},
+    "team_conditional_modifiers_json": []
+  }
+}

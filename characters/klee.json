@@ -1,0 +1,154 @@
+{
+  "display_name": "Klee",
+  "go_key": "Klee",
+  "avatar_id": 10000029,
+  "character_key": "avatar_10000029",
+  "base_stats_json": {
+    "baseHp": 10287.4935768,
+    "baseAtk": 261.4512,
+    "baseDef": 614.6796,
+    "ascStatKey": "pyro_dmg_",
+    "ascStatValue": 0.288
+  },
+  "hit_definitions_json": {
+    "normal": {
+      "hit1Dmg": {
+        "element": "pyro",
+        "dmgBonusKeys": [
+          "normal_dmg_",
+          "pyro_dmg_",
+          "all_dmg_"
+        ],
+        "components": [
+          {
+            "scalingKey": "atk",
+            "multKey": "p0_mult"
+          }
+        ]
+      },
+      "hit2Dmg": {
+        "element": "pyro",
+        "dmgBonusKeys": [
+          "normal_dmg_",
+          "pyro_dmg_",
+          "all_dmg_"
+        ],
+        "components": [
+          {
+            "scalingKey": "atk",
+            "multKey": "p1_mult"
+          }
+        ]
+      },
+      "hit3Dmg": {
+        "element": "pyro",
+        "dmgBonusKeys": [
+          "normal_dmg_",
+          "pyro_dmg_",
+          "all_dmg_"
+        ],
+        "components": [
+          {
+            "scalingKey": "atk",
+            "multKey": "p2_mult"
+          }
+        ]
+      },
+      "chargedDmg": {
+        "element": "pyro",
+        "dmgBonusKeys": [
+          "charged_dmg_",
+          "pyro_dmg_",
+          "all_dmg_"
+        ],
+        "components": [
+          {
+            "scalingKey": "atk",
+            "multKey": "p3_mult"
+          }
+        ]
+      }
+    },
+    "skill": {
+      "jumpyDumptyBounce": {
+        "element": "pyro",
+        "dmgBonusKeys": [
+          "skill_dmg_",
+          "pyro_dmg_",
+          "all_dmg_"
+        ],
+        "components": [
+          {
+            "scalingKey": "atk",
+            "multKey": "p0_mult"
+          }
+        ]
+      },
+      "mineDmg": {
+        "element": "pyro",
+        "dmgBonusKeys": [
+          "skill_dmg_",
+          "pyro_dmg_",
+          "all_dmg_"
+        ],
+        "components": [
+          {
+            "scalingKey": "atk",
+            "multKey": "p1_mult"
+          }
+        ]
+      }
+    },
+    "burst": {
+      "sparksDmg": {
+        "element": "pyro",
+        "dmgBonusKeys": [
+          "burst_dmg_",
+          "pyro_dmg_",
+          "all_dmg_"
+        ],
+        "components": [
+          {
+            "scalingKey": "atk",
+            "multKey": "p0_mult"
+          }
+        ]
+      }
+    }
+  },
+  "talent_multipliers_json": {
+    "burst": {
+      "p0_mult": 0.7168
+    },
+    "skill": {
+      "p0_mult": 1.8592,
+      "p1_mult": 0.576
+    },
+    "normal": {
+      "p0_mult": 0.9602,
+      "p1_mult": 0.8318,
+      "p2_mult": 1.1987,
+      "p3_mult": 2.101
+    },
+    "source": {
+      "assumptions": {
+        "constellation": 0,
+        "characterLevel": 90,
+        "autoTalentLevel": 10,
+        "burstTalentLevel": 10,
+        "skillTalentLevel": 10
+      },
+      "goCommit": "2937f8a80846b18c3495b7657c0bae5c78c82606",
+      "goAllStatFile": "libs/gi/stats/src/allStat_gen.json",
+      "goCharacterKey": "Klee"
+    },
+    "passive": {},
+    "constellation": {}
+  },
+  "buffs": {
+    "self_modifiers_json": {},
+    "self_conditional_modifiers_json": [],
+    "team_modifiers_json": {},
+    "team_conditional_modifiers_json": []
+  }
+}
