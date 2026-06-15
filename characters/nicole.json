@@ -90,7 +90,13 @@
         "source": "Nicole",
         "states": [
           {
-            "value": "on",
+            "value": "off-field",
+            "modifiers": {
+              "atk": 600
+            }
+          },
+          {
+            "value": "on-field",
             "modifiers": {
               "atk": 900
             }
