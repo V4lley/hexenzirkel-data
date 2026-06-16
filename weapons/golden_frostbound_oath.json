@@ -8,8 +8,28 @@
   },
   "buffs": {
     "self_modifiers_json": {},
-    "self_conditional_modifiers_json": [],
+    "self_conditional_modifiers_json": [
+      {
+        "conditionKey": "frostboundOathSelf",
+        "source": "15516",
+        "description": "Golden Frostbound Oath passive (self): +40% Geo DMG and +40% Lunar-Crystallize DMG.",
+        "modifiers": {
+          "geo_dmg_": 0.4,
+          "lunarcrystallize_dmg_": 0.4
+        }
+      }
+    ],
     "team_modifiers_json": {},
-    "team_conditional_modifiers_json": []
+    "team_conditional_modifiers_json": [
+      {
+        "conditionKey": "frostboundOathTeam",
+        "source": "15516",
+        "description": "Golden Frostbound Oath passive (team): +20% Geo DMG and +20% Lunar-Crystallize DMG.",
+        "modifiers": {
+          "geo_dmg_": 0.2,
+          "lunarcrystallize_dmg_": 0.2
+        }
+      }
+    ]
   }
 }

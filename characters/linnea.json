@@ -17,49 +17,69 @@
     "normal": {
       "hit1Dmg": {
         "element": "physical",
-        "dmgBonusKeys": [
-          "normal_dmg_",
-          "physical_dmg_",
-          "all_dmg_"
-        ],
-        "components": [
-          {
-            "scalingKey": "atk",
-            "multKey": "p0_mult"
-          }
-        ]
+        "dmgBonusKeys": ["normal_dmg_", "physical_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p0_mult"}]
+      },
+      "hit2Dmg": {
+        "element": "physical",
+        "dmgBonusKeys": ["normal_dmg_", "physical_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p1_mult"}]
+      },
+      "hit3Dmg": {
+        "element": "physical",
+        "dmgBonusKeys": ["normal_dmg_", "physical_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p2_mult"}]
+      },
+      "aimedDmg": {
+        "element": "physical",
+        "dmgBonusKeys": ["charged_dmg_", "physical_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p3_mult"}]
+      },
+      "fullyAimedDmg": {
+        "element": "geo",
+        "dmgBonusKeys": ["charged_dmg_", "geo_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p4_mult"}]
+      },
+      "plungeDmg": {
+        "element": "physical",
+        "dmgBonusKeys": ["plunging_dmg_", "physical_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p5_mult"}]
+      },
+      "plungeLowDmg": {
+        "element": "physical",
+        "dmgBonusKeys": ["plunging_dmg_", "physical_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p6_mult"}]
+      },
+      "plungeHighDmg": {
+        "element": "physical",
+        "dmgBonusKeys": ["plunging_dmg_", "physical_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p7_mult"}]
       }
     },
     "skill": {
-      "skillDmg": {
-        "element": "hydro",
-        "dmgBonusKeys": [
-          "skill_dmg_",
-          "hydro_dmg_",
-          "all_dmg_"
-        ],
-        "components": [
-          {
-            "scalingKey": "atk",
-            "multKey": "p0_mult"
-          }
-        ]
+      "pummelerDmg": {
+        "element": "geo",
+        "dmgBonusKeys": ["skill_dmg_", "geo_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "def", "multKey": "p0_mult"}]
+      },
+      "hammerDmg": {
+        "specialType": "direct_lunar_crystallization",
+        "element": "geo",
+        "dmgBonusKeys": ["lunarcrystallize_dmg_", "reaction_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "def", "multKey": "p1_mult"}]
+      },
+      "crushDmg": {
+        "specialType": "direct_lunar_crystallization",
+        "element": "geo",
+        "dmgBonusKeys": ["lunarcrystallize_dmg_", "reaction_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "def", "multKey": "p2_mult"}]
       }
     },
-    "burst": {
-      "hit1": {
-        "element": "hydro",
-        "dmgBonusKeys": [
-          "burst_dmg_",
-          "hydro_dmg_",
-          "all_dmg_"
-        ],
-        "components": [
-          {
-            "scalingKey": "atk",
-            "multKey": "p0_mult"
-          }
-        ]
+    "reaction": {
+      "lunarcrystallize": {
+        "specialType": "lunarcrystallizationreaction",
+        "element": "geo",
+        "dmgBonusKeys": ["lunarcrystallize_dmg_", "reaction_dmg_", "all_dmg_"]
       }
     }
   },
@@ -123,12 +143,33 @@
     "team_modifiers_json": {
       "lunarcrystallize_baseDmg_": {
         "formulaRef": "linnea.a0.lunarcrystallize_base_dmg"
-      },
-      "geo_enemyRes_": {
-        "formulaRef": "linnea.a1.lumi.geo_enemy_res"
       }
     },
     "team_conditional_modifiers_json": [
+      {
+        "conditionKey": "a1GeoShred",
+        "source": "avatar_10000130",
+        "description": "A1 passive: -30% Geo RES (shred).",
+        "modifiers": {
+          "geo_enemyRes_": -0.3
+        }
+      },
+      {
+        "conditionKey": "a4EmBuff",
+        "source": "avatar_10000130",
+        "description": "A4 passive: team EM equal to 5% of Linnea's DEF, evaluated at 2500 DEF (+125 EM).",
+        "modifiers": {
+          "eleMas": 125.0
+        }
+      },
+      {
+        "conditionKey": "lunarReactionPassive",
+        "source": "avatar_10000130",
+        "description": "Lunar passive: +14% Lunar-Crystallize base DMG to the team.",
+        "modifiers": {
+          "lunarcrystallize_baseDmg_": 0.14
+        }
+      },
       {
         "conditionKey": "c6Gleam",
         "source": "avatar_10000130",

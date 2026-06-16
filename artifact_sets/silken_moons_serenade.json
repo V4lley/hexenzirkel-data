@@ -3,7 +3,10 @@
   "display_name": "Silken Moon's Serenade",
   "buffs": {
     "self_modifiers_json": {
-      "enerRech_": 0.2
+      "enerRech_": 0.2,
+      "lunarbloom_dmg_": 0.1,
+      "lunarcharged_dmg_": 0.1,
+      "lunarcrystallize_dmg_": 0.1
     },
     "self_conditional_modifiers_json": [],
     "team_modifiers_json": {},
