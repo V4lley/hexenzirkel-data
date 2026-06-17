@@ -17,48 +17,83 @@
     "normal": {
       "hit1Dmg": {
         "element": "physical",
-        "dmgBonusKeys": [
-          "normal_dmg_",
-          "physical_dmg_",
-          "all_dmg_"
-        ],
-        "components": [
-          {
-            "scalingKey": "atk",
-            "multKey": "p0_mult"
-          }
-        ]
+        "dmgBonusKeys": ["normal_dmg_", "physical_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p0_mult"}]
+      },
+      "hit2Dmg": {
+        "element": "physical",
+        "dmgBonusKeys": ["normal_dmg_", "physical_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p1_mult"}]
+      },
+      "hit3aDmg": {
+        "element": "physical",
+        "dmgBonusKeys": ["normal_dmg_", "physical_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p2_mult"}]
+      },
+      "hit3bDmg": {
+        "element": "physical",
+        "dmgBonusKeys": ["normal_dmg_", "physical_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p3_mult"}]
+      },
+      "hit4Dmg": {
+        "element": "physical",
+        "dmgBonusKeys": ["normal_dmg_", "physical_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p4_mult"}]
+      },
+      "chargedDmg": {
+        "element": "physical",
+        "dmgBonusKeys": ["charged_dmg_", "physical_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p5_mult"}]
+      },
+      "plungeDmg": {
+        "element": "physical",
+        "dmgBonusKeys": ["plunging_dmg_", "physical_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p7_mult"}]
+      },
+      "plungeLowDmg": {
+        "element": "physical",
+        "dmgBonusKeys": ["plunging_dmg_", "physical_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p8_mult"}]
+      },
+      "plungeHighDmg": {
+        "element": "physical",
+        "dmgBonusKeys": ["plunging_dmg_", "physical_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p9_mult"}]
       }
     },
     "skill": {
-      "skillDmg": {
-        "element": "dendro",
-        "dmgBonusKeys": [
-          "skill_dmg_",
-          "dendro_dmg_",
-          "all_dmg_"
-        ],
+      "pressDmg": {
+        "element": "geo",
+        "dmgBonusKeys": ["skill_dmg_", "geo_dmg_", "all_dmg_"],
         "components": [
-          {
-            "scalingKey": "atk",
-            "multKey": "p0_mult"
-          }
+          {"scalingKey": "eleMas", "multKey": "p0_mult"},
+          {"scalingKey": "def", "multKey": "p1_mult"}
+        ]
+      },
+      "holdDmg": {
+        "element": "geo",
+        "dmgBonusKeys": ["skill_dmg_", "geo_dmg_", "all_dmg_"],
+        "components": [
+          {"scalingKey": "eleMas", "multKey": "p2_mult"},
+          {"scalingKey": "def", "multKey": "p3_mult"}
         ]
       }
     },
     "burst": {
-      "hit1": {
-        "element": "dendro",
-        "dmgBonusKeys": [
-          "burst_dmg_",
-          "dendro_dmg_",
-          "all_dmg_"
-        ],
+      "skillDmg": {
+        "element": "geo",
+        "dmgBonusKeys": ["burst_dmg_", "geo_dmg_", "all_dmg_"],
         "components": [
-          {
-            "scalingKey": "atk",
-            "multKey": "p0_mult"
-          }
+          {"scalingKey": "eleMas", "multKey": "p0_mult"},
+          {"scalingKey": "def", "multKey": "p1_mult"}
+        ]
+      },
+      "c2Dmg": {
+        "element": "geo",
+        "dmgBonusKeys": ["burst_dmg_", "geo_dmg_", "all_dmg_"],
+        "components": [
+          {"scalingKey": "eleMas", "multKey": "p9_mult"},
+          {"scalingKey": "def", "multKey": "p10_mult"}
         ]
       }
     }
@@ -73,7 +108,9 @@
       "p5_mult": 5.0,
       "p6_mult": 20.0,
       "p7_mult": 15.0,
-      "p8_mult": 60.0
+      "p8_mult": 60.0,
+      "p9_mult": 4.0,
+      "p10_mult": 2.0
     },
     "skill": {
       "p0_mult": 8.68608,
@@ -101,29 +138,128 @@
         "characterLevel": 90,
         "autoTalentLevel": 10,
         "burstTalentLevel": 10,
-        "skillTalentLevel": 10
+        "skillTalentLevel": 10,
+        "teamBuffEleMas": 850
       },
-      "goAllStatFile": "libs/gi/stats/src/allStat_gen.json"
+      "goAllStatFile": "libs/gi/stats/src/allStat_gen.json",
+      "goCharacterKey": "Illuga"
     },
     "passive": {
-      "a4StackingBonus_tier1": 0.07,
-      "a4StackingBonus_tier2": 0.14,
-      "a1LunarcrystallizeBase_tier1": 0.05,
-      "a1LunarcrystallizeBase_tier2": 0.1
+      "a1Geo_critRate_": 0.05,
+      "a1Geo_critDMG_": 0.1,
+      "a1GleamEleMas": 50.0,
+      "burstGeo_dmgInc_perEm": 0.6048,
+      "burstLunarcrystallize_dmgInc_perEm": 4.06656,
+      "a4Geo_dmgInc_perEm": [0.07, 0.14, 0.24],
+      "a4Lunarcrystallize_dmgInc_perEm": [0.48, 0.96, 1.6]
     },
     "constellation": {
-      "c1EleMas": 12.0,
-      "c4EleMas": 200.0
+      "c1EnergyRegen": 12.0,
+      "c1Cd": 15.0,
+      "c2DmgEleMas": 4.0,
+      "c2DmgDef": 2.0,
+      "c4Def": 200.0,
+      "c6Geo_critRate_": 0.1,
+      "c6Geo_critDMG_": 0.3,
+      "c6GleamEleMas": 80.0
     }
   },
   "buffs": {
-    "self_modifiers_json": {
-      "eleMas": {
-        "formulaRef": "illuga.c4.elemas_bonus"
-      }
-    },
+    "self_modifiers_json": {},
     "self_conditional_modifiers_json": [],
     "team_modifiers_json": {},
-    "team_conditional_modifiers_json": []
+    "team_conditional_modifiers_json": [
+      {
+        "conditionKey": "burstSong",
+        "source": "avatar_10000127",
+        "description": "Burst Song active: active character gains Geo DMG increase and Lunar-Crystallize direct DMG increase scaling with Illuga's Elemental Mastery (computed at 850 EM).",
+        "states": [
+          {
+            "value": "on",
+            "modifiers": {
+              "geo_dmgInc": 514.08,
+              "lunarcrystallization_dmgInc": 3456.576
+            }
+          }
+        ]
+      },
+      {
+        "conditionKey": "a4SongHydroGeo",
+        "source": "avatar_10000127",
+        "description": "A4: while Burst Song is active, the active character gains additional Geo DMG and Lunar-Crystallize direct DMG increase based on the number of Hydro/Geo party members (computed at 850 EM).",
+        "states": [
+          {
+            "value": "members1",
+            "modifiers": {
+              "geo_dmgInc": 59.5,
+              "lunarcrystallization_dmgInc": 408.0
+            }
+          },
+          {
+            "value": "members2",
+            "modifiers": {
+              "geo_dmgInc": 119.0,
+              "lunarcrystallization_dmgInc": 816.0
+            }
+          },
+          {
+            "value": "members3plus",
+            "modifiers": {
+              "geo_dmgInc": 204.0,
+              "lunarcrystallization_dmgInc": 1360.0
+            }
+          }
+        ]
+      },
+      {
+        "conditionKey": "a1AfterSkillBurst",
+        "source": "avatar_10000127",
+        "description": "A1: after Illuga uses his Elemental Skill or Burst, nearby party members gain Geo CRIT Rate, Geo CRIT DMG, and (with 2+ team Moonsigns) Elemental Mastery.",
+        "states": [
+          {
+            "value": "on",
+            "modifiers": {
+              "geo_critRate_": 0.05,
+              "geo_critDMG_": 0.1,
+              "eleMas": 50.0
+            }
+          }
+        ]
+      },
+      {
+        "conditionKey": "a1AfterSkillBurstC6",
+        "source": "avatar_10000127",
+        "gating": {
+          "constellationMin": 6
+        },
+        "description": "C6 enhances A1: additional Geo CRIT Rate, Geo CRIT DMG, and Elemental Mastery granted on top of the base A1 buff.",
+        "states": [
+          {
+            "value": "on",
+            "modifiers": {
+              "geo_critRate_": 0.05,
+              "geo_critDMG_": 0.2,
+              "eleMas": 30.0
+            }
+          }
+        ]
+      },
+      {
+        "conditionKey": "c4BurstActive",
+        "source": "avatar_10000127",
+        "gating": {
+          "constellationMin": 4
+        },
+        "description": "C4: while the burst is active, the active character gains +200 DEF.",
+        "states": [
+          {
+            "value": "on",
+            "modifiers": {
+              "def": 200.0
+            }
+          }
+        ]
+      }
+    ]
   }
 }

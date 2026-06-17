@@ -7,8 +7,21 @@
     "subStatValue": 0.882048
   },
   "buffs": {
-    "self_modifiers_json": {},
-    "self_conditional_modifiers_json": [],
+    "self_modifiers_json": {
+      "def_": 0.2
+    },
+    "self_conditional_modifiers_json": [
+      {
+        "conditionKey": "lightbearing_moonshard_passive",
+        "source": "LightbearingMoonshard",
+        "description": "After using an Elemental Skill: Lunar-Crystallize DMG +64% (R1) for 5s.",
+        "states": {
+          "on": {
+            "lunarcrystallize_dmg_": 0.64
+          }
+        }
+      }
+    ],
     "team_modifiers_json": {},
     "team_conditional_modifiers_json": []
   }

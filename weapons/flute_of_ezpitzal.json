@@ -8,7 +8,18 @@
   },
   "buffs": {
     "self_modifiers_json": {},
-    "self_conditional_modifiers_json": [],
+    "self_conditional_modifiers_json": [
+      {
+        "conditionKey": "flute_of_ezpitzal_after_skill",
+        "source": "FluteOfEzpitzal",
+        "description": "After an Elemental Skill hits an opponent: DEF +16% (R1) for 15s.",
+        "states": {
+          "on": {
+            "def_": 0.16
+          }
+        }
+      }
+    ],
     "team_modifiers_json": {},
     "team_conditional_modifiers_json": []
   }
