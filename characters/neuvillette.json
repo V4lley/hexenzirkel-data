@@ -1,0 +1,137 @@
+{
+  "display_name": "Neuvillette",
+  "go_key": "Neuvillette",
+  "avatar_id": 10000087,
+  "character_key": "avatar_10000087",
+  "weapon_type": "catalyst",
+  "nation": "fontaine",
+  "constellation_talent_boosts": {"normal": 3, "burst": 5},
+  "base_stats_json": {
+    "baseHp": 14695.0932,
+    "baseAtk": 208.3244,
+    "baseDef": 576.4158,
+    "ascStatKey": "critDMG_",
+    "ascStatValue": 0.384
+  },
+  "hit_definitions_json": {
+    "normal": {
+      "0": {
+        "element": "hydro",
+        "dmgBonusKeys": ["normal_dmg_", "hydro_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p0_mult"}]
+      },
+      "1": {
+        "element": "hydro",
+        "dmgBonusKeys": ["normal_dmg_", "hydro_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p1_mult"}]
+      },
+      "2": {
+        "element": "hydro",
+        "dmgBonusKeys": ["normal_dmg_", "hydro_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p2_mult"}]
+      }
+    },
+    "charged": {
+      "dmg": {
+        "element": "hydro",
+        "dmgBonusKeys": ["charged_dmg_", "hydro_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p_charged_mult"}]
+      },
+      "equitableJudgment": {
+        "element": "hydro",
+        "dmgBonusKeys": ["charged_dmg_", "hydro_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "hp", "multKey": "p_equitable_mult"}]
+      }
+    },
+    "plunging": {
+      "plunge": {
+        "element": "hydro",
+        "dmgBonusKeys": ["plunging_dmg_", "hydro_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p_plunge_mult"}]
+      },
+      "low": {
+        "element": "hydro",
+        "dmgBonusKeys": ["plunging_dmg_", "hydro_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p_plunge_low_mult"}]
+      },
+      "high": {
+        "element": "hydro",
+        "dmgBonusKeys": ["plunging_dmg_", "hydro_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p_plunge_high_mult"}]
+      }
+    },
+    "skill": {
+      "dmg": {
+        "element": "hydro",
+        "dmgBonusKeys": ["skill_dmg_", "hydro_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p0_mult"}]
+      }
+    },
+    "burst": {
+      "dmg": {
+        "element": "hydro",
+        "dmgBonusKeys": ["burst_dmg_", "hydro_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p0_mult"}]
+      }
+    }
+  },
+  "talent_multipliers_json": {
+    "normal": {
+      "p0_mult": 0.982382,
+      "p1_mult": 0.832421,
+      "p2_mult": 1.302077
+    },
+    "charged": {
+      "p_charged_mult": 2.4624,
+      "p_equitable_mult": 0.14467
+    },
+    "plunging": {
+      "p_plunge_mult": 1.12336,
+      "p_plunge_low_mult": 2.246244,
+      "p_plunge_high_mult": 2.80568
+    },
+    "skill": {
+      "p0_mult": 0.231552
+    },
+    "burst": {
+      "p0_mult": 0.400641
+    },
+    "source": {
+      "goAllStatFile": "libs/gi/stats/src/allStat_gen.json",
+      "assumptions": {
+        "constellation": 0,
+        "characterLevel": 90,
+        "autoTalentLevel": 10,
+        "skillTalentLevel": 10,
+        "burstTalentLevel": 10
+      },
+      "goCharacterKey": "Neuvillette"
+    }
+  },
+  "buffs": {
+    "self_modifiers_json": {},
+    "self_conditional_modifiers_json": [
+      {
+        "conditionKey": "supremeArbitration",
+        "source": "avatar_10000087",
+        "description": "A4 Discipline of the Supreme Arbitration: +0.6% Hydro DMG for each 1% of current HP above 30% of Max HP, up to +30% (full value at high HP).",
+        "states": [
+          {"value": "on", "modifiers": {"hydro_dmg_": 0.30}}
+        ]
+      },
+      {
+        "conditionKey": "pastDraconicGlories",
+        "source": "avatar_10000087",
+        "gating": {"constellationMin": 2},
+        "description": "C2 Juridical Exhortation: each Past Draconic Glories stack grants +14% CRIT DMG to Charged Attack: Equitable Judgment (max 3 stacks). Select how many stacks are active.",
+        "states": [
+          {"value": "1", "modifiers": {"charged_critDMG_": 0.14}},
+          {"value": "2", "modifiers": {"charged_critDMG_": 0.28}},
+          {"value": "3", "modifiers": {"charged_critDMG_": 0.42}}
+        ]
+      }
+    ],
+    "team_modifiers_json": {},
+    "team_conditional_modifiers_json": []
+  }
+}

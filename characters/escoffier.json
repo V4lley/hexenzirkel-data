@@ -117,8 +117,8 @@
           {
             "value": "on",
             "modifiers": {
-              "hydro_enemyRes_": -0.3,
-              "cryo_enemyRes_": -0.3
+              "hydro_enemyRes_": -0.55,
+              "cryo_enemyRes_": -0.55
             }
           }
         ]
