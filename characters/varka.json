@@ -220,13 +220,77 @@
       "nanokaVersion": "6.6",
       "goCharacterKey": "Varka"
     },
-    "passive": {},
-    "constellation": {}
+    "passive": {
+      "a1ElementalDmg_perAtk": 0.0001,
+      "a1ElementalDmg_cap": 0.25,
+      "a1SturmAmplify": 0.4,
+      "a4AzureFangsOath_perStack": 0.075,
+      "a4AzureFangsOath_maxStacks": 4
+    },
+    "constellation": {
+      "c1ExtraStrike_atk": 8.0,
+      "c3SwirlElementalDmg": 0.2
+    }
   },
   "buffs": {
-    "self_modifiers_json": {},
-    "self_conditional_modifiers_json": [],
+    "self_modifiers_json": {
+      "anemo_dmg_": {
+        "formulaRef": "varka.a1.elemental_dmg"
+      }
+    },
+    "self_conditional_modifiers_json": [
+      {
+        "conditionKey": "a4AzureFangsOath",
+        "source": "avatar_10000128",
+        "description": "A4 Wind's Vanguard: each Swirl triggered by a nearby party member grants 1 stack of Azure Fang's Oath, increasing Normal/Charged Attack, Azure Devour and Four Winds' Ascension DMG by 7.5% (max 4 stacks = +30%).",
+        "states": [
+          {
+            "value": "4",
+            "modifiers": {
+              "normal_dmg_": 0.3,
+              "charged_dmg_": 0.3,
+              "skill_dmg_": 0.3
+            }
+          }
+        ]
+      },
+      {
+        "conditionKey": "a1SturmAmplify",
+        "source": "avatar_10000128",
+        "description": "A1 Dawn Wind's March (2+ Anemo or 2+ same-element supports): Normal/Charged Attack, Azure Devour and Four Winds' Ascension deal 140% of their original DMG in Sturm und Drang (220% with 2 Anemo + 2 same-element). Modeled additively as +40% (default) / +120%.",
+        "states": [
+          {
+            "value": "140",
+            "modifiers": {
+              "normal_dmg_": 0.4,
+              "charged_dmg_": 0.4,
+              "skill_dmg_": 0.4
+            }
+          },
+          {
+            "value": "220",
+            "modifiers": {
+              "normal_dmg_": 1.2,
+              "charged_dmg_": 1.2,
+              "skill_dmg_": 1.2
+            }
+          }
+        ]
+      }
+    ],
     "team_modifiers_json": {},
-    "team_conditional_modifiers_json": []
+    "team_conditional_modifiers_json": [
+      {
+        "conditionKey": "c3Swirl",
+        "source": "avatar_10000128",
+        "description": "C3: when Varka triggers a Swirl reaction, all nearby party members gain a 20% Anemo DMG Bonus (and the corresponding elemental DMG Bonus) for 10s.",
+        "gating": {
+          "constellationMin": 3
+        },
+        "modifiers": {
+          "anemo_dmg_": 0.2
+        }
+      }
+    ]
   }
 }

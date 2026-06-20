@@ -7,7 +7,9 @@
     "subStatValue": 0.882048
   },
   "buffs": {
-    "self_modifiers_json": {},
+    "self_modifiers_json": {
+      "def_": 0.16
+    },
     "self_conditional_modifiers_json": [
       {
         "conditionKey": "frostboundOathSelf",

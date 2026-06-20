@@ -172,13 +172,40 @@
       "nanokaVersion": "6.6",
       "goCharacterKey": "Lohen"
     },
-    "passive": {},
+    "passive": {
+      "a1Atk": 0.15,
+      "a4HexereiNormalChargedDmg": 0.4
+    },
     "constellation": {}
   },
   "buffs": {
     "self_modifiers_json": {},
-    "self_conditional_modifiers_json": [],
+    "self_conditional_modifiers_json": [
+      {
+        "conditionKey": "a4Hexerei",
+        "source": "avatar_10000129",
+        "description": "A4 Witch's Eve Rite (Hexerei: Secret Rite, Will to Win >= 50%): after Etched Into Bone and Soul hits or Manifest Judgment is cast, Normal and Charged Attack DMG +40% for 6s.",
+        "states": [
+          {
+            "value": "on",
+            "modifiers": {
+              "normal_dmg_": 0.4,
+              "charged_dmg_": 0.4
+            }
+          }
+        ]
+      }
+    ],
     "team_modifiers_json": {},
-    "team_conditional_modifiers_json": []
+    "team_conditional_modifiers_json": [
+      {
+        "conditionKey": "a1FlippantMasterpiece",
+        "source": "avatar_10000129",
+        "description": "A1 Flippant Masterpiece: while Lohen is in Masterstroke mode, for 8s after a nearby party member triggers a Cryo reaction, that character's ATK +15% (and Lohen's ATK +15%).",
+        "modifiers": {
+          "atk_": 0.15
+        }
+      }
+    ]
   }
 }

@@ -5,6 +5,7 @@
   "character_key": "avatar_10000120",
   "weapon_type": "polearm",
   "constellation_talent_boosts": {"skill": 5, "burst": 3},
+  "nation": "nod_krai",
   "base_stats_json": {
     "baseHp": 12490.8290496,
     "baseAtk": 351.5922196,
@@ -16,49 +17,114 @@
     "normal": {
       "hit1Dmg": {
         "element": "physical",
-        "dmgBonusKeys": [
-          "normal_dmg_",
-          "physical_dmg_",
-          "all_dmg_"
-        ],
-        "components": [
-          {
-            "scalingKey": "atk",
-            "multKey": "p0_mult"
-          }
-        ]
+        "dmgBonusKeys": ["normal_dmg_", "physical_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p0_mult"}]
+      },
+      "hit2Dmg": {
+        "element": "physical",
+        "dmgBonusKeys": ["normal_dmg_", "physical_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p1_mult"}]
+      },
+      "hit3Dmg": {
+        "element": "physical",
+        "dmgBonusKeys": ["normal_dmg_", "physical_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p2_mult"}]
+      },
+      "hit4Dmg": {
+        "element": "physical",
+        "dmgBonusKeys": ["normal_dmg_", "physical_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p3_mult"}]
+      },
+      "hit5Dmg": {
+        "element": "physical",
+        "dmgBonusKeys": ["normal_dmg_", "physical_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p4_mult"}]
+      },
+      "chargedDmg": {
+        "element": "physical",
+        "dmgBonusKeys": ["charged_dmg_", "physical_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p5_mult"}]
+      },
+      "plungeDmg": {
+        "element": "physical",
+        "dmgBonusKeys": ["plunging_dmg_", "physical_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p7_mult"}]
+      },
+      "plungeLowDmg": {
+        "element": "physical",
+        "dmgBonusKeys": ["plunging_dmg_", "physical_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p8_mult"}]
+      },
+      "plungeHighDmg": {
+        "element": "physical",
+        "dmgBonusKeys": ["plunging_dmg_", "physical_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p9_mult"}]
       }
     },
     "skill": {
-      "skillDmg": {
-        "element": "anemo",
-        "dmgBonusKeys": [
-          "skill_dmg_",
-          "anemo_dmg_",
-          "all_dmg_"
-        ],
-        "components": [
-          {
-            "scalingKey": "atk",
-            "multKey": "p0_mult"
-          }
-        ]
+      "enhancedHit1Dmg": {
+        "element": "electro",
+        "dmgBonusKeys": ["normal_dmg_", "electro_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p0_mult"}]
+      },
+      "enhancedHit2Dmg": {
+        "element": "electro",
+        "dmgBonusKeys": ["normal_dmg_", "electro_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p1_mult"}]
+      },
+      "enhancedHit3Dmg": {
+        "element": "electro",
+        "dmgBonusKeys": ["normal_dmg_", "electro_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p2_mult"}]
+      },
+      "enhancedHit4Dmg": {
+        "element": "electro",
+        "dmgBonusKeys": ["normal_dmg_", "electro_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p3_mult"}]
+      },
+      "enhancedHit5Dmg": {
+        "element": "electro",
+        "dmgBonusKeys": ["normal_dmg_", "electro_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p4_mult"}]
+      },
+      "enhancedChargedDmg": {
+        "element": "electro",
+        "dmgBonusKeys": ["charged_dmg_", "electro_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p5_mult"}]
+      },
+      "northlandSpearstormDmg": {
+        "element": "electro",
+        "dmgBonusKeys": ["skill_dmg_", "electro_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p6_mult"}]
       }
     },
     "burst": {
-      "hit1": {
-        "element": "anemo",
-        "dmgBonusKeys": [
-          "burst_dmg_",
-          "anemo_dmg_",
-          "all_dmg_"
-        ],
-        "components": [
-          {
-            "scalingKey": "atk",
-            "multKey": "p0_mult"
-          }
-        ]
+      "initialDmg": {
+        "element": "electro",
+        "dmgBonusKeys": ["burst_dmg_", "electro_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p0_mult"}]
+      },
+      "middlePhaseLunarchargedDmg": {
+        "specialType": "direct_lunar_charged",
+        "element": "electro",
+        "dmgBonusKeys": ["lunarcharged_dmg_", "reaction_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p1_mult"}]
+      },
+      "finalPhaseLunarchargedDmg": {
+        "specialType": "direct_lunar_charged",
+        "element": "electro",
+        "dmgBonusKeys": ["lunarcharged_dmg_", "reaction_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p2_mult"}]
+      },
+      "thunderousSymphonyDmg": {
+        "element": "electro",
+        "dmgBonusKeys": ["burst_dmg_", "electro_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p5_mult"}]
+      },
+      "thunderousSymphonyAdditionalDmg": {
+        "element": "electro",
+        "dmgBonusKeys": ["burst_dmg_", "electro_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p6_mult"}]
       }
     }
   },
@@ -110,14 +176,14 @@
     },
     "passive": {
       "a4AtkCap": 160.0,
-      "a4AtkPerEm": 0.08,
+      "a4EmPerAtk": 0.08,
       "a1LunarchargedDmg": 0.2,
       "a4BaseLunarchargedDmg_cap": 0.14,
-      "a4BaseLunarchargedDmg_perEm": 0.007
+      "a4BaseLunarchargedDmg_perAtk": 0.00007
     },
     "constellation": {
       "c4Atk": 0.2,
-      "c2ElectroEnemyRes": 0.5,
+      "c2ElectroEnemyRes": -0.25,
       "c6LunarchargedSpecialDmg_self": 0.35,
       "c6LunarchargedSpecialDmg_team": 0.1
     }
@@ -127,8 +193,11 @@
       "lunarcharged_dmg_": {
         "formulaRef": "flins.a1.lunarcharged_dmg"
       },
-      "atk_": {
+      "eleMas": {
         "formulaRef": "flins.a4.atk_from_elemas"
+      },
+      "atk_": {
+        "formulaRef": "flins.c4.atk_bonus"
       },
       "lunarcharged_specialDmg_": {
         "formulaRef": "flins.c6.lunarcharged_special_dmg"
@@ -147,19 +216,13 @@
       {
         "conditionKey": "c6Ascendant",
         "source": "avatar_10000120",
+        "description": "C6 Songs and Dances of Death (Ascendant Gleam): all nearby party members' Lunar-Charged DMG is elevated by 10%.",
         "gating": {
           "constellationMin": 6
         },
-        "states": [
-          {
-            "value": "on",
-            "modifiers": {
-              "lunarcharged_specialDmg_": {
-                "formulaRef": "flins.c6.lunarcharged_special_dmg"
-              }
-            }
-          }
-        ]
+        "modifiers": {
+          "lunarcharged_specialDmg_": 0.1
+        }
       }
     ]
   }

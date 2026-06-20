@@ -65,37 +65,37 @@
       }
     },
     "skill": {
-      "flash1": {
+      "0": {
         "element": "cryo",
         "dmgBonusKeys": ["normal_dmg_", "cryo_dmg_", "all_dmg_"],
         "components": [{"scalingKey": "atk", "multKey": "p0_mult"}]
       },
-      "flash2": {
+      "1": {
         "element": "cryo",
         "dmgBonusKeys": ["normal_dmg_", "cryo_dmg_", "all_dmg_"],
         "components": [{"scalingKey": "atk", "multKey": "p1_mult"}]
       },
-      "flash3": {
+      "2": {
         "element": "cryo",
         "dmgBonusKeys": ["normal_dmg_", "cryo_dmg_", "all_dmg_"],
         "components": [{"scalingKey": "atk", "multKey": "p2_mult"}]
       },
-      "flash4": {
+      "3": {
         "element": "cryo",
         "dmgBonusKeys": ["normal_dmg_", "cryo_dmg_", "all_dmg_"],
         "components": [{"scalingKey": "atk", "multKey": "p3_mult"}]
       },
-      "flash5": {
+      "4": {
         "element": "cryo",
         "dmgBonusKeys": ["normal_dmg_", "cryo_dmg_", "all_dmg_"],
         "components": [{"scalingKey": "atk", "multKey": "p4_mult"}]
       },
-      "flash6": {
+      "5": {
         "element": "cryo",
         "dmgBonusKeys": ["normal_dmg_", "cryo_dmg_", "all_dmg_"],
         "components": [{"scalingKey": "atk", "multKey": "p5_mult"}]
       },
-      "flashCharged": {
+      "chargedDmg": {
         "element": "cryo",
         "dmgBonusKeys": ["charged_dmg_", "cryo_dmg_", "all_dmg_"],
         "components": [{"scalingKey": "atk", "multKey": "p_charged_mult"}]

@@ -8,7 +8,24 @@
   },
   "buffs": {
     "self_modifiers_json": {},
-    "self_conditional_modifiers_json": [],
+    "self_conditional_modifiers_json": [
+      {
+        "source": "13516",
+        "conditionKey": "after_burst",
+        "description": "R1: for 3.5s after using an Elemental Burst, the equipping character's Lunar-Charged DMG dealt is increased by 36%.",
+        "modifiers": {
+          "lunarcharged_dmg_": 0.36
+        }
+      },
+      {
+        "source": "13516",
+        "conditionKey": "requiem_of_ruin",
+        "description": "R1: after triggering a Lunar-Charged reaction, gain Requiem of Ruin: CRIT DMG +28% for 6s.",
+        "modifiers": {
+          "critDMG_": 0.28
+        }
+      }
+    ],
     "team_modifiers_json": {},
     "team_conditional_modifiers_json": []
   }

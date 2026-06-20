@@ -8,7 +8,50 @@
   },
   "buffs": {
     "self_modifiers_json": {},
-    "self_conditional_modifiers_json": [],
+    "self_conditional_modifiers_json": [
+      {
+        "source": "13517",
+        "conditionKey": "unforgivable",
+        "description": "R1: after using an Elemental Skill, gain Unforgivable: Normal and Charged Attack DMG +40% (+75% to +70% under Hexerei: Secret Rite).",
+        "states": [
+          {
+            "value": "base",
+            "modifiers": {
+              "normal_dmg_": 0.4,
+              "charged_dmg_": 0.4
+            }
+          },
+          {
+            "value": "hexerei",
+            "modifiers": {
+              "normal_dmg_": 0.7,
+              "charged_dmg_": 0.7
+            }
+          }
+        ]
+      },
+      {
+        "source": "13517",
+        "conditionKey": "irreparable",
+        "description": "R1: after using an Elemental Skill, gain Irreparable: Elemental Skill and Burst DMG +40% (+75% to +70% under Hexerei: Secret Rite).",
+        "states": [
+          {
+            "value": "base",
+            "modifiers": {
+              "skill_dmg_": 0.4,
+              "burst_dmg_": 0.4
+            }
+          },
+          {
+            "value": "hexerei",
+            "modifiers": {
+              "skill_dmg_": 0.7,
+              "burst_dmg_": 0.7
+            }
+          }
+        ]
+      }
+    ],
     "team_modifiers_json": {},
     "team_conditional_modifiers_json": []
   }

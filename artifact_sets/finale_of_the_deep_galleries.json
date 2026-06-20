@@ -5,7 +5,25 @@
     "self_modifiers_json": {
       "cryo_dmg_": 0.15
     },
-    "self_conditional_modifiers_json": [],
+    "self_conditional_modifiers_json": [
+      {
+        "conditionKey": "4pc_zero_energy",
+        "source": "FinaleOfTheDeepGalleries",
+        "description": "4pc: while the equipping character has 0 Elemental Energy, Normal Attack DMG +60% and Elemental Burst DMG +60%. Dealing Normal Attack DMG suspends the Burst bonus for 6s and vice versa, so in practice only one applies at a time (use 'normal_attack' or 'elemental_burst'; 'both' is the un-suspended ceiling).",
+        "states": {
+          "normal_attack": {
+            "normal_dmg_": 0.6
+          },
+          "elemental_burst": {
+            "burst_dmg_": 0.6
+          },
+          "both": {
+            "normal_dmg_": 0.6,
+            "burst_dmg_": 0.6
+          }
+        }
+      }
+    ],
     "team_modifiers_json": {},
     "team_conditional_modifiers_json": []
   }

@@ -167,6 +167,17 @@
         }
       },
       {
+        "conditionKey": "c1Moondrift",
+        "source": "avatar_10000130",
+        "description": "C1 Tidings of Joy and Sorrow: within 8s after triggering Moondrift Harmony, all Hydro and Geo party members gain +40% CRIT DMG.",
+        "gating": {
+          "constellationMin": 1
+        },
+        "modifiers": {
+          "critDMG_": 0.4
+        }
+      },
+      {
         "conditionKey": "c6Gleam",
         "source": "avatar_10000130",
         "gating": {

@@ -17,49 +17,67 @@
     "normal": {
       "hit1Dmg": {
         "element": "physical",
-        "dmgBonusKeys": [
-          "normal_dmg_",
-          "physical_dmg_",
-          "all_dmg_"
-        ],
-        "components": [
-          {
-            "scalingKey": "atk",
-            "multKey": "p0_mult"
-          }
-        ]
+        "dmgBonusKeys": ["normal_dmg_", "physical_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p0_mult"}]
+      },
+      "hit2Dmg": {
+        "element": "physical",
+        "dmgBonusKeys": ["normal_dmg_", "physical_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p1_mult"}]
+      },
+      "hit3aDmg": {
+        "element": "physical",
+        "dmgBonusKeys": ["normal_dmg_", "physical_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p2_mult"}]
+      },
+      "hit3bDmg": {
+        "element": "physical",
+        "dmgBonusKeys": ["normal_dmg_", "physical_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p3_mult"}]
+      },
+      "hit4Dmg": {
+        "element": "physical",
+        "dmgBonusKeys": ["normal_dmg_", "physical_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p4_mult"}]
+      },
+      "chargedDmg": {
+        "element": "physical",
+        "dmgBonusKeys": ["charged_dmg_", "physical_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p5_mult"}]
+      },
+      "plungeDmg": {
+        "element": "physical",
+        "dmgBonusKeys": ["plunging_dmg_", "physical_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p7_mult"}]
+      },
+      "plungeLowDmg": {
+        "element": "physical",
+        "dmgBonusKeys": ["plunging_dmg_", "physical_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p8_mult"}]
+      },
+      "plungeHighDmg": {
+        "element": "physical",
+        "dmgBonusKeys": ["plunging_dmg_", "physical_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p9_mult"}]
       }
     },
     "skill": {
       "skillDmg": {
-        "element": "geo",
-        "dmgBonusKeys": [
-          "skill_dmg_",
-          "geo_dmg_",
-          "all_dmg_"
-        ],
-        "components": [
-          {
-            "scalingKey": "atk",
-            "multKey": "p0_mult"
-          }
-        ]
+        "element": "electro",
+        "dmgBonusKeys": ["skill_dmg_", "electro_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p0_mult"}]
+      },
+      "birgittaDischargeDmg": {
+        "element": "electro",
+        "dmgBonusKeys": ["skill_dmg_", "electro_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p3_mult"}]
       }
     },
     "burst": {
-      "hit1": {
-        "element": "geo",
-        "dmgBonusKeys": [
-          "burst_dmg_",
-          "geo_dmg_",
-          "all_dmg_"
-        ],
-        "components": [
-          {
-            "scalingKey": "atk",
-            "multKey": "p0_mult"
-          }
-        ]
+      "burstDmg": {
+        "element": "electro",
+        "dmgBonusKeys": ["burst_dmg_", "electro_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p0_mult"}]
       }
     }
   },
@@ -102,11 +120,13 @@
       "goAllStatFile": "libs/gi/stats/src/allStat_gen.json"
     },
     "passive": {
-      "a0LunarchargedBase_cap": 3.5,
-      "a0LunarchargedBase_perEm": 0.65
+      "a0LunarchargedBase_cap": 0.14,
+      "a0LunarchargedBase_perAtk": 0.00007,
+      "a1TeamEmPerAtk": 0.06
     },
     "constellation": {
-      "c1LunarchargedDmg": 20.0
+      "c1CarrierFlow_lunarchargedDmg_perAtk": 0.00025,
+      "c1CarrierFlow_lunarchargedDmg_cap": 0.5
     }
   },
   "buffs": {
@@ -119,21 +139,25 @@
     },
     "team_conditional_modifiers_json": [
       {
+        "conditionKey": "a1Panoramic",
+        "source": "avatar_10000116",
+        "description": "A1 Panoramic Permutation Protocol: on Burst, party gains EM equal to 6% of Ineffa's ATK for 20s. Modeled as a flat team buff assuming 2800 ATK (0.06 x 2800 = 168 EM).",
+        "modifiers": {
+          "eleMas": 168.0
+        }
+      },
+      {
         "conditionKey": "c1AfterShield",
         "source": "avatar_10000116",
+        "description": "C1 Rectifying Processor: after activating the Optical Flow Shield Barrier, party gains Carrier Flow Composite: +2.5% Lunar-Charged DMG per 100 ATK, capped at 50%.",
         "gating": {
           "constellationMin": 1
         },
-        "states": [
-          {
-            "value": "on",
-            "modifiers": {
-              "lunarcharged_dmg_": {
-                "formulaRef": "ineffa.c1.after_shield.lunarcharged_dmg"
-              }
-            }
+        "modifiers": {
+          "lunarcharged_dmg_": {
+            "formulaRef": "ineffa.c1.after_shield.lunarcharged_dmg"
           }
-        ]
+        }
       }
     ]
   }
