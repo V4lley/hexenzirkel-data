@@ -131,20 +131,24 @@
     }
   },
   "buffs": {
-    "self_modifiers_json": {},
+    "self_modifiers_json": {
+      "eleMas_from_atk_": 0.06
+    },
     "self_conditional_modifiers_json": [],
     "team_modifiers_json": {
       "lunarcharged_baseDmg_": 0.14
     },
-    "team_conditional_modifiers_json": [
+    "others_conditional_modifiers_json": [
       {
         "conditionKey": "a1Panoramic",
         "source": "avatar_10000116",
-        "description": "A1 Panoramic Permutation Protocol: on Burst, party gains EM equal to 6% of Ineffa's ATK for 20s. Modeled as a flat team buff assuming 2800 ATK (0.06 x 2800 = 168 EM).",
+        "description": "A1 Panoramic Permutation Protocol: on Burst, party gains EM equal to 6% of Ineffa's ATK for 20s. Applied statically to teammates (flat 168 EM = 0.06 x assumed 2800 ATK); when Ineffa herself is scored the buff is dynamic (eleMas_from_atk_ in self_modifiers).",
         "modifiers": {
           "eleMas": 168.0
         }
-      },
+      }
+    ],
+    "team_conditional_modifiers_json": [
       {
         "conditionKey": "c1AfterShield",
         "source": "avatar_10000116",
