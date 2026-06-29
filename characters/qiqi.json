@@ -1,0 +1,169 @@
+{
+  "display_name": "Qiqi",
+  "go_key": "Qiqi",
+  "avatar_id": 10000035,
+  "character_key": "avatar_10000035",
+  "element": "cryo",
+  "weapon_type": "sword",
+  "constellation_talent_boosts": {"skill": 5, "burst": 3},
+  "base_stats_json": {
+    "baseHp": 12368.3699148,
+    "baseAtk": 287.014056,
+    "baseDef": 922.265244,
+    "ascStatKey": "heal_",
+    "ascStatValue": 0.2215
+  },
+  "hit_definitions_json": {
+    "normal": {
+      "hit1Dmg": {
+        "element": "physical",
+        "dmgBonusKeys": ["normal_dmg_", "physical_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p0_mult"}]
+      },
+      "hit2Dmg": {
+        "element": "physical",
+        "dmgBonusKeys": ["normal_dmg_", "physical_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p1_mult"}]
+      },
+      "hit3aDmg": {
+        "element": "physical",
+        "dmgBonusKeys": ["normal_dmg_", "physical_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p2_mult"}]
+      },
+      "hit3bDmg": {
+        "element": "physical",
+        "dmgBonusKeys": ["normal_dmg_", "physical_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p2_mult"}]
+      },
+      "hit4aDmg": {
+        "element": "physical",
+        "dmgBonusKeys": ["normal_dmg_", "physical_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p3_mult"}]
+      },
+      "hit4bDmg": {
+        "element": "physical",
+        "dmgBonusKeys": ["normal_dmg_", "physical_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p3_mult"}]
+      },
+      "hit5Dmg": {
+        "element": "physical",
+        "dmgBonusKeys": ["normal_dmg_", "physical_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p4_mult"}]
+      },
+      "chargedDmg1": {
+        "element": "physical",
+        "dmgBonusKeys": ["charged_dmg_", "physical_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p5_mult"}]
+      },
+      "chargedDmg2": {
+        "element": "physical",
+        "dmgBonusKeys": ["charged_dmg_", "physical_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p5_mult"}]
+      },
+      "plungeDmg": {
+        "element": "physical",
+        "dmgBonusKeys": ["plunging_dmg_", "physical_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p6_mult"}]
+      },
+      "plungeLow": {
+        "element": "physical",
+        "dmgBonusKeys": ["plunging_dmg_", "physical_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p7_mult"}]
+      },
+      "plungeHigh": {
+        "element": "physical",
+        "dmgBonusKeys": ["plunging_dmg_", "physical_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p8_mult"}]
+      }
+    },
+    "skill": {
+      "skillDmg": {
+        "element": "cryo",
+        "dmgBonusKeys": ["skill_dmg_", "cryo_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p0_mult"}]
+      },
+      "heraldOfFrostDmg": {
+        "element": "cryo",
+        "dmgBonusKeys": ["skill_dmg_", "cryo_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p1_mult"}]
+      },
+      "heraldCoordinatedDmg": {
+        "element": "cryo",
+        "dmgBonusKeys": ["skill_dmg_", "cryo_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p2_mult"}]
+      }
+    },
+    "burst": {
+      "skillDmg": {
+        "element": "cryo",
+        "dmgBonusKeys": ["burst_dmg_", "cryo_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p0_mult"}]
+      },
+      "stellarConductDmg": {
+        "element": "cryo",
+        "dmgBonusKeys": ["burst_dmg_", "cryo_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p1_mult"}]
+      }
+    }
+  },
+  "talent_multipliers_json": {
+    "normal": {
+      "p0_mult": 0.7463,
+      "p1_mult": 0.7684,
+      "p2_mult": 0.4777,
+      "p3_mult": 0.4879,
+      "p4_mult": 1.2461,
+      "p5_mult": 1.2716,
+      "p6_mult": 1.26378,
+      "p7_mult": 2.527025,
+      "p8_mult": 3.15639
+    },
+    "skill": {
+      "p0_mult": 1.728,
+      "p1_mult": 0.648,
+      "p2_mult": 0.432
+    },
+    "burst": {
+      "p0_mult": 5.1264,
+      "p1_mult": 5.352005
+    },
+    "source": {
+      "assumptions": {
+        "constellation": 0,
+        "characterLevel": 90,
+        "autoTalentLevel": 10,
+        "burstTalentLevel": 10,
+        "skillTalentLevel": 10
+      },
+      "nanokaVersion": "6.7",
+      "goCharacterKey": "Qiqi"
+    },
+    "passive": {
+      "a1IncHealOnReaction": 0.2,
+      "a4StellarConductReactionDmg": 0.5
+    },
+    "constellation": {
+      "c2NaCaDmgVsCryo": 0.15,
+      "c4TalismanAtkDecrease": 0.2
+    }
+  },
+  "buffs": {
+    "self_modifiers_json": {},
+    "self_conditional_modifiers_json": [
+      {
+        "conditionKey": "c2FrozenToTheBone",
+        "source": "avatar_10000035",
+        "gating": {"constellationMin": 2},
+        "description": "C2 Frozen to the Bone: Qiqi's Normal and Charged Attack DMG against opponents affected by Cryo is increased by 15%.",
+        "states": [
+          {
+            "value": "on",
+            "modifiers": {"normal_dmg_": 0.15, "charged_dmg_": 0.15}
+          }
+        ]
+      }
+    ],
+    "team_modifiers_json": {},
+    "team_conditional_modifiers_json": []
+  }
+}
