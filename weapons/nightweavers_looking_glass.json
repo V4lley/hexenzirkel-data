@@ -1,5 +1,6 @@
 {
   "weapon_key": "14520",
+  "rarity": 5,
   "display_name": "Nightweaver's Looking Glass",
   "base_stats_json": {
     "baseAtk": 541.829758,

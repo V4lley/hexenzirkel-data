@@ -1,5 +1,6 @@
 {
   "weapon_key": "13406",
+  "rarity": 4,
   "display_name": "Lithic Spear",
   "base_stats_json": {
     "baseAtk": 564.7837244,

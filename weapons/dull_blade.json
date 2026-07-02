@@ -1,5 +1,6 @@
 {
   "weapon_key": "11101",
+  "rarity": 1,
   "display_name": "Dull Blade",
   "base_stats_json": {
     "baseAtk": 23.245,

@@ -1,5 +1,6 @@
 {
   "weapon_key": "15302",
+  "rarity": 3,
   "display_name": "Sharpshooter's Oath",
   "base_stats_json": {
     "baseAtk": 401.2935898,

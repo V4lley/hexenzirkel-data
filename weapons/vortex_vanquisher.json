@@ -1,5 +1,6 @@
 {
   "weapon_key": "13504",
+  "rarity": 5,
   "display_name": "Vortex Vanquisher",
   "base_stats_json": {
     "baseAtk": 608.0745972,

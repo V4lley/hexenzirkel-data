@@ -1,5 +1,6 @@
 {
   "weapon_key": "14304",
+  "rarity": 3,
   "display_name": "Emerald Orb",
   "base_stats_json": {
     "baseAtk": 448.2215814,

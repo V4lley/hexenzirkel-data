@@ -1,5 +1,6 @@
 {
   "weapon_key": "12305",
+  "rarity": 3,
   "display_name": "Debate Club",
   "base_stats_json": {
     "baseAtk": 401.2935898,

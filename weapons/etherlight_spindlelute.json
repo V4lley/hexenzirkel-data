@@ -1,5 +1,6 @@
 {
   "weapon_key": "14432",
+  "rarity": 4,
   "display_name": "Etherlight Spindlelute",
   "base_stats_json": {
     "baseAtk": 509.605949,

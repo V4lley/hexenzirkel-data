@@ -1,5 +1,6 @@
 {
   "weapon_key": "11428",
+  "rarity": 4,
   "display_name": "Sword of Narzissenkreuz",
   "base_stats_json": {
     "baseAtk": 509.605949,

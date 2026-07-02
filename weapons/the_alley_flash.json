@@ -1,5 +1,6 @@
 {
   "weapon_key": "11410",
+  "rarity": 4,
   "display_name": "The Alley Flash",
   "base_stats_json": {
     "baseAtk": 620.0329535,

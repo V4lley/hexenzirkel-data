@@ -1,5 +1,6 @@
 {
   "weapon_key": "14303",
+  "rarity": 3,
   "display_name": "Otherworldly Story",
   "base_stats_json": {
     "baseAtk": 401.2935898,

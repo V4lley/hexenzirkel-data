@@ -1,5 +1,6 @@
 {
   "weapon_key": "15511",
+  "rarity": 5,
   "display_name": "Hunter's Path",
   "base_stats_json": {
     "baseAtk": 541.829758,

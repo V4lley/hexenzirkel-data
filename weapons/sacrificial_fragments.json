@@ -1,5 +1,6 @@
 {
   "weapon_key": "14403",
+  "rarity": 4,
   "display_name": "Sacrificial Fragments",
   "base_stats_json": {
     "baseAtk": 454.36315250000007,

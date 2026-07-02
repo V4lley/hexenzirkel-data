@@ -1,5 +1,6 @@
 {
   "weapon_key": "11301",
+  "rarity": 3,
   "display_name": "Cool Steel",
   "base_stats_json": {
     "baseAtk": 401.2935898,

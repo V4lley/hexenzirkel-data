@@ -1,5 +1,6 @@
 {
   "weapon_key": "11406",
+  "rarity": 4,
   "display_name": "Prototype Rancour",
   "base_stats_json": {
     "baseAtk": 564.7837244,

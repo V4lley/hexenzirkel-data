@@ -1,5 +1,6 @@
 {
   "weapon_key": "11434",
+  "rarity": 4,
   "display_name": "Moonweaver's Dawn",
   "base_stats_json": {
     "baseAtk": 564.7837244,

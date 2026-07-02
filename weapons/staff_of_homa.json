@@ -1,5 +1,6 @@
 {
   "weapon_key": "13501",
+  "rarity": 5,
   "display_name": "Staff of Homa",
   "base_stats_json": {
     "baseAtk": 608.0745972,

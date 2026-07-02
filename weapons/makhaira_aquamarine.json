@@ -1,5 +1,6 @@
 {
   "weapon_key": "12415",
+  "rarity": 4,
   "display_name": "Makhaira Aquamarine",
   "base_stats_json": {
     "baseAtk": 509.605949,

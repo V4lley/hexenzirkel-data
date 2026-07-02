@@ -1,5 +1,6 @@
 {
   "weapon_key": "14407",
+  "rarity": 4,
   "display_name": "Mappa Mare",
   "base_stats_json": {
     "baseAtk": 564.7837244,

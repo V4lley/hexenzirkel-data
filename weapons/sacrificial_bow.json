@@ -1,5 +1,6 @@
 {
   "weapon_key": "15403",
+  "rarity": 4,
   "display_name": "Sacrificial Bow",
   "base_stats_json": {
     "baseAtk": 564.7837244,

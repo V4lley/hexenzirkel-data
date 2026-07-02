@@ -1,5 +1,6 @@
 {
   "weapon_key": "11512",
+  "rarity": 5,
   "display_name": "Light of Foliar Incision",
   "base_stats_json": {
     "baseAtk": 541.829758,

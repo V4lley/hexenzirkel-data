@@ -1,5 +1,6 @@
 {
   "weapon_key": "15513",
+  "rarity": 5,
   "display_name": "Silvershower Heartstrings",
   "base_stats_json": {
     "baseAtk": 541.829758,

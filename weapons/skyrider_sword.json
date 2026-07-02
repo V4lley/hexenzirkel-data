@@ -1,5 +1,6 @@
 {
   "weapon_key": "11306",
+  "rarity": 3,
   "display_name": "Skyrider Sword",
   "base_stats_json": {
     "baseAtk": 354.37940000000003,

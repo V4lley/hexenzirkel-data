@@ -1,5 +1,6 @@
 {
   "weapon_key": "13301",
+  "rarity": 3,
   "display_name": "White Tassel",
   "base_stats_json": {
     "baseAtk": 401.2935898,

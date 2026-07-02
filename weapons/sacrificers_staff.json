@@ -1,5 +1,6 @@
 {
   "weapon_key": "13434",
+  "rarity": 4,
   "display_name": "Sacrificer's Staff",
   "base_stats_json": {
     "baseAtk": 620.0329535,

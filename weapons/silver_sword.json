@@ -1,5 +1,6 @@
 {
   "weapon_key": "11201",
+  "rarity": 2,
   "display_name": "Silver Sword",
   "base_stats_json": {
     "baseAtk": 32.93,

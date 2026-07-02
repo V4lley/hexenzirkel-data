@@ -1,5 +1,6 @@
 {
   "weapon_key": "15417",
+  "rarity": 4,
   "display_name": "King's Squire",
   "base_stats_json": {
     "baseAtk": 454.36315250000007,

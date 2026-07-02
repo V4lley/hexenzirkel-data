@@ -1,5 +1,6 @@
 {
   "weapon_key": "14305",
+  "rarity": 3,
   "display_name": "Twin Nephrite",
   "base_stats_json": {
     "baseAtk": 448.2215814,

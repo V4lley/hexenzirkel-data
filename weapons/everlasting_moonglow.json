@@ -1,5 +1,6 @@
 {
   "weapon_key": "14506",
+  "rarity": 5,
   "display_name": "Everlasting Moonglow",
   "base_stats_json": {
     "baseAtk": 608.0745972,

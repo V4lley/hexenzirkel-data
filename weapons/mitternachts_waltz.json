@@ -1,5 +1,6 @@
 {
   "weapon_key": "15412",
+  "rarity": 4,
   "display_name": "Mitternachts Waltz",
   "base_stats_json": {
     "baseAtk": 509.605949,

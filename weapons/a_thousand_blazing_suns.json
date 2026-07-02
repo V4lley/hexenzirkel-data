@@ -1,5 +1,6 @@
 {
   "weapon_key": "12514",
+  "rarity": 5,
   "display_name": "A Thousand Blazing Suns",
   "base_stats_json": {
     "baseAtk": 740.5801544000001,

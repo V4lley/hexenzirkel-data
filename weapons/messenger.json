@@ -1,5 +1,6 @@
 {
   "weapon_key": "15305",
+  "rarity": 3,
   "display_name": "Messenger",
   "base_stats_json": {
     "baseAtk": 448.2215814,

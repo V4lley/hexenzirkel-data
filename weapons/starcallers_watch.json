@@ -1,5 +1,6 @@
 {
   "weapon_key": "14517",
+  "rarity": 5,
   "display_name": "Starcaller's Watch",
   "base_stats_json": {
     "baseAtk": 541.829758,

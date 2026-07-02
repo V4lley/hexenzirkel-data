@@ -1,5 +1,6 @@
 {
   "weapon_key": "11417",
+  "rarity": 4,
   "display_name": "Sapwood Blade",
   "base_stats_json": {
     "baseAtk": 564.7837244,

@@ -1,5 +1,6 @@
 {
   "weapon_key": "15514",
+  "rarity": 5,
   "display_name": "Astral Vulture's Crimson Plumage",
   "base_stats_json": {
     "baseAtk": 608.0745972,

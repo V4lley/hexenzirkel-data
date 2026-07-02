@@ -1,5 +1,6 @@
 {
   "weapon_key": "14504",
+  "rarity": 5,
   "display_name": "Memory of Dust",
   "base_stats_json": {
     "baseAtk": 608.0745972,

@@ -1,5 +1,6 @@
 {
   "weapon_key": "12424",
+  "rarity": 4,
   "display_name": "Talking Stick",
   "base_stats_json": {
     "baseAtk": 564.7837244,

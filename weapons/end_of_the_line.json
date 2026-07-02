@@ -1,5 +1,6 @@
 {
   "weapon_key": "15418",
+  "rarity": 4,
   "display_name": "End of the Line",
   "base_stats_json": {
     "baseAtk": 509.605949,

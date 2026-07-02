@@ -1,5 +1,6 @@
 {
   "weapon_key": "12512",
+  "rarity": 5,
   "display_name": "Verdict",
   "base_stats_json": {
     "baseAtk": 674.3345459999999,

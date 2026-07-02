@@ -1,5 +1,6 @@
 {
   "weapon_key": "14505",
+  "rarity": 5,
   "display_name": "Jadefall's Splendor",
   "base_stats_json": {
     "baseAtk": 608.0745972,

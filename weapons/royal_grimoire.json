@@ -1,5 +1,6 @@
 {
   "weapon_key": "14404",
+  "rarity": 4,
   "display_name": "Royal Grimoire",
   "base_stats_json": {
     "baseAtk": 564.7837244,

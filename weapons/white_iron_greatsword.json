@@ -1,5 +1,6 @@
 {
   "weapon_key": "12303",
+  "rarity": 3,
   "display_name": "White Iron Greatsword",
   "base_stats_json": {
     "baseAtk": 401.2935898,

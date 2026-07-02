@@ -1,5 +1,6 @@
 {
   "weapon_key": "15503",
+  "rarity": 5,
   "display_name": "Elegy for the End",
   "base_stats_json": {
     "baseAtk": 608.0745972,

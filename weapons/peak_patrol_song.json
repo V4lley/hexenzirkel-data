@@ -1,5 +1,6 @@
 {
   "weapon_key": "11516",
+  "rarity": 5,
   "display_name": "Peak Patrol Song",
   "base_stats_json": {
     "baseAtk": 541.829758,

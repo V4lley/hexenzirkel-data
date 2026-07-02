@@ -1,5 +1,6 @@
 {
   "weapon_key": "15201",
+  "rarity": 2,
   "display_name": "Seasoned Hunter's Bow",
   "base_stats_json": {
     "baseAtk": 32.93,

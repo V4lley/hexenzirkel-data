@@ -1,5 +1,6 @@
 {
   "weapon_key": "13509",
+  "rarity": 5,
   "display_name": "Engulfing Lightning",
   "base_stats_json": {
     "baseAtk": 608.0745972,

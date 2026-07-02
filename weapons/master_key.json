@@ -1,5 +1,6 @@
 {
   "weapon_key": "12433",
+  "rarity": 4,
   "display_name": "Master Key",
   "base_stats_json": {
     "baseAtk": 454.36315250000007,

@@ -1,5 +1,6 @@
 {
   "weapon_key": "12414",
+  "rarity": 4,
   "display_name": "Katsuragikiri Nagamasa",
   "base_stats_json": {
     "baseAtk": 509.605949,

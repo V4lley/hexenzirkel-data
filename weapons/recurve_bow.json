@@ -1,5 +1,6 @@
 {
   "weapon_key": "15303",
+  "rarity": 3,
   "display_name": "Recurve Bow",
   "base_stats_json": {
     "baseAtk": 354.37940000000003,

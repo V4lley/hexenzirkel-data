@@ -1,5 +1,6 @@
 {
   "weapon_key": "13507",
+  "rarity": 5,
   "display_name": "Calamity Queller",
   "base_stats_json": {
     "baseAtk": 740.5801544000001,

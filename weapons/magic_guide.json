@@ -1,5 +1,6 @@
 {
   "weapon_key": "14301",
+  "rarity": 3,
   "display_name": "Magic Guide",
   "base_stats_json": {
     "baseAtk": 354.37940000000003,

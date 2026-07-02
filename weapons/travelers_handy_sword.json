@@ -1,5 +1,6 @@
 {
   "weapon_key": "11303",
+  "rarity": 3,
   "display_name": "Traveler's Handy Sword",
   "base_stats_json": {
     "baseAtk": 448.2215814,

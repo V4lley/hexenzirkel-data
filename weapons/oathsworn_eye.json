@@ -1,5 +1,6 @@
 {
   "weapon_key": "14415",
+  "rarity": 4,
   "display_name": "Oathsworn Eye",
   "base_stats_json": {
     "baseAtk": 564.7837244,

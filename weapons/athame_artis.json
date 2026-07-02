@@ -1,5 +1,6 @@
 {
   "weapon_key": "11518",
+  "rarity": 5,
   "display_name": "Athame Artis",
   "base_stats_json": {
     "baseAtk": 608.0745972,

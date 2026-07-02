@@ -1,5 +1,6 @@
 {
   "weapon_key": "13407",
+  "rarity": 4,
   "display_name": "Favonius Lance",
   "base_stats_json": {
     "baseAtk": 564.7837244,

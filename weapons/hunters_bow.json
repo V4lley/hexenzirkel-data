@@ -1,5 +1,6 @@
 {
   "weapon_key": "15101",
+  "rarity": 1,
   "display_name": "Hunter's Bow",
   "base_stats_json": {
     "baseAtk": 23.245,

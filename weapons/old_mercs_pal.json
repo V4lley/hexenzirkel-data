@@ -1,5 +1,6 @@
 {
   "weapon_key": "12201",
+  "rarity": 2,
   "display_name": "Old Merc's Pal",
   "base_stats_json": {
     "baseAtk": 32.93,

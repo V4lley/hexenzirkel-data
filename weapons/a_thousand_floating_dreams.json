@@ -1,5 +1,6 @@
 {
   "weapon_key": "14511",
+  "rarity": 5,
   "display_name": "A Thousand Floating Dreams",
   "base_stats_json": {
     "baseAtk": 541.829758,

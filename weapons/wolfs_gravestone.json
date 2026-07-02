@@ -1,5 +1,6 @@
 {
   "weapon_key": "12502",
+  "rarity": 5,
   "display_name": "Wolf's Gravestone",
   "base_stats_json": {
     "baseAtk": 608.0745972,

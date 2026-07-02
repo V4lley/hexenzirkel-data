@@ -1,5 +1,6 @@
 {
   "weapon_key": "11414",
+  "rarity": 4,
   "display_name": "Amenoma Kageuchi",
   "base_stats_json": {
     "baseAtk": 454.36315250000007,

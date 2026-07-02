@@ -1,5 +1,6 @@
 {
   "weapon_key": "13511",
+  "rarity": 5,
   "display_name": "Staff of the Scarlet Sands",
   "base_stats_json": {
     "baseAtk": 541.829758,

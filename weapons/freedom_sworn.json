@@ -1,5 +1,6 @@
 {
   "weapon_key": "11503",
+  "rarity": 5,
   "display_name": "Freedom-Sworn",
   "base_stats_json": {
     "baseAtk": 608.0745972,

@@ -1,5 +1,6 @@
 {
   "weapon_key": "13201",
+  "rarity": 2,
   "display_name": "Iron Point",
   "base_stats_json": {
     "baseAtk": 32.93,

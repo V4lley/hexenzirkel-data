@@ -1,5 +1,6 @@
 {
   "weapon_key": "11509",
+  "rarity": 5,
   "display_name": "Mistsplitter Reforged",
   "base_stats_json": {
     "baseAtk": 674.3345459999999,

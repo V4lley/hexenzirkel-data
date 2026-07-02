@@ -1,5 +1,6 @@
 {
   "weapon_key": "12427",
+  "rarity": 4,
   "display_name": "Portable Power Saw",
   "base_stats_json": {
     "baseAtk": 454.36315250000007,

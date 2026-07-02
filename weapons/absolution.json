@@ -1,5 +1,6 @@
 {
   "weapon_key": "11515",
+  "rarity": 5,
   "display_name": "Absolution",
   "base_stats_json": {
     "baseAtk": 674.3345459999999,

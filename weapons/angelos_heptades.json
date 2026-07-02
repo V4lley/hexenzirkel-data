@@ -1,5 +1,6 @@
 {
   "weapon_key": "14523",
+  "rarity": 5,
   "display_name": "Angelos' Heptades",
   "base_stats_json": {
     "baseAtk": 740.5801544000001,

@@ -1,5 +1,6 @@
 {
   "weapon_key": "11418",
+  "rarity": 4,
   "display_name": "Xiphos' Moonlight",
   "base_stats_json": {
     "baseAtk": 509.605949,

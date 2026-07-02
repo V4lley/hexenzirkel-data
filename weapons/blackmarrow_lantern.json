@@ -1,5 +1,6 @@
 {
   "weapon_key": "14433",
+  "rarity": 4,
   "display_name": "Blackmarrow Lantern",
   "base_stats_json": {
     "baseAtk": 454.36315250000007,

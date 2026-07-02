@@ -1,5 +1,6 @@
 {
   "weapon_key": "14502",
+  "rarity": 5,
   "display_name": "Lost Prayer to the Sacred Winds",
   "base_stats_json": {
     "baseAtk": 608.0745972,

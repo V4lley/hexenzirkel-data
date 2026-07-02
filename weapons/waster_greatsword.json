@@ -1,5 +1,6 @@
 {
   "weapon_key": "12101",
+  "rarity": 1,
   "display_name": "Waster Greatsword",
   "base_stats_json": {
     "baseAtk": 23.245,

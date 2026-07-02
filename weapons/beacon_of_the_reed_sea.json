@@ -1,5 +1,6 @@
 {
   "weapon_key": "12511",
+  "rarity": 5,
   "display_name": "Beacon of the Reed Sea",
   "base_stats_json": {
     "baseAtk": 608.0745972,

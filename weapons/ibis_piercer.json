@@ -1,5 +1,6 @@
 {
   "weapon_key": "15419",
+  "rarity": 4,
   "display_name": "Ibis Piercer",
   "base_stats_json": {
     "baseAtk": 564.7837244,

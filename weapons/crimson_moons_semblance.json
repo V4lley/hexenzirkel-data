@@ -1,5 +1,6 @@
 {
   "weapon_key": "13512",
+  "rarity": 5,
   "display_name": "Crimson Moon's Semblance",
   "base_stats_json": {
     "baseAtk": 674.3345459999999,

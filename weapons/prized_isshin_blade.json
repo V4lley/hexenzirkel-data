@@ -1,5 +1,6 @@
 {
   "weapon_key": "11419",
+  "rarity": 4,
   "display_name": "Prized Isshin Blade",
   "base_stats_json": {
     "baseAtk": 509.605949,

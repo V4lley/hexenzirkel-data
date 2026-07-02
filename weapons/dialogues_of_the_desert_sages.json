@@ -1,5 +1,6 @@
 {
   "weapon_key": "13426",
+  "rarity": 4,
   "display_name": "Dialogues of the Desert Sages",
   "base_stats_json": {
     "baseAtk": 509.605949,

@@ -1,5 +1,6 @@
 {
   "weapon_key": "12301",
+  "rarity": 3,
   "display_name": "Ferrous Shadow",
   "base_stats_json": {
     "baseAtk": 401.2935898,

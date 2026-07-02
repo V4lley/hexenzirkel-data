@@ -1,5 +1,6 @@
 {
   "weapon_key": "12302",
+  "rarity": 3,
   "display_name": "Bloodtainted Greatsword",
   "base_stats_json": {
     "baseAtk": 354.37940000000003,
