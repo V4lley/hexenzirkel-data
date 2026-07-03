@@ -95,7 +95,7 @@
         "components": [
           {
             "scalingKey": "atk",
-            "multKey": "p5_mult"
+            "multKey": "p6_mult"
           }
         ]
       },
@@ -109,7 +109,7 @@
         "components": [
           {
             "scalingKey": "atk",
-            "multKey": "p6_mult"
+            "multKey": "p7_mult"
           }
         ]
       },
@@ -263,7 +263,7 @@
         "components": [
           {
             "scalingKey": "atk",
-            "multKey": "p5_mult"
+            "multKey": "p6_mult"
           }
         ]
       },
@@ -277,7 +277,7 @@
         "components": [
           {
             "scalingKey": "atk",
-            "multKey": "p6_mult"
+            "multKey": "p7_mult"
           }
         ]
       },
@@ -361,7 +361,7 @@
         "components": [
           {
             "scalingKey": "atk",
-            "multKey": "p5_mult"
+            "multKey": "p6_mult"
           }
         ]
       },
@@ -375,7 +375,7 @@
         "components": [
           {
             "scalingKey": "atk",
-            "multKey": "p6_mult"
+            "multKey": "p7_mult"
           }
         ]
       },
@@ -775,8 +775,8 @@
       "p11_mult": 3.15639
     },
     "charged": {
-      "p0_mult": 1.3243,
-      "p1_mult": 1.5181
+      "p0_mult": 1.5181,
+      "p1_mult": 1.7
     },
     "constellation1": {
       "p0_mult": 1.512
@@ -787,8 +787,8 @@
         "constellation": 0,
         "characterLevel": 90,
         "autoTalentLevel": 10,
-        "burstTalentLevel": 10,
-        "skillTalentLevel": 10
+        "burstTalentLevel": 13,
+        "skillTalentLevel": 13
       },
       "goAllStatFile": "libs/gi/stats/src/allStat_gen.json",
       "goCharacterKey": "Keqing"
