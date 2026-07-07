@@ -1,0 +1,228 @@
+{
+  "display_name": "Kaveh",
+  "go_key": "Kaveh",
+  "avatar_id": 10000081,
+  "character_key": "avatar_10000081",
+  "element": "dendro",
+  "weapon_type": "claymore",
+  "constellation_talent_boosts": {
+    "burst": 3,
+    "skill": 5
+  },
+  "nation": "sumeru",
+  "base_stats_json": {
+    "baseHp": 11962.4064649,
+    "baseAtk": 233.6369112,
+    "baseDef": 750.7736775,
+    "ascStatKey": "eleMas",
+    "ascStatValue": 96
+  },
+  "hit_definitions_json": {
+    "normal": {
+      "0": {
+        "element": "physical",
+        "dmgBonusKeys": [
+          "normal_dmg_",
+          "physical_dmg_",
+          "all_dmg_"
+        ],
+        "components": [
+          {
+            "scalingKey": "atk",
+            "multKey": "0_mult"
+          }
+        ]
+      },
+      "1": {
+        "element": "physical",
+        "dmgBonusKeys": [
+          "normal_dmg_",
+          "physical_dmg_",
+          "all_dmg_"
+        ],
+        "components": [
+          {
+            "scalingKey": "atk",
+            "multKey": "1_mult"
+          }
+        ]
+      },
+      "2": {
+        "element": "physical",
+        "dmgBonusKeys": [
+          "normal_dmg_",
+          "physical_dmg_",
+          "all_dmg_"
+        ],
+        "components": [
+          {
+            "scalingKey": "atk",
+            "multKey": "2_mult"
+          }
+        ]
+      },
+      "3": {
+        "element": "physical",
+        "dmgBonusKeys": [
+          "normal_dmg_",
+          "physical_dmg_",
+          "all_dmg_"
+        ],
+        "components": [
+          {
+            "scalingKey": "atk",
+            "multKey": "3_mult"
+          }
+        ]
+      }
+    },
+    "charged": {
+      "spin": {
+        "element": "physical",
+        "dmgBonusKeys": [
+          "charged_dmg_",
+          "physical_dmg_",
+          "all_dmg_"
+        ],
+        "components": [
+          {
+            "scalingKey": "atk",
+            "multKey": "spin_mult"
+          }
+        ]
+      },
+      "final": {
+        "element": "physical",
+        "dmgBonusKeys": [
+          "charged_dmg_",
+          "physical_dmg_",
+          "all_dmg_"
+        ],
+        "components": [
+          {
+            "scalingKey": "atk",
+            "multKey": "final_mult"
+          }
+        ]
+      }
+    },
+    "plunging": {
+      "dmg": {
+        "element": "physical",
+        "dmgBonusKeys": [
+          "plunging_dmg_",
+          "physical_dmg_",
+          "all_dmg_"
+        ],
+        "components": [
+          {
+            "scalingKey": "atk",
+            "multKey": "dmg_mult"
+          }
+        ]
+      },
+      "low": {
+        "element": "physical",
+        "dmgBonusKeys": [
+          "plunging_dmg_",
+          "physical_dmg_",
+          "all_dmg_"
+        ],
+        "components": [
+          {
+            "scalingKey": "atk",
+            "multKey": "low_mult"
+          }
+        ]
+      },
+      "high": {
+        "element": "physical",
+        "dmgBonusKeys": [
+          "plunging_dmg_",
+          "physical_dmg_",
+          "all_dmg_"
+        ],
+        "components": [
+          {
+            "scalingKey": "atk",
+            "multKey": "high_mult"
+          }
+        ]
+      }
+    },
+    "skill": {
+      "dmg": {
+        "element": "dendro",
+        "dmgBonusKeys": [
+          "skill_dmg_",
+          "dendro_dmg_",
+          "all_dmg_"
+        ],
+        "components": [
+          {
+            "scalingKey": "atk",
+            "multKey": "dmg_mult"
+          }
+        ]
+      }
+    },
+    "burst": {
+      "dmg": {
+        "element": "dendro",
+        "dmgBonusKeys": [
+          "burst_dmg_",
+          "dendro_dmg_",
+          "all_dmg_"
+        ],
+        "components": [
+          {
+            "scalingKey": "atk",
+            "multKey": "dmg_mult"
+          }
+        ]
+      }
+    }
+  },
+  "talent_multipliers_json": {
+    "normal": {
+      "0_mult": 1.505996,
+      "1_mult": 1.376575,
+      "2_mult": 1.665626,
+      "3_mult": 2.029885
+    },
+    "charged": {
+      "spin_mult": 1.0506,
+      "final_mult": 1.9006
+    },
+    "plunging": {
+      "dmg_mult": 1.47441,
+      "low_mult": 2.948195,
+      "high_mult": 3.682455
+    },
+    "skill": {
+      "dmg_mult": 4.335
+    },
+    "burst": {
+      "dmg_mult": 3.4
+    },
+    "source": {
+      "goCharacterKey": "Kaveh",
+      "note": "Generated from Genshin Optimizer sheets (master) + allStat_gen skillParam. Hit keys match GO target paths; multKey = <hitKey>_mult. Levels: Lv10, except constellation-boosted talents of 4-star characters at Lv13 (C6 assumed). Normal/charged/plunging default to physical unless the sheet overrides the element (infusions are NOT applied).",
+      "assumptions": {
+        "constellation": 6,
+        "characterLevel": 90,
+        "autoTalentLevel": 10,
+        "skillTalentLevel": 13,
+        "burstTalentLevel": 13
+      }
+    }
+  },
+  "buffs": {
+    "self_modifiers_json": {},
+    "self_conditional_modifiers_json": [],
+    "team_modifiers_json": {},
+    "team_conditional_modifiers_json": [],
+    "others_modifiers_json": {},
+    "others_conditional_modifiers_json": []
+  }
+}

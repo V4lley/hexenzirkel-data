@@ -5,7 +5,10 @@
   "character_key": "avatar_10000055",
   "element": "geo",
   "weapon_type": "bow",
-  "constellation_talent_boosts": {"skill": 3, "burst": 5},
+  "constellation_talent_boosts": {
+    "skill": 3,
+    "burst": 5
+  },
   "nation": "inazuma",
   "base_stats_json": {
     "baseHp": 9570.7905,
@@ -18,11 +21,11 @@
   "talent_multipliers_json": {
     "source": {
       "goCharacterKey": "Gorou",
-      "note": "Support teammate: only team buffs are used by the evaluator. Combat hit definitions/multipliers can be added if a Gorou-as-main leaderboard is ever needed. Skill values: Standing Firm flat DEF 371.088 and Crunch Geo DMG 15% at skill Lv10 (Project Amber).",
+      "note": "Support teammate: only team buffs are used by the evaluator. Combat hit definitions/multipliers can be added if a Gorou-as-main leaderboard is ever needed. Skill values: Standing Firm flat DEF 438.09 and Crunch Geo DMG 15% at skill Lv13 (Project Amber).",
       "assumptions": {
-        "constellation": 0,
+        "constellation": 6,
         "characterLevel": 90,
-        "skillTalentLevel": 10
+        "skillTalentLevel": 13
       }
     }
   },
@@ -34,9 +37,9 @@
       {
         "conditionKey": "standingFirm",
         "source": "avatar_10000055",
-        "description": "Elemental Skill (General's War Banner) — Standing Firm (1+ Geo party member): nearby active characters gain a flat DEF bonus of 371.088 (skill Lv10).",
+        "description": "Elemental Skill (General's War Banner) — Standing Firm (1+ Geo party member): nearby active characters gain a flat DEF bonus of 438.09 (skill Lv13, 4-star C6 assumption).",
         "modifiers": {
-          "def": 371.088
+          "def": 438.09
         }
       },
       {

@@ -1,0 +1,54 @@
+{
+  "display_name": "Xiangling",
+  "go_key": "Xiangling",
+  "avatar_id": 10000023,
+  "character_key": "avatar_10000023",
+  "element": "pyro",
+  "weapon_type": "polearm",
+  "constellation_talent_boosts": {"burst": 3, "skill": 5},
+  "nation": "liyue",
+  "base_stats_json": {
+    "baseHp": 10874.9149,
+    "baseAtk": 225.141022,
+    "baseDef": 668.8710945,
+    "ascStatKey": "eleMas",
+    "ascStatValue": 96
+  },
+  "hit_definitions_json": {},
+  "talent_multipliers_json": {
+    "source": {
+      "goCharacterKey": "Xiangling",
+      "note": "Support teammate: only team buffs are used by the evaluator. Combat hit definitions/multipliers can be added if a Xiangling-as-main leaderboard is ever needed. Base stats from GO allStat_gen (GROW_CURVE_HP_S4/ATTACK_S4 Lv90 = 8.349).",
+      "assumptions": {
+        "constellation": 0,
+        "characterLevel": 90
+      }
+    }
+  },
+  "buffs": {
+    "self_modifiers_json": {},
+    "self_conditional_modifiers_json": [],
+    "team_modifiers_json": {},
+    "team_conditional_modifiers_json": [
+      {
+        "conditionKey": "a4ChiliPepper",
+        "source": "avatar_10000023",
+        "description": "A4 Beware, It's Super Hot!: when Guoba Attack's effects end, Guoba leaves a chili pepper; picking it up increases ATK by 10% for 10s.",
+        "modifiers": {
+          "atk_": 0.10
+        }
+      },
+      {
+        "conditionKey": "c1GuobaPyroShred",
+        "source": "avatar_10000023",
+        "gating": {
+          "constellationMin": 1
+        },
+        "description": "C1 Crispy Outside, Tender Inside: opponents hit by Guoba's attacks have their Pyro RES reduced by 15% for 6s.",
+        "modifiers": {
+          "pyro_enemyRes_": -0.15
+        }
+      }
+    ]
+  }
+}

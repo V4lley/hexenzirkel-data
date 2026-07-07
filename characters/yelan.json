@@ -5,7 +5,10 @@
   "character_key": "avatar_10000060",
   "element": "hydro",
   "weapon_type": "bow",
-  "constellation_talent_boosts": {"skill": 5, "burst": 3},
+  "constellation_talent_boosts": {
+    "skill": 5,
+    "burst": 3
+  },
   "base_stats_json": {
     "baseHp": 14450.174906400001,
     "baseAtk": 243.96194960000003,
@@ -229,10 +232,19 @@
         "skillTalentLevel": 10
       },
       "goAllStatFile": "libs/gi/stats/src/allStat_gen.json",
-      "goCharacterKey": "Yelan"
+      "goCharacterKey": "Yelan",
+      "note": "2026-07: charged/plunging multipliers were missing (resolved to 0). charged p4 = fully-charged aimed shot 223.2% (GO charged.aimedCharged lv10); plunging = standard bow values."
     },
     "passive": {},
-    "constellation": {}
+    "constellation": {},
+    "charged": {
+      "p4_mult": 2.232
+    },
+    "plunging": {
+      "p6_mult": 1.12336,
+      "p7_mult": 2.246244,
+      "p8_mult": 2.80568
+    }
   },
   "buffs": {
     "self_modifiers_json": {},

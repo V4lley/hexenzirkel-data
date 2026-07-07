@@ -5,7 +5,10 @@
   "character_key": "avatar_10000106",
   "element": "pyro",
   "weapon_type": "claymore",
-  "constellation_talent_boosts": {"skill": 5, "burst": 3},
+  "constellation_talent_boosts": {
+    "skill": 5,
+    "burst": 3
+  },
   "base_stats_json": {
     "baseHp": 12552.058567,
     "baseAtk": 358.76757,
@@ -452,10 +455,19 @@
         "skillTalentLevel": 10
       },
       "goAllStatFile": "libs/gi/stats/src/allStat_gen.json",
-      "goCharacterKey": "Mavuika"
+      "goCharacterKey": "Mavuika",
+      "note": "2026-07: charged/plunging hit definitions read section-scoped multipliers that only existed under 'normal'; mirrored the GO lv10 values into the charged/plunging sections (they previously resolved to 0)."
     },
     "passive": {},
-    "constellation": {}
+    "constellation": {},
+    "charged": {
+      "p4_mult": 3.8318
+    },
+    "plunging": {
+      "p6_mult": 1.47441,
+      "p7_mult": 2.948195,
+      "p8_mult": 3.682455
+    }
   },
   "buffs": {
     "self_modifiers_json": {},

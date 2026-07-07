@@ -1,0 +1,242 @@
+{
+  "display_name": "Traveler (Geo)",
+  "go_key": "TravelerGeoF",
+  "avatar_id": 1000000506,
+  "character_key": "avatar_1000000506",
+  "element": "geo",
+  "weapon_type": "sword",
+  "constellation_talent_boosts": {
+    "burst": 3,
+    "skill": 5
+  },
+  "base_stats_json": {
+    "baseHp": 10874.914859,
+    "baseAtk": 212.397192,
+    "baseDef": 682.521525,
+    "ascStatKey": "atk_",
+    "ascStatValue": 0.24
+  },
+  "hit_definitions_json": {
+    "normal": {
+      "0": {
+        "element": "physical",
+        "dmgBonusKeys": [
+          "normal_dmg_",
+          "physical_dmg_",
+          "all_dmg_"
+        ],
+        "components": [
+          {
+            "scalingKey": "atk",
+            "multKey": "0_mult"
+          }
+        ]
+      },
+      "1": {
+        "element": "physical",
+        "dmgBonusKeys": [
+          "normal_dmg_",
+          "physical_dmg_",
+          "all_dmg_"
+        ],
+        "components": [
+          {
+            "scalingKey": "atk",
+            "multKey": "1_mult"
+          }
+        ]
+      },
+      "2": {
+        "element": "physical",
+        "dmgBonusKeys": [
+          "normal_dmg_",
+          "physical_dmg_",
+          "all_dmg_"
+        ],
+        "components": [
+          {
+            "scalingKey": "atk",
+            "multKey": "2_mult"
+          }
+        ]
+      },
+      "3": {
+        "element": "physical",
+        "dmgBonusKeys": [
+          "normal_dmg_",
+          "physical_dmg_",
+          "all_dmg_"
+        ],
+        "components": [
+          {
+            "scalingKey": "atk",
+            "multKey": "3_mult"
+          }
+        ]
+      },
+      "4": {
+        "element": "physical",
+        "dmgBonusKeys": [
+          "normal_dmg_",
+          "physical_dmg_",
+          "all_dmg_"
+        ],
+        "components": [
+          {
+            "scalingKey": "atk",
+            "multKey": "4_mult"
+          }
+        ]
+      }
+    },
+    "charged": {
+      "dmg1": {
+        "element": "physical",
+        "dmgBonusKeys": [
+          "charged_dmg_",
+          "physical_dmg_",
+          "all_dmg_"
+        ],
+        "components": [
+          {
+            "scalingKey": "atk",
+            "multKey": "dmg1_mult"
+          }
+        ]
+      },
+      "dmg2": {
+        "element": "physical",
+        "dmgBonusKeys": [
+          "charged_dmg_",
+          "physical_dmg_",
+          "all_dmg_"
+        ],
+        "components": [
+          {
+            "scalingKey": "atk",
+            "multKey": "dmg2_mult"
+          }
+        ]
+      }
+    },
+    "plunging": {
+      "dmg": {
+        "element": "physical",
+        "dmgBonusKeys": [
+          "plunging_dmg_",
+          "physical_dmg_",
+          "all_dmg_"
+        ],
+        "components": [
+          {
+            "scalingKey": "atk",
+            "multKey": "dmg_mult"
+          }
+        ]
+      },
+      "low": {
+        "element": "physical",
+        "dmgBonusKeys": [
+          "plunging_dmg_",
+          "physical_dmg_",
+          "all_dmg_"
+        ],
+        "components": [
+          {
+            "scalingKey": "atk",
+            "multKey": "low_mult"
+          }
+        ]
+      },
+      "high": {
+        "element": "physical",
+        "dmgBonusKeys": [
+          "plunging_dmg_",
+          "physical_dmg_",
+          "all_dmg_"
+        ],
+        "components": [
+          {
+            "scalingKey": "atk",
+            "multKey": "high_mult"
+          }
+        ]
+      }
+    },
+    "skill": {
+      "dmg": {
+        "element": "geo",
+        "dmgBonusKeys": [
+          "skill_dmg_",
+          "geo_dmg_",
+          "all_dmg_"
+        ],
+        "components": [
+          {
+            "scalingKey": "atk",
+            "multKey": "dmg_mult"
+          }
+        ]
+      }
+    },
+    "burst": {
+      "dmg": {
+        "element": "geo",
+        "dmgBonusKeys": [
+          "burst_dmg_",
+          "geo_dmg_",
+          "all_dmg_"
+        ],
+        "components": [
+          {
+            "scalingKey": "atk",
+            "multKey": "dmg_mult"
+          }
+        ]
+      }
+    }
+  },
+  "talent_multipliers_json": {
+    "normal": {
+      "0_mult": 0.8789,
+      "1_mult": 0.8585,
+      "2_mult": 1.0472,
+      "3_mult": 1.1526,
+      "4_mult": 1.3991
+    },
+    "charged": {
+      "dmg1_mult": 1.105,
+      "dmg2_mult": 1.428
+    },
+    "plunging": {
+      "dmg_mult": 1.26378,
+      "low_mult": 2.527025,
+      "high_mult": 3.15639
+    },
+    "skill": {
+      "dmg_mult": 4.464
+    },
+    "burst": {
+      "dmg_mult": 2.664
+    },
+    "source": {
+      "goCharacterKey": "TravelerGeoF",
+      "note": "Traveler (geo) — one character per element; both twins map here. Generated from Genshin Optimizer sheets + allStat_gen skillParam at Lv10. Hit keys match GO target paths; multKey = <hitKey>_mult. Enka ingestion maps avatarId 10000005/10000007 + skillDepotId to this synthetic avatar_id.",
+      "assumptions": {
+        "constellation": 0,
+        "characterLevel": 90,
+        "autoTalentLevel": 10,
+        "skillTalentLevel": 10,
+        "burstTalentLevel": 10
+      }
+    }
+  },
+  "buffs": {
+    "self_modifiers_json": {},
+    "self_conditional_modifiers_json": [],
+    "team_modifiers_json": {},
+    "team_conditional_modifiers_json": [],
+    "others_modifiers_json": {},
+    "others_conditional_modifiers_json": []
+  }
+}

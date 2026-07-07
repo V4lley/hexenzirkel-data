@@ -5,7 +5,10 @@
   "character_key": "avatar_10000090",
   "element": "pyro",
   "weapon_type": "polearm",
-  "constellation_talent_boosts": {"skill": 3, "burst": 5},
+  "constellation_talent_boosts": {
+    "skill": 3,
+    "burst": 5
+  },
   "base_stats_json": {
     "baseHp": 11962.4064649,
     "baseAtk": 193.28144472,
@@ -65,19 +68,19 @@
   },
   "talent_multipliers_json": {
     "burst": {
-      "p0_mult": 6.62688,
-      "p1_mult": 0.883584,
+      "p0_mult": 7.8234,
+      "p1_mult": 1.04312,
       "p2_mult": 15.0,
       "p3_mult": 60.0
     },
     "skill": {
-      "p0_mult": 2.0736,
-      "p1_mult": 3.1104,
-      "p2_mult": 5.0832,
+      "p0_mult": 2.448,
+      "p1_mult": 3.672,
+      "p2_mult": 6.001,
       "p3_mult": 12.0,
-      "p4_mult": 0.048,
-      "p5_mult": 564.98486,
-      "p6_mult": 0.5184,
+      "p4_mult": 0.056667,
+      "p5_mult": 706.24,
+      "p6_mult": 0.612,
       "p7_mult": 10.0,
       "p8_mult": 15.0
     },
@@ -96,11 +99,11 @@
     "source": {
       "goCommit": "2937f8a80846b18c3495b7657c0bae5c78c82606",
       "assumptions": {
-        "constellation": 0,
+        "constellation": 6,
         "characterLevel": 90,
         "autoTalentLevel": 10,
-        "burstTalentLevel": 10,
-        "skillTalentLevel": 10
+        "burstTalentLevel": 13,
+        "skillTalentLevel": 13
       },
       "goAllStatFile": "libs/gi/stats/src/allStat_gen.json",
       "goCharacterKey": "Chevreuse"

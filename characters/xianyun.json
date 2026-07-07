@@ -5,7 +5,10 @@
   "character_key": "avatar_10000093",
   "element": "anemo",
   "weapon_type": "catalyst",
-  "constellation_talent_boosts": {"skill": 5, "burst": 3},
+  "constellation_talent_boosts": {
+    "skill": 5,
+    "burst": 3
+  },
   "base_stats_json": {
     "baseHp": 10409.023958000002,
     "baseAtk": 334.849732,
@@ -54,10 +57,6 @@
           {
             "scalingKey": "atk",
             "multKey": "p2_mult"
-          },
-          {
-            "scalingKey": "atk",
-            "multKey": "p3_mult"
           }
         ]
       },
@@ -181,7 +180,30 @@
       }
     }
   },
-  "talent_multipliers_json": {},
+  "talent_multipliers_json": {
+    "normal": {
+      "p0_mult": 0.725443,
+      "p1_mult": 0.699394,
+      "p2_mult": 0.879797,
+      "p4_mult": 1.168502,
+      "p5_mult": 2.21616
+    },
+    "plunging": {
+      "p7_mult": 1.12336,
+      "p8_mult": 2.246244,
+      "p9_mult": 2.80568
+    },
+    "skill": {
+      "p0_mult": 0.4464
+    },
+    "burst": {
+      "p0_mult": 1.944,
+      "p1_mult": 0.7056
+    },
+    "source": {
+      "note": "2026-07: all multipliers were missing (hits resolved to 0); filled from GO lv10. Per GO her 3-Hit is a single strike, so hit_3's second component (p3) was removed; hit_4 = p4 (116.85%), charged_1 = p5 (221.6%)."
+    }
+  },
   "buffs": {
     "self_modifiers_json": {},
     "self_conditional_modifiers_json": [],

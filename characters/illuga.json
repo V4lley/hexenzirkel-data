@@ -5,7 +5,10 @@
   "character_key": "avatar_10000127",
   "element": "geo",
   "weapon_type": "polearm",
-  "constellation_talent_boosts": {"skill": 5, "burst": 3},
+  "constellation_talent_boosts": {
+    "skill": 5,
+    "burst": 3
+  },
   "nation": "nod_krai",
   "base_stats_json": {
     "baseHp": 11962.4064649,
@@ -18,93 +21,214 @@
     "normal": {
       "hit1Dmg": {
         "element": "physical",
-        "dmgBonusKeys": ["normal_dmg_", "physical_dmg_", "all_dmg_"],
-        "components": [{"scalingKey": "atk", "multKey": "p0_mult"}]
+        "dmgBonusKeys": [
+          "normal_dmg_",
+          "physical_dmg_",
+          "all_dmg_"
+        ],
+        "components": [
+          {
+            "scalingKey": "atk",
+            "multKey": "p0_mult"
+          }
+        ]
       },
       "hit2Dmg": {
         "element": "physical",
-        "dmgBonusKeys": ["normal_dmg_", "physical_dmg_", "all_dmg_"],
-        "components": [{"scalingKey": "atk", "multKey": "p1_mult"}]
+        "dmgBonusKeys": [
+          "normal_dmg_",
+          "physical_dmg_",
+          "all_dmg_"
+        ],
+        "components": [
+          {
+            "scalingKey": "atk",
+            "multKey": "p1_mult"
+          }
+        ]
       },
       "hit3aDmg": {
         "element": "physical",
-        "dmgBonusKeys": ["normal_dmg_", "physical_dmg_", "all_dmg_"],
-        "components": [{"scalingKey": "atk", "multKey": "p2_mult"}]
+        "dmgBonusKeys": [
+          "normal_dmg_",
+          "physical_dmg_",
+          "all_dmg_"
+        ],
+        "components": [
+          {
+            "scalingKey": "atk",
+            "multKey": "p2_mult"
+          }
+        ]
       },
       "hit3bDmg": {
         "element": "physical",
-        "dmgBonusKeys": ["normal_dmg_", "physical_dmg_", "all_dmg_"],
-        "components": [{"scalingKey": "atk", "multKey": "p3_mult"}]
+        "dmgBonusKeys": [
+          "normal_dmg_",
+          "physical_dmg_",
+          "all_dmg_"
+        ],
+        "components": [
+          {
+            "scalingKey": "atk",
+            "multKey": "p3_mult"
+          }
+        ]
       },
       "hit4Dmg": {
         "element": "physical",
-        "dmgBonusKeys": ["normal_dmg_", "physical_dmg_", "all_dmg_"],
-        "components": [{"scalingKey": "atk", "multKey": "p4_mult"}]
+        "dmgBonusKeys": [
+          "normal_dmg_",
+          "physical_dmg_",
+          "all_dmg_"
+        ],
+        "components": [
+          {
+            "scalingKey": "atk",
+            "multKey": "p4_mult"
+          }
+        ]
       },
       "chargedDmg": {
         "element": "physical",
-        "dmgBonusKeys": ["charged_dmg_", "physical_dmg_", "all_dmg_"],
-        "components": [{"scalingKey": "atk", "multKey": "p5_mult"}]
+        "dmgBonusKeys": [
+          "charged_dmg_",
+          "physical_dmg_",
+          "all_dmg_"
+        ],
+        "components": [
+          {
+            "scalingKey": "atk",
+            "multKey": "p5_mult"
+          }
+        ]
       },
       "plungeDmg": {
         "element": "physical",
-        "dmgBonusKeys": ["plunging_dmg_", "physical_dmg_", "all_dmg_"],
-        "components": [{"scalingKey": "atk", "multKey": "p7_mult"}]
+        "dmgBonusKeys": [
+          "plunging_dmg_",
+          "physical_dmg_",
+          "all_dmg_"
+        ],
+        "components": [
+          {
+            "scalingKey": "atk",
+            "multKey": "p7_mult"
+          }
+        ]
       },
       "plungeLowDmg": {
         "element": "physical",
-        "dmgBonusKeys": ["plunging_dmg_", "physical_dmg_", "all_dmg_"],
-        "components": [{"scalingKey": "atk", "multKey": "p8_mult"}]
+        "dmgBonusKeys": [
+          "plunging_dmg_",
+          "physical_dmg_",
+          "all_dmg_"
+        ],
+        "components": [
+          {
+            "scalingKey": "atk",
+            "multKey": "p8_mult"
+          }
+        ]
       },
       "plungeHighDmg": {
         "element": "physical",
-        "dmgBonusKeys": ["plunging_dmg_", "physical_dmg_", "all_dmg_"],
-        "components": [{"scalingKey": "atk", "multKey": "p9_mult"}]
+        "dmgBonusKeys": [
+          "plunging_dmg_",
+          "physical_dmg_",
+          "all_dmg_"
+        ],
+        "components": [
+          {
+            "scalingKey": "atk",
+            "multKey": "p9_mult"
+          }
+        ]
       }
     },
     "skill": {
       "pressDmg": {
         "element": "geo",
-        "dmgBonusKeys": ["skill_dmg_", "geo_dmg_", "all_dmg_"],
+        "dmgBonusKeys": [
+          "skill_dmg_",
+          "geo_dmg_",
+          "all_dmg_"
+        ],
         "components": [
-          {"scalingKey": "eleMas", "multKey": "p0_mult"},
-          {"scalingKey": "def", "multKey": "p1_mult"}
+          {
+            "scalingKey": "eleMas",
+            "multKey": "p0_mult"
+          },
+          {
+            "scalingKey": "def",
+            "multKey": "p1_mult"
+          }
         ]
       },
       "holdDmg": {
         "element": "geo",
-        "dmgBonusKeys": ["skill_dmg_", "geo_dmg_", "all_dmg_"],
+        "dmgBonusKeys": [
+          "skill_dmg_",
+          "geo_dmg_",
+          "all_dmg_"
+        ],
         "components": [
-          {"scalingKey": "eleMas", "multKey": "p2_mult"},
-          {"scalingKey": "def", "multKey": "p3_mult"}
+          {
+            "scalingKey": "eleMas",
+            "multKey": "p2_mult"
+          },
+          {
+            "scalingKey": "def",
+            "multKey": "p3_mult"
+          }
         ]
       }
     },
     "burst": {
       "skillDmg": {
         "element": "geo",
-        "dmgBonusKeys": ["burst_dmg_", "geo_dmg_", "all_dmg_"],
+        "dmgBonusKeys": [
+          "burst_dmg_",
+          "geo_dmg_",
+          "all_dmg_"
+        ],
         "components": [
-          {"scalingKey": "eleMas", "multKey": "p0_mult"},
-          {"scalingKey": "def", "multKey": "p1_mult"}
+          {
+            "scalingKey": "eleMas",
+            "multKey": "p0_mult"
+          },
+          {
+            "scalingKey": "def",
+            "multKey": "p1_mult"
+          }
         ]
       },
       "c2Dmg": {
         "element": "geo",
-        "dmgBonusKeys": ["burst_dmg_", "geo_dmg_", "all_dmg_"],
+        "dmgBonusKeys": [
+          "burst_dmg_",
+          "geo_dmg_",
+          "all_dmg_"
+        ],
         "components": [
-          {"scalingKey": "eleMas", "multKey": "p9_mult"},
-          {"scalingKey": "def", "multKey": "p10_mult"}
+          {
+            "scalingKey": "eleMas",
+            "multKey": "p9_mult"
+          },
+          {
+            "scalingKey": "def",
+            "multKey": "p10_mult"
+          }
         ]
       }
     }
   },
   "talent_multipliers_json": {
     "burst": {
-      "p0_mult": 14.8896,
-      "p1_mult": 7.4448,
-      "p2_mult": 0.6048,
-      "p3_mult": 4.06656,
+      "p0_mult": 17.578,
+      "p1_mult": 8.789,
+      "p2_mult": 0.714,
+      "p3_mult": 4.8008,
       "p4_mult": 21.0,
       "p5_mult": 5.0,
       "p6_mult": 20.0,
@@ -114,10 +238,10 @@
       "p10_mult": 2.0
     },
     "skill": {
-      "p0_mult": 8.68608,
-      "p1_mult": 4.34304,
-      "p2_mult": 10.8576,
-      "p3_mult": 5.4288,
+      "p0_mult": 10.2544,
+      "p1_mult": 5.1272,
+      "p2_mult": 12.818,
+      "p3_mult": 6.409,
       "p4_mult": 15.0
     },
     "normal": {
@@ -135,11 +259,11 @@
     "source": {
       "goCommit": "2937f8a80846b18c3495b7657c0bae5c78c82606",
       "assumptions": {
-        "constellation": 0,
+        "constellation": 6,
         "characterLevel": 90,
         "autoTalentLevel": 10,
-        "burstTalentLevel": 10,
-        "skillTalentLevel": 10,
+        "burstTalentLevel": 13,
+        "skillTalentLevel": 13,
         "teamBuffEleMas": 850
       },
       "goAllStatFile": "libs/gi/stats/src/allStat_gen.json",
@@ -149,10 +273,18 @@
       "a1Geo_critRate_": 0.05,
       "a1Geo_critDMG_": 0.1,
       "a1GleamEleMas": 50.0,
-      "burstGeo_dmgInc_perEm": 0.6048,
-      "burstLunarcrystallize_dmgInc_perEm": 4.06656,
-      "a4Geo_dmgInc_perEm": [0.07, 0.14, 0.24],
-      "a4Lunarcrystallize_dmgInc_perEm": [0.48, 0.96, 1.6]
+      "burstGeo_dmgInc_perEm": 0.714,
+      "burstLunarcrystallize_dmgInc_perEm": 4.8008,
+      "a4Geo_dmgInc_perEm": [
+        0.07,
+        0.14,
+        0.24
+      ],
+      "a4Lunarcrystallize_dmgInc_perEm": [
+        0.48,
+        0.96,
+        1.6
+      ]
     },
     "constellation": {
       "c1EnergyRegen": 12.0,

@@ -5,7 +5,10 @@
   "character_key": "avatar_10000032",
   "element": "pyro",
   "weapon_type": "sword",
-  "constellation_talent_boosts": {"skill": 3, "burst": 5},
+  "constellation_talent_boosts": {
+    "skill": 3,
+    "burst": 5
+  },
   "base_stats_json": {
     "baseHp": 12397.4035882,
     "baseAtk": 191.15747280000002,
@@ -65,21 +68,21 @@
   },
   "talent_multipliers_json": {
     "burst": {
-      "p0_mult": 4.1904,
-      "p1_mult": 0.108,
-      "p2_mult": 1270.2417,
-      "p3_mult": 1.008,
+      "p0_mult": 4.947,
+      "p1_mult": 0.1275,
+      "p2_mult": 1587.8221,
+      "p3_mult": 1.19,
       "p4_mult": 12.0,
       "p5_mult": 15.0,
       "p6_mult": 60.0
     },
     "skill": {
-      "p0_mult": 2.4768,
-      "p1_mult": 1.512,
-      "p2_mult": 1.656,
-      "p3_mult": 1.584,
-      "p4_mult": 1.728,
-      "p5_mult": 2.376,
+      "p0_mult": 2.924,
+      "p1_mult": 1.785,
+      "p2_mult": 1.955,
+      "p3_mult": 1.87,
+      "p4_mult": 2.04,
+      "p5_mult": 2.805,
       "p6_mult": 5.0,
       "p7_mult": 7.5,
       "p8_mult": 10.0
@@ -100,11 +103,11 @@
     "source": {
       "goCommit": "2937f8a80846b18c3495b7657c0bae5c78c82606",
       "assumptions": {
-        "constellation": 0,
+        "constellation": 6,
         "characterLevel": 90,
         "autoTalentLevel": 10,
-        "burstTalentLevel": 10,
-        "skillTalentLevel": 10
+        "burstTalentLevel": 13,
+        "skillTalentLevel": 13
       },
       "goAllStatFile": "libs/gi/stats/src/allStat_gen.json",
       "goCharacterKey": "Bennett"

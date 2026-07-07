@@ -5,7 +5,10 @@
   "character_key": "avatar_10000025",
   "element": "hydro",
   "weapon_type": "sword",
-  "constellation_talent_boosts": {"skill": 5, "burst": 3},
+  "constellation_talent_boosts": {
+    "skill": 5,
+    "burst": 3
+  },
   "base_stats_json": {
     "baseHp": 10222.420242440001,
     "baseAtk": 201.77733240000003,
@@ -15,7 +18,7 @@
   },
   "hit_definitions_json": {
     "normal": {
-      "hit_1": {
+      "0": {
         "element": "physical",
         "dmgBonusKeys": [
           "normal_dmg_",
@@ -25,11 +28,11 @@
         "components": [
           {
             "scalingKey": "atk",
-            "multKey": "p0_mult"
+            "multKey": "0_mult"
           }
         ]
       },
-      "hit_2": {
+      "1": {
         "element": "physical",
         "dmgBonusKeys": [
           "normal_dmg_",
@@ -39,11 +42,11 @@
         "components": [
           {
             "scalingKey": "atk",
-            "multKey": "p1_mult"
+            "multKey": "1_mult"
           }
         ]
       },
-      "hit_3": {
+      "2": {
         "element": "physical",
         "dmgBonusKeys": [
           "normal_dmg_",
@@ -53,11 +56,11 @@
         "components": [
           {
             "scalingKey": "atk",
-            "multKey": "p2_mult"
+            "multKey": "2_mult"
           }
         ]
       },
-      "hit_4": {
+      "3": {
         "element": "physical",
         "dmgBonusKeys": [
           "normal_dmg_",
@@ -67,15 +70,11 @@
         "components": [
           {
             "scalingKey": "atk",
-            "multKey": "p3_mult"
-          },
-          {
-            "scalingKey": "atk",
-            "multKey": "p4_mult"
+            "multKey": "3_mult"
           }
         ]
       },
-      "hit_5": {
+      "4": {
         "element": "physical",
         "dmgBonusKeys": [
           "normal_dmg_",
@@ -85,11 +84,13 @@
         "components": [
           {
             "scalingKey": "atk",
-            "multKey": "p5_mult"
+            "multKey": "4_mult"
           }
         ]
-      },
-      "charged_1": {
+      }
+    },
+    "charged": {
+      "dmg1": {
         "element": "physical",
         "dmgBonusKeys": [
           "charged_dmg_",
@@ -99,13 +100,27 @@
         "components": [
           {
             "scalingKey": "atk",
-            "multKey": "p6_mult"
+            "multKey": "dmg1_mult"
+          }
+        ]
+      },
+      "dmg2": {
+        "element": "physical",
+        "dmgBonusKeys": [
+          "charged_dmg_",
+          "physical_dmg_",
+          "all_dmg_"
+        ],
+        "components": [
+          {
+            "scalingKey": "atk",
+            "multKey": "dmg2_mult"
           }
         ]
       }
     },
     "plunging": {
-      "plunging_dmg": {
+      "dmg": {
         "element": "physical",
         "dmgBonusKeys": [
           "plunging_dmg_",
@@ -115,11 +130,11 @@
         "components": [
           {
             "scalingKey": "atk",
-            "multKey": "p8_mult"
+            "multKey": "dmg_mult"
           }
         ]
       },
-      "plunging_low": {
+      "low": {
         "element": "physical",
         "dmgBonusKeys": [
           "plunging_dmg_",
@@ -129,11 +144,11 @@
         "components": [
           {
             "scalingKey": "atk",
-            "multKey": "p9_mult"
+            "multKey": "low_mult"
           }
         ]
       },
-      "plunging_high": {
+      "high": {
         "element": "physical",
         "dmgBonusKeys": [
           "plunging_dmg_",
@@ -143,13 +158,13 @@
         "components": [
           {
             "scalingKey": "atk",
-            "multKey": "p10_mult"
+            "multKey": "high_mult"
           }
         ]
       }
     },
     "skill": {
-      "skill_1": {
+      "press1": {
         "element": "hydro",
         "dmgBonusKeys": [
           "skill_dmg_",
@@ -159,11 +174,11 @@
         "components": [
           {
             "scalingKey": "atk",
-            "multKey": "p0_mult"
+            "multKey": "press1_mult"
           }
         ]
       },
-      "skill_2": {
+      "press2": {
         "element": "hydro",
         "dmgBonusKeys": [
           "skill_dmg_",
@@ -173,13 +188,13 @@
         "components": [
           {
             "scalingKey": "atk",
-            "multKey": "p1_mult"
+            "multKey": "press2_mult"
           }
         ]
       }
     },
     "burst": {
-      "burst_1": {
+      "dmg": {
         "element": "hydro",
         "dmgBonusKeys": [
           "burst_dmg_",
@@ -189,41 +204,48 @@
         "components": [
           {
             "scalingKey": "atk",
-            "multKey": "p0_mult"
-          }
-        ]
-      },
-      "burst_2": {
-        "element": "hydro",
-        "dmgBonusKeys": [
-          "burst_dmg_",
-          "hydro_dmg_",
-          "all_dmg_"
-        ],
-        "components": [
-          {
-            "scalingKey": "atk",
-            "multKey": "p1_mult"
-          }
-        ]
-      },
-      "burst_3": {
-        "element": "hydro",
-        "dmgBonusKeys": [
-          "burst_dmg_",
-          "hydro_dmg_",
-          "all_dmg_"
-        ],
-        "components": [
-          {
-            "scalingKey": "atk",
-            "multKey": "p2_mult"
+            "multKey": "dmg_mult"
           }
         ]
       }
     }
   },
-  "talent_multipliers_json": {},
+  "talent_multipliers_json": {
+    "normal": {
+      "0_mult": 0.9214,
+      "1_mult": 0.9418,
+      "2_mult": 0.5644,
+      "3_mult": 1.1067,
+      "4_mult": 0.7089
+    },
+    "charged": {
+      "dmg1_mult": 0.935,
+      "dmg2_mult": 1.1101
+    },
+    "plunging": {
+      "dmg_mult": 1.26378,
+      "low_mult": 2.527025,
+      "high_mult": 3.15639
+    },
+    "skill": {
+      "press1_mult": 3.57,
+      "press2_mult": 4.063
+    },
+    "burst": {
+      "dmg_mult": 1.15328
+    },
+    "source": {
+      "goCharacterKey": "Xingqiu",
+      "note": "Regenerated 2026-07 from Genshin Optimizer sheets (the previous hit definitions referenced an empty multiplier table and scored 0). Hit keys match GO target paths; multKey = <hitKey>_mult. 4-star C6 assumed: skill/burst at Lv13, auto at Lv10. Normal/charged/plunging are physical (no infusion). Unparsed GO formulas: ['skill.dmgRed_: skipped (helper/cond formula)'].",
+      "assumptions": {
+        "constellation": 6,
+        "characterLevel": 90,
+        "autoTalentLevel": 10,
+        "skillTalentLevel": 13,
+        "burstTalentLevel": 13
+      }
+    }
+  },
   "buffs": {
     "self_modifiers_json": {},
     "self_conditional_modifiers_json": [],

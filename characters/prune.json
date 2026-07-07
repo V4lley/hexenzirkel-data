@@ -5,7 +5,10 @@
   "character_key": "avatar_10000132",
   "element": "anemo",
   "weapon_type": "catalyst",
-  "constellation_talent_boosts": {"skill": 5, "burst": 3},
+  "constellation_talent_boosts": {
+    "skill": 5,
+    "burst": 3
+  },
   "base_stats_json": {
     "baseHp": 9678.674406,
     "baseAtk": 220.89308168000002,
@@ -64,9 +67,15 @@
     }
   },
   "talent_multipliers_json": {
-    "burst": {},
-    "skill": {},
-    "normal": {},
+    "burst": {
+      "p0_mult": 2.0604
+    },
+    "skill": {
+      "p0_mult": 3.5581
+    },
+    "normal": {
+      "p0_mult": 0.875174
+    },
     "source": {
       "assumptions": {
         "constellation": 0,
@@ -76,7 +85,8 @@
         "skillTalentLevel": 10
       },
       "nanokaVersion": "6.6",
-      "goCharacterKey": "Prune"
+      "goCharacterKey": "Prune",
+      "note": "2026-07: filled the multipliers referenced by the stub hit definitions (GO; skill/burst Lv13 per 4-star C6 assumption); they previously resolved to 0."
     },
     "passive": {},
     "constellation": {}
@@ -98,7 +108,6 @@
           }
         ]
       },
-
       {
         "conditionKey": "c6TollingRally",
         "source": "avatar_10000132",
