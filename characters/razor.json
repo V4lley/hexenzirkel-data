@@ -251,6 +251,21 @@
           }
         ]
       }
+    },
+    "constellation6": {
+      "dmg": {
+        "element": "electro",
+        "dmgBonusKeys": [
+          "electro_dmg_",
+          "all_dmg_"
+        ],
+        "components": [
+          {
+            "scalingKey": "atk",
+            "multKey": "dmg_mult"
+          }
+        ]
+      }
     }
   },
   "talent_multipliers_json": {
@@ -280,9 +295,12 @@
       "companionDmg3_mult": 0.9400218,
       "companionDmg4_mult": 1.2378822
     },
+    "constellation6": {
+      "dmg_mult": 1.0
+    },
     "source": {
       "goCharacterKey": "Razor",
-      "note": "Generated from Genshin Optimizer sheets (master) + allStat_gen skillParam. Hit keys match GO target paths; multKey = <hitKey>_mult. Levels: Lv10, except constellation-boosted talents of 4-star characters at Lv13 (C6 assumed). Normal/charged/plunging default to physical unless the sheet overrides the element (infusions are NOT applied). burst.companionDmg1-4 (Wolf's Bite lightning strikes proc'd on Normal Attack hits 1-4) manually derived from GO's actual sheet formula (libs/gi/sheets/src/Characters/Razor/index.tsx): companionDmg{n}_mult = normal.{n}_mult (Lv10) x burst companionDmg scalar (skillParam_gen.burst[1], Lv13 = 0.51); the formula/data.ts stub for Razor is an unmigrated placeholder and was not the source.",
+      "note": "Generated from Genshin Optimizer sheets (master) + allStat_gen skillParam. Hit keys match GO target paths; multKey = <hitKey>_mult. Levels: Lv10, except constellation-boosted talents of 4-star characters at Lv13 (C6 assumed). Normal/charged/plunging default to physical unless the sheet overrides the element (infusions are NOT applied). burst.companionDmg1-4 (Wolf's Bite lightning strikes proc'd on Normal Attack hits 1-4) manually derived from GO's actual sheet formula (libs/gi/sheets/src/Characters/Razor/index.tsx): companionDmg{n}_mult = normal.{n}_mult (Lv10) x burst companionDmg scalar (skillParam_gen.burst[1], Lv13 = 0.51); the formula/data.ts stub for Razor is an unmigrated placeholder and was not the source. constellation6.dmg (Lupus Fulguris lightning strike) = flat 100% ATK Electro DMG (GO: `prod(percent(dm.constellation6.dmg), input.total.atk)`, dm.constellation6.dmg = 1), untagged by any normal/skill/burst dmgBonusKey per GO's customDmgNode('elemental', ...) categorization — only electro_dmg_/all_dmg_ apply.",
       "assumptions": {
         "constellation": 6,
         "characterLevel": 90,
@@ -294,9 +312,55 @@
   },
   "buffs": {
     "self_modifiers_json": {},
-    "self_conditional_modifiers_json": [],
+    "self_conditional_modifiers_json": [
+      {
+        "conditionKey": "a4Hunger",
+        "source": "avatar_10000020",
+        "description": "A4 Hunger: when Razor's Energy is below 50%, his Energy Recharge is increased by 30%.",
+        "states": [
+          {"value": "on", "modifiers": {"enerRech_": 0.30}}
+        ]
+      },
+      {
+        "conditionKey": "c1WolfsInstinctDmg",
+        "source": "avatar_10000020",
+        "gating": {"constellationMin": 1},
+        "description": "C1 Wolf's Instinct: picking up an Elemental Orb or Particle increases Razor's DMG by 10% for 8s.",
+        "states": [
+          {"value": "on", "modifiers": {"all_dmg_": 0.10}}
+        ]
+      },
+      {
+        "conditionKey": "c2SuppressionCritRate",
+        "source": "avatar_10000020",
+        "gating": {"constellationMin": 2},
+        "description": "C2 Suppression: increases CRIT Rate against opponents with less than 30% HP by 10%.",
+        "states": [
+          {"value": "on", "modifiers": {"critRate_": 0.10}}
+        ]
+      },
+      {
+        "conditionKey": "c6LupusFulgurisSigilBuff",
+        "source": "avatar_10000020",
+        "gating": {"constellationMin": 6},
+        "description": "C6 Lupus Fulguris: for 15s after Razor consumes Electro Sigils (gained from Claw and Thunder or the periodic lightning-charged Normal Attack), his CRIT Rate is increased by 10% and CRIT DMG by 50%. The periodic lightning strike itself (100% ATK Electro DMG every 10s) is modeled separately as the constellation6.dmg hit.",
+        "states": [
+          {"value": "on", "modifiers": {"critRate_": 0.10, "critDMG_": 0.50}}
+        ]
+      }
+    ],
     "team_modifiers_json": {},
-    "team_conditional_modifiers_json": [],
+    "team_conditional_modifiers_json": [
+      {
+        "conditionKey": "c4BiteDefShred",
+        "source": "avatar_10000020",
+        "gating": {"constellationMin": 4},
+        "description": "C4 Bite: when casting Claw and Thunder (Press), opponents hit have their DEF decreased by 15% for 7s. Modeled as a party-wide buff so it applies whether Razor is the scored character or a support.",
+        "states": [
+          {"value": "on", "modifiers": {"defShred_": 0.15}}
+        ]
+      }
+    ],
     "others_modifiers_json": {},
     "others_conditional_modifiers_json": []
   }

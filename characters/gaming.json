@@ -219,7 +219,34 @@
   },
   "buffs": {
     "self_modifiers_json": {},
-    "self_conditional_modifiers_json": [],
+    "self_conditional_modifiers_json": [
+      {
+        "conditionKey": "a4AirOfProsperityCloudstriderDmg",
+        "source": "avatar_10000092",
+        "description": "A4 Air of Prosperity: when Gaming has 50% HP or more, Plunging Attack: Charmed Cloudstrider DMG is increased by 20%. Applied as skill_dmg_ since cloudstriderDmg is Gaming's only skill hit.",
+        "states": [
+          {"value": "on", "modifiers": {"skill_dmg_": 0.20}}
+        ]
+      },
+      {
+        "conditionKey": "c2PlumBlossomsAtk",
+        "source": "avatar_10000092",
+        "gating": {"constellationMin": 2},
+        "description": "C2 Plum Blossoms Underfoot: when Gaming receives healing that overflows (exceeds his Max HP), his ATK is increased by 20% for 5s.",
+        "states": [
+          {"value": "on", "modifiers": {"atk_": 0.20}}
+        ]
+      },
+      {
+        "conditionKey": "c6ToTameAllBeastsCloudstriderCrit",
+        "source": "avatar_10000092",
+        "gating": {"constellationMin": 6},
+        "description": "C6 To Tame All Beasts: Plunging Attack: Charmed Cloudstrider CRIT Rate is increased by 20% and CRIT DMG by 40% (attack radius increase not modeled). Applied as skill_critRate_/skill_critDMG_ since cloudstriderDmg is Gaming's only skill hit.",
+        "states": [
+          {"value": "on", "modifiers": {"skill_critRate_": 0.20, "skill_critDMG_": 0.40}}
+        ]
+      }
+    ],
     "team_modifiers_json": {},
     "team_conditional_modifiers_json": [],
     "others_modifiers_json": {},
