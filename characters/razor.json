@@ -207,7 +207,8 @@
             "scalingKey": "atk",
             "multKey": "companionDmg1_mult"
           }
-        ]
+        ],
+        "flatDmgIncFromAtkRatioKeys": ["razorWolfWithinDmgIncFromAtk_"]
       },
       "companionDmg2": {
         "element": "electro",
@@ -221,7 +222,8 @@
             "scalingKey": "atk",
             "multKey": "companionDmg2_mult"
           }
-        ]
+        ],
+        "flatDmgIncFromAtkRatioKeys": ["razorWolfWithinDmgIncFromAtk_"]
       },
       "companionDmg3": {
         "element": "electro",
@@ -235,7 +237,8 @@
             "scalingKey": "atk",
             "multKey": "companionDmg3_mult"
           }
-        ]
+        ],
+        "flatDmgIncFromAtkRatioKeys": ["razorWolfWithinDmgIncFromAtk_"]
       },
       "companionDmg4": {
         "element": "electro",
@@ -248,6 +251,22 @@
           {
             "scalingKey": "atk",
             "multKey": "companionDmg4_mult"
+          }
+        ],
+        "flatDmgIncFromAtkRatioKeys": ["razorWolfWithinDmgIncFromAtk_"]
+      }
+    },
+    "lockedPassive": {
+      "dmg": {
+        "element": "electro",
+        "dmgBonusKeys": [
+          "electro_dmg_",
+          "all_dmg_"
+        ],
+        "components": [
+          {
+            "scalingKey": "atk",
+            "multKey": "dmg_mult"
           }
         ]
       }
@@ -298,9 +317,12 @@
     "constellation6": {
       "dmg_mult": 1.0
     },
+    "lockedPassive": {
+      "dmg_mult": 1.5
+    },
     "source": {
       "goCharacterKey": "Razor",
-      "note": "Generated from Genshin Optimizer sheets (master) + allStat_gen skillParam. Hit keys match GO target paths; multKey = <hitKey>_mult. Levels: Lv10, except constellation-boosted talents of 4-star characters at Lv13 (C6 assumed). Normal/charged/plunging default to physical unless the sheet overrides the element (infusions are NOT applied). burst.companionDmg1-4 (Wolf's Bite lightning strikes proc'd on Normal Attack hits 1-4) manually derived from GO's actual sheet formula (libs/gi/sheets/src/Characters/Razor/index.tsx): companionDmg{n}_mult = normal.{n}_mult (Lv10) x burst companionDmg scalar (skillParam_gen.burst[1], Lv13 = 0.51); the formula/data.ts stub for Razor is an unmigrated placeholder and was not the source. constellation6.dmg (Lupus Fulguris lightning strike) = flat 100% ATK Electro DMG (GO: `prod(percent(dm.constellation6.dmg), input.total.atk)`, dm.constellation6.dmg = 1), untagged by any normal/skill/burst dmgBonusKey per GO's customDmgNode('elemental', ...) categorization — only electro_dmg_/all_dmg_ apply.",
+      "note": "Generated from Genshin Optimizer sheets (master) + allStat_gen skillParam. Hit keys match GO target paths; multKey = <hitKey>_mult. Levels: Lv10, except constellation-boosted talents of 4-star characters at Lv13 (C6 assumed). Normal/charged/plunging default to physical unless the sheet overrides the element (infusions are NOT applied). burst.companionDmg1-4 (Wolf's Bite lightning strikes proc'd on Normal Attack hits 1-4) manually derived from GO's actual sheet formula (libs/gi/sheets/src/Characters/Razor/index.tsx): companionDmg{n}_mult = normal.{n}_mult (Lv10) x burst companionDmg scalar (skillParam_gen.burst[1], Lv13 = 0.51); the formula/data.ts stub for Razor is an unmigrated placeholder and was not the source. constellation6.dmg (Lupus Fulguris lightning strike) = flat 100% ATK Electro DMG (GO: `prod(percent(dm.constellation6.dmg), input.total.atk)`, dm.constellation6.dmg = 1), untagged by any normal/skill/burst dmgBonusKey per GO's customDmgNode('elemental', ...) categorization — only electro_dmg_/all_dmg_ apply. lockedPassive.dmg (v6.2 Hexerei: Secret Rite AoE lightning strike, requires 2+ Hexerei party members + Witch's Homework: Of the Little Wolf Pack) = flat 150% ATK Electro DMG (GO: `skillParam_gen.lockedPassive[1][0]` = 1.5, gated `tally.hexerei>=2` + `condLockHomework`), same untagged 'elemental' categorization as C6. The companion Wolf Within +70% ATK flat DMG bonus (`skillParam_gen.lockedPassive[0][0]` = 0.7, GO's `lock_burst_dmgInc`) is passed ONLY into companionDmg1-4's `premod.burst_dmgInc` (NOT into burst.dmg) — modeled via each companionDmg hit's `flatDmgIncFromAtkRatioKeys: [\"razorWolfWithinDmgIncFromAtk_\"]` plus the buffs.self_conditional_modifiers_json `hexereiWolfWithinDmgInc` entry, so it never leaks onto Razor's own Lightning Fang hit. Energy restore (7) and the 1s internal cooldown on the AoE strike are not modeled (no dmg-formula effect).",
       "assumptions": {
         "constellation": 6,
         "characterLevel": 90,
@@ -336,7 +358,15 @@
         "gating": {"constellationMin": 2},
         "description": "C2 Suppression: increases CRIT Rate against opponents with less than 30% HP by 10%.",
         "states": [
-          {"value": "on", "modifiers": {"critRate_": 0.10}}
+          {"value": "on", "modifiers": {"critRate_": 0.03}}
+        ]
+      },
+      {
+        "conditionKey": "hexereiWolfWithinDmgInc",
+        "source": "avatar_10000020",
+        "description": "v6.2 Hexerei: Secret Rite (requires 2+ Hexerei characters in the party and completing Witch's Homework: Of the Little Wolf Pack): while The Wolf Within (burst) is active, its coordinated-attack hits (companionDmg1-4) deal bonus DMG equal to 70% of Razor's ATK.",
+        "states": [
+          {"value": "on", "modifiers": {"razorWolfWithinDmgIncFromAtk_": 0.70}}
         ]
       },
       {
