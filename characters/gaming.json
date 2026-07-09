@@ -156,7 +156,8 @@
         "dmgBonusKeys": [
           "plunging_dmg_",
           "pyro_dmg_",
-          "all_dmg_"
+          "all_dmg_",
+          "cloudstriderdmg_dmg_"
         ],
         "components": [
           {
@@ -223,9 +224,9 @@
       {
         "conditionKey": "a4AirOfProsperityCloudstriderDmg",
         "source": "avatar_10000092",
-        "description": "A4 Air of Prosperity: when Gaming has 50% HP or more, Plunging Attack: Charmed Cloudstrider DMG is increased by 20%. Applied as skill_dmg_ since cloudstriderDmg is Gaming's only skill hit.",
+        "description": "A4 Air of Prosperity: when Gaming has 50% HP or more, Plunging Attack: Charmed Cloudstrider DMG is increased by 20%. Scoped to the cloudstriderDmg hit only via cloudstriderdmg_dmg_ (hit-key-specific bonus key, added to the hit's dmgBonusKeys) since cloudstriderDmg is not actually tagged skill_dmg_ (its dmgBonusKeys are plunging_dmg_/pyro_dmg_/all_dmg_, matching C6's scoping approach).",
         "states": [
-          {"value": "on", "modifiers": {"skill_dmg_": 0.20}}
+          {"value": "on", "modifiers": {"cloudstriderdmg_dmg_": 0.20}}
         ]
       },
       {
