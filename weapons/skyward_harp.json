@@ -8,7 +8,9 @@
     "subStatValue": 0.220512
   },
   "buffs": {
-    "self_modifiers_json": {},
+    "self_modifiers_json": {
+      "critDMG_": 0.20
+    },
     "self_conditional_modifiers_json": [],
     "team_modifiers_json": {},
     "team_conditional_modifiers_json": []

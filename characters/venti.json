@@ -306,6 +306,21 @@
             "multKey": "base_mult"
           }
         ]
+      },
+      "stormeye": {
+        "element": "anemo",
+        "dmgBonusKeys": [
+          "burst_dmg_",
+          "anemo_dmg_",
+          "all_dmg_",
+          "stormeye_dmg_"
+        ],
+        "components": [
+          {
+            "scalingKey": "atk",
+            "multKey": "stormeye_mult"
+          }
+        ]
       }
     }
   },
@@ -338,11 +353,12 @@
       "hold_mult": 6.84
     },
     "burst": {
-      "base_mult": 0.6768
+      "base_mult": 0.6768,
+      "stormeye_mult": 0.3384
     },
     "source": {
       "goCharacterKey": "Venti",
-      "note": "Generated from Genshin Optimizer sheets (master) + allStat_gen skillParam. Hit keys match GO target paths; multKey = <hitKey>_mult. Levels: Lv10, except constellation-boosted talents of 4-star characters at Lv13 (C6 assumed). Normal/charged/plunging default to physical unless the sheet overrides the element (infusions are NOT applied). Unparsed GO formulas (add manually if needed): ['burst.absorb: skipped (helper/cond formula)'].",
+      "note": "Generated from Genshin Optimizer sheets (master) + allStat_gen skillParam. Hit keys match GO target paths; multKey = <hitKey>_mult. Levels: Lv10, except constellation-boosted talents of 4-star characters at Lv13 (C6 assumed). Normal/charged/plunging default to physical unless the sheet overrides the element (infusions are NOT applied). Unparsed GO formulas (add manually if needed): ['burst.absorb: skipped (helper/cond formula)']. 2026-07: added burst.stormeye (GO burst skillParam index 1, Lv10 = 0.3384) — the periodic Stormeye tick, previously missing from hit_definitions_json.",
       "assumptions": {
         "constellation": 0,
         "characterLevel": 90,
@@ -354,9 +370,64 @@
   },
   "buffs": {
     "self_modifiers_json": {},
-    "self_conditional_modifiers_json": [],
+    "self_conditional_modifiers_json": [
+      {
+        "conditionKey": "c1SplittingGales",
+        "source": "avatar_10000022",
+        "gating": {"constellationMin": 1},
+        "description": "C1 Splitting Gales: Aimed Shot fires 2 additional arrows, each dealing 33% of the original arrow's DMG (+66% total, applied as charged_base_dmg_ to both charged hits since both share the charged_dmg_ bonus key).",
+        "states": [
+          {"value": "on", "modifiers": {"charged_base_dmg_": 0.66}}
+        ]
+      },
+      {
+        "conditionKey": "c4HurricaneOfFreedom",
+        "source": "avatar_10000022",
+        "gating": {"constellationMin": 4},
+        "description": "C4 Hurricane of Freedom: picking up an Elemental Orb/Particle grants Venti a 25% Anemo DMG Bonus for 10s.",
+        "states": [
+          {"value": "on", "modifiers": {"anemo_dmg_": 0.25}}
+        ]
+      },
+      {
+        "conditionKey": "hexereiStormeyeBonus",
+        "source": "avatar_10000022",
+        "description": "Witch's Eve Rite: Temporal Wind's Eulogy (Hexerei: Secret Rite, requires >=2 Hexerei party members): while Stormeye is active, Venti's Stormeye deals 135% of its original DMG (+35%), scoped to the stormeye hit only.",
+        "states": [
+          {"value": "on", "modifiers": {"stormeye_dmg_": 0.35}}
+        ]
+      }
+    ],
     "team_modifiers_json": {},
-    "team_conditional_modifiers_json": [],
+    "team_conditional_modifiers_json": [
+      {
+        "conditionKey": "c2BreezeOfReminiscence",
+        "source": "avatar_10000022",
+        "gating": {"constellationMin": 2},
+        "description": "C2 Breeze of Reminiscence: Skyward Sonnet decreases opponents' Anemo RES and Physical RES by 12% for 10s; airborne targets suffer an additional 12% decrease to each (24% total) while airborne.",
+        "states": [
+          {"value": "grounded", "modifiers": {"anemo_enemyRes_": -0.12, "physical_enemyRes_": -0.12}},
+          {"value": "airborne", "modifiers": {"anemo_enemyRes_": -0.24, "physical_enemyRes_": -0.24}}
+        ]
+      },
+      {
+        "conditionKey": "c6StormOfDefiance",
+        "source": "avatar_10000022",
+        "gating": {"constellationMin": 6},
+        "description": "C6 Storm of Defiance: targets hit by Wind's Grand Ode (burst) have Anemo RES decreased by 20% (the additional -20% RES to an absorbed element, when Elemental Absorption occurs, is not modeled).",
+        "states": [
+          {"value": "on", "modifiers": {"anemo_enemyRes_": -0.20}}
+        ]
+      },
+      {
+        "conditionKey": "hexereiSwirlBonus",
+        "source": "avatar_10000022",
+        "description": "Witch's Eve Rite: Temporal Wind's Eulogy (Hexerei: Secret Rite, requires >=2 Hexerei party members): while Stormeye is active, for 4s after a nearby active character triggers Swirl, that character's DMG is increased by 50%.",
+        "states": [
+          {"value": "on", "modifiers": {"all_dmg_": 0.50}}
+        ]
+      }
+    ],
     "others_modifiers_json": {},
     "others_conditional_modifiers_json": []
   }

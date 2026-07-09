@@ -238,6 +238,16 @@
     "team_modifiers_json": {},
     "team_conditional_modifiers_json": [],
     "others_modifiers_json": {},
-    "others_conditional_modifiers_json": []
+    "others_conditional_modifiers_json": [
+      {
+        "conditionKey": "c4GiftOfTheWoods",
+        "source": "avatar_10000067",
+        "gating": {"constellationMin": 4},
+        "description": "C4 Gift of the Woods: using Trump-Card Kitty (burst) increases all nearby characters' EM by 60 for 12s (not including Collei herself — modeled as others-only so it doesn't apply when she's the scored character).",
+        "states": [
+          {"value": "on", "modifiers": {"eleMas": 60.0}}
+        ]
+      }
+    ]
   }
 }
