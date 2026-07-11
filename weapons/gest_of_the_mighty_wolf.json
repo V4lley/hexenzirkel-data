@@ -44,6 +44,37 @@
             }
           }
         ]
+      },
+      {
+        "source": "12515",
+        "conditionKey": "four_winds_hymn_no_hexerei",
+        "description": "R1: gain Four Winds' Hymn stacks from Normal Attack hits / Elemental Skill / Charged Attack start; DMG dealt +7.5% per stack, max 4 (+30%). Under Hexerei: Secret Rite, each stack also grants +7.5% CRIT DMG (+30% at 4 stacks).",
+        "states": [
+          {
+            "value": "1",
+            "modifiers": {
+              "all_dmg_": 0.075
+            }
+          },
+          {
+            "value": "2",
+            "modifiers": {
+              "all_dmg_": 0.15
+            }
+          },
+          {
+            "value": "3",
+            "modifiers": {
+              "all_dmg_": 0.225
+            }
+          },
+          {
+            "value": "4",
+            "modifiers": {
+              "all_dmg_": 0.3
+            }
+          }
+        ]
       }
     ],
     "team_modifiers_json": {},
