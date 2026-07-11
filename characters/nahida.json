@@ -16,10 +16,10 @@
   "hit_definitions_json": {
     "normal": {
       "0": {
-        "element": "physical",
+        "element": "dendro",
         "dmgBonusKeys": [
           "normal_dmg_",
-          "physical_dmg_",
+          "dendro_dmg_",
           "all_dmg_"
         ],
         "components": [
@@ -30,10 +30,10 @@
         ]
       },
       "1": {
-        "element": "physical",
+        "element": "dendro",
         "dmgBonusKeys": [
           "normal_dmg_",
-          "physical_dmg_",
+          "dendro_dmg_",
           "all_dmg_"
         ],
         "components": [
@@ -44,10 +44,10 @@
         ]
       },
       "2": {
-        "element": "physical",
+        "element": "dendro",
         "dmgBonusKeys": [
           "normal_dmg_",
-          "physical_dmg_",
+          "dendro_dmg_",
           "all_dmg_"
         ],
         "components": [
@@ -58,10 +58,10 @@
         ]
       },
       "3": {
-        "element": "physical",
+        "element": "dendro",
         "dmgBonusKeys": [
           "normal_dmg_",
-          "physical_dmg_",
+          "dendro_dmg_",
           "all_dmg_"
         ],
         "components": [
@@ -74,10 +74,10 @@
     },
     "charged": {
       "dmg": {
-        "element": "physical",
+        "element": "dendro",
         "dmgBonusKeys": [
           "charged_dmg_",
-          "physical_dmg_",
+          "dendro_dmg_",
           "all_dmg_"
         ],
         "components": [
@@ -90,10 +90,10 @@
     },
     "plunging": {
       "dmg": {
-        "element": "physical",
+        "element": "dendro",
         "dmgBonusKeys": [
           "plunging_dmg_",
-          "physical_dmg_",
+          "dendro_dmg_",
           "all_dmg_"
         ],
         "components": [
@@ -104,10 +104,10 @@
         ]
       },
       "low": {
-        "element": "physical",
+        "element": "dendro",
         "dmgBonusKeys": [
           "plunging_dmg_",
-          "physical_dmg_",
+          "dendro_dmg_",
           "all_dmg_"
         ],
         "components": [
@@ -118,10 +118,10 @@
         ]
       },
       "high": {
-        "element": "physical",
+        "element": "dendro",
         "dmgBonusKeys": [
           "plunging_dmg_",
-          "physical_dmg_",
+          "dendro_dmg_",
           "all_dmg_"
         ],
         "components": [
@@ -213,7 +213,7 @@
         "skillTalentLevel": 10
       },
       "goAllStatFile": "libs/gi/stats/src/allStat_gen.json",
-      "note": "2026-07: rebuilt hit_definitions_json to match GO's actual sheet (libs/gi/sheets/src/Characters/Nahida/index.tsx) target paths: normal.0-3, charged.dmg, plunging.dmg/low/high, skill.pressDmg/holdDmg/karmaDmg (karmaDmg = Tri-Karma Purification, the atk+eleMas split-scale periodic hit). Removed a fabricated burst hit — Illusory Heart deals no direct damage in GO's sheet (dmgFormulas has no burst entry); its skillParam.burst array (kept below for reference/future buff work) is all non-damage values: dmg_1/dmg_2 (Pyro/Electro synergy amounts, not modeled yet), intervalDec_1/2, durationInc1/2, duration, cd, energyCost. The previous 'skillDmg'/'hit1' hits incorrectly combined skill.pressDmg (p0) and skill.holdDmg (p1) into one fake atk+eleMas hit. 2026-07 correction: Compassion Illuminated (EM to active character) is her A1 passive, not A4 — fixed conditionKeys/descriptions. Awakening Elucidated (the karmadmg_*_from_eleMas_excess200_ keys in self_modifiers_json below) is her A4 passive."
+      "note": "2026-07: rebuilt hit_definitions_json to match GO's actual sheet (libs/gi/sheets/src/Characters/Nahida/index.tsx) target paths: normal.0-3, charged.dmg, plunging.dmg/low/high, skill.pressDmg/holdDmg/karmaDmg (karmaDmg = Tri-Karma Purification, the atk+eleMas split-scale periodic hit). Removed a fabricated burst hit — Illusory Heart deals no direct damage in GO's sheet (dmgFormulas has no burst entry); its skillParam.burst array (kept below for reference/future buff work) is all non-damage values: dmg_1/dmg_2 (Pyro/Electro synergy amounts, not modeled yet), intervalDec_1/2, durationInc1/2, duration, cd, energyCost. The previous 'skillDmg'/'hit1' hits incorrectly combined skill.pressDmg (p0) and skill.holdDmg (p1) into one fake atk+eleMas hit. 2026-07 correction: Compassion Illuminated (EM to active character) is her A1 passive, not A4 — fixed conditionKeys/descriptions. Awakening Elucidated (the karmadmg_*_from_eleMas_excess200_ keys in self_modifiers_json below) is her A4 passive. 2026-07-11 correction: normal/charged/plunging element was left as GO's raw 'physical' base value from that rebuild — catalyst users deal elemental (not physical) auto-attack damage in-game, so these are now 'dendro' with dendro_dmg_ in dmgBonusKeys (matches Baizhu's convention)."
     },
     "burstRawSkillParam": {
       "dmg_1": 0.26784,

@@ -31,7 +31,7 @@
       }
     },
     "skill": {
-      "skillDmg": {
+      "bubbleDmg": {
         "element": "hydro",
         "dmgBonusKeys": [
           "skill_dmg_",
@@ -40,8 +40,53 @@
         ],
         "components": [
           {
-            "scalingKey": "atk",
-            "multKey": "p0_mult"
+            "scalingKey": "hp",
+            "multKey": "bubbleDmg_mult"
+          }
+        ]
+      },
+      "usherDmg": {
+        "element": "hydro",
+        "dmgBonusKeys": [
+          "skill_dmg_",
+          "hydro_dmg_",
+          "all_dmg_",
+          "salonmember_dmg_"
+        ],
+        "components": [
+          {
+            "scalingKey": "hp",
+            "multKey": "usherDmg_mult"
+          }
+        ]
+      },
+      "chevalDmg": {
+        "element": "hydro",
+        "dmgBonusKeys": [
+          "skill_dmg_",
+          "hydro_dmg_",
+          "all_dmg_",
+          "salonmember_dmg_"
+        ],
+        "components": [
+          {
+            "scalingKey": "hp",
+            "multKey": "chevalDmg_mult"
+          }
+        ]
+      },
+      "crabDmg": {
+        "element": "hydro",
+        "dmgBonusKeys": [
+          "skill_dmg_",
+          "hydro_dmg_",
+          "all_dmg_",
+          "salonmember_dmg_"
+        ],
+        "components": [
+          {
+            "scalingKey": "hp",
+            "multKey": "crabDmg_mult"
           }
         ]
       }
@@ -56,7 +101,7 @@
         ],
         "components": [
           {
-            "scalingKey": "atk",
+            "scalingKey": "hp",
             "multKey": "p0_mult"
           }
         ]
@@ -75,17 +120,10 @@
       "p7_mult": 60.0
     },
     "skill": {
-      "p0_mult": 0.141552,
-      "p1_mult": 30.0,
-      "p2_mult": 0.10728,
-      "p3_mult": 0.058176,
-      "p4_mult": 0.149184,
-      "p5_mult": 0.024,
-      "p6_mult": 0.016,
-      "p7_mult": 0.036,
-      "p8_mult": 0.0864,
-      "p9_mult": 1016.9728,
-      "p10_mult": 20.0
+      "bubbleDmg_mult": 0.141552,
+      "usherDmg_mult": 0.10728,
+      "chevalDmg_mult": 0.058176,
+      "crabDmg_mult": 0.149184
     },
     "normal": {
       "p0_mult": 0.956471,
@@ -111,14 +149,47 @@
         "skillTalentLevel": 10
       },
       "goAllStatFile": "libs/gi/stats/src/allStat_gen.json",
-      "goCharacterKey": "Furina"
+      "goCharacterKey": "Furina",
+      "note": "2026-07-11 correction (fetched libs/gi/sheets/src/Characters/Furina/index.tsx + Data/Characters/Furina/skillParam.json from frzyc/genshin-optimizer, commit above): the E (Salon Solitaire) previously only had one fabricated ATK-scaling 'skillDmg' hit — GO's dmgFormulas.skill has FOUR distinct HP-scaling summon hits (bubbleDmg = the free cast-time burst, usherDmg/chevalDmg/crabDmg = the Usher/Cheval/Crab members, each HP-scaling per dmgNode('hp', ...)), 'crabDmg' being the one leaderboards reference. Added all four with scalingKey 'hp' (was wrongly 'atk'). Also fixed burst.hit1 scalingKey atk->hp (GO's burst.skillDmg is also dmgNode('hp', ...) — Furina's whole kit scales off Max HP, not ATK). Modeled the Salon Solitaire 'number of members summoned' selector (GO's member_mult_, 1-4 stacks each worth 1+0.1*stack) as a self-conditional salonmember_dmg_ bonus (0.1/0.2/0.3/0.4), included only in usher/cheval/crab's dmgBonusKeys (matches Nahida's karmadmg_dmg_ pattern for a hit-family-scoped bonus bucket) — an additive-stacking approximation of what's really a multiplicative factor, consistent with how this codebase models other stack mechanics (e.g. Cyno C2 stellarconduct_dmg_). NOT modeled: the A4 passive's dynamic HP-scaling skill_dmg_ bonus (member_dmg_/max_member_dmg_ in skillParam.passive2, capped at 28%) — its percent()/1000 unit conversion in the sheet is ambiguous without a known-good reference value to validate against, so it's left out rather than guessed; flag for a follow-up pass."
     },
     "passive": {},
     "constellation": {}
   },
   "buffs": {
     "self_modifiers_json": {},
-    "self_conditional_modifiers_json": [],
+    "self_conditional_modifiers_json": [
+      {
+        "conditionKey": "salonNumMembers",
+        "source": "avatar_10000089",
+        "description": "Salon Solitaire (E): number of extra Fontainian members summoned by consuming Max HP. Each member adds +10% DMG to that member's summon hit (Usher/Cheval/Crab only, not the free Bubble hit).",
+        "states": [
+          {
+            "value": "1",
+            "modifiers": {
+              "salonmember_dmg_": 0.1
+            }
+          },
+          {
+            "value": "2",
+            "modifiers": {
+              "salonmember_dmg_": 0.2
+            }
+          },
+          {
+            "value": "3",
+            "modifiers": {
+              "salonmember_dmg_": 0.3
+            }
+          },
+          {
+            "value": "4",
+            "modifiers": {
+              "salonmember_dmg_": 0.4
+            }
+          }
+        ]
+      }
+    ],
     "team_modifiers_json": {},
     "team_conditional_modifiers_json": [
       {
