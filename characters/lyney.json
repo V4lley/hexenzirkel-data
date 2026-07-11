@@ -238,7 +238,6 @@
         ]
       }
     },
-  {
     "weapon:SkywardHarp": {
       "dmg": {
         "element": "physical",
@@ -254,7 +253,6 @@
         ]
       }
     }
-  }
   },
   "talent_multipliers_json": {
     "normal": {
@@ -283,7 +281,7 @@
       "fireworkDmg_mult": 7.452
     },
     "weapon:SkywardHarp": {
-        "dmg_mult": 1.25
+      "dmg_mult": 1.25
     },
     "source": {
       "goCharacterKey": "Lyney",
@@ -306,15 +304,21 @@
         "states": [
           {
             "value": 0,
-            "modifiers": {"pyro_dmg_": 0.6}
+            "modifiers": {
+              "pyro_dmg_": 0.6
+            }
           },
           {
             "value": 1,
-            "modifiers": {"pyro_dmg_": 0.8}
+            "modifiers": {
+              "pyro_dmg_": 0.8
+            }
           },
           {
             "value": 2,
-            "modifiers": {"pyro_dmg_": 1.0}
+            "modifiers": {
+              "pyro_dmg_": 1.0
+            }
           }
         ]
       }
