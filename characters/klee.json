@@ -15,7 +15,7 @@
   },
   "hit_definitions_json": {
     "normal": {
-      "hit1Dmg": {
+      "0": {
         "element": "pyro",
         "dmgBonusKeys": [
           "normal_dmg_",
@@ -29,7 +29,7 @@
           }
         ]
       },
-      "hit2Dmg": {
+      "1": {
         "element": "pyro",
         "dmgBonusKeys": [
           "normal_dmg_",
@@ -43,7 +43,7 @@
           }
         ]
       },
-      "hit3Dmg": {
+      "2": {
         "element": "pyro",
         "dmgBonusKeys": [
           "normal_dmg_",
@@ -56,8 +56,10 @@
             "multKey": "p2_mult"
           }
         ]
-      },
-      "chargedDmg": {
+      }
+    },
+    "charged": {
+      "dmg": {
         "element": "pyro",
         "dmgBonusKeys": [
           "charged_dmg_",
@@ -70,8 +72,10 @@
             "multKey": "p3_mult"
           }
         ]
-      },
-      "plungeDmg": {
+      }
+    },
+    "plunging": {
+      "dmg": {
         "element": "pyro",
         "dmgBonusKeys": [
           "plunging_dmg_",
@@ -85,7 +89,7 @@
           }
         ]
       },
-      "plungeLow": {
+      "low": {
         "element": "pyro",
         "dmgBonusKeys": [
           "plunging_dmg_",
@@ -99,7 +103,7 @@
           }
         ]
       },
-      "plungeHigh": {
+      "high": {
         "element": "pyro",
         "dmgBonusKeys": [
           "plunging_dmg_",
@@ -115,7 +119,7 @@
       }
     },
     "skill": {
-      "jumpyDumptyBounce": {
+      "jumptyDumptyDmg": {
         "element": "pyro",
         "dmgBonusKeys": [
           "skill_dmg_",
@@ -145,7 +149,7 @@
       }
     },
     "burst": {
-      "sparksDmg": {
+      "dmg": {
         "element": "pyro",
         "dmgBonusKeys": [
           "burst_dmg_",
@@ -156,6 +160,39 @@
           {
             "scalingKey": "atk",
             "multKey": "p0_mult"
+          }
+        ]
+      }
+    },
+    "passive1": {
+      "dmg": {
+        "element": "pyro",
+        "dmgBonusKeys": [
+          "charged_dmg_",
+          "pyro_dmg_",
+          "all_dmg_",
+          "passive1dmg_dmg_"
+        ],
+        "components": [
+          {
+            "scalingKey": "atk",
+            "multKey": "p3_mult"
+          }
+        ]
+      }
+    },
+    "constellation1": {
+      "chainedReactionsDmg": {
+        "element": "pyro",
+        "dmgBonusKeys": [
+          "burst_dmg_",
+          "pyro_dmg_",
+          "all_dmg_"
+        ],
+        "components": [
+          {
+            "scalingKey": "atk",
+            "multKey": "chainedReactionsDmg_mult"
           }
         ]
       }
@@ -172,14 +209,24 @@
     "normal": {
       "p0_mult": 1.29888,
       "p1_mult": 1.1232,
-      "p2_mult": 1.61856,
-      "p3_mult": 2.83248,
+      "p2_mult": 1.61856
+    },
+    "charged": {
+      "p3_mult": 2.83248
+    },
+    "plunging": {
       "p4_mult": 1.12336,
       "p5_mult": 2.246244,
       "p6_mult": 2.80568
     },
+    "passive1": {
+      "p3_mult": 2.83248
+    },
+    "constellation1": {
+      "chainedReactionsDmg_mult": 0.921024
+    },
     "source": {
-      "note": "2026-07 audit: prior p0-p3/skill/burst values did not match GO/Amber Lv10 data at all (each hit off by a different, non-level-aligned ratio -- likely stale/hand-entered before the goCommit pointer was added). Re-derived from allStat_gen.json skillParam.Klee at commit 2937f8a80846b18c3495b7657c0bae5c78c82606, cross-checked against Amber avatar/10000029 talent[0].promote['10'] (identical). Added plunging (p4-p6), previously missing entirely from both hit_definitions_json and here.",
+      "note": "2026-07 audit: prior p0-p3/skill/burst values did not match GO/Amber Lv10 data at all (each hit off by a different, non-level-aligned ratio -- likely stale/hand-entered before the goCommit pointer was added). Re-derived from allStat_gen.json skillParam.Klee at commit 2937f8a80846b18c3495b7657c0bae5c78c82606, cross-checked against Amber avatar/10000029 talent[0].promote['10'] (identical). Added plunging (previously missing entirely). Renamed all hit_definitions_json keys/sections to match GO's real target paths (normal/{0,1,2}, charged/dmg, plunging/{dmg,low,high}, skill/{jumptyDumptyDmg,mineDmg}, burst/dmg) -- a leaderboard built with GO's own naming was failing with 'no hit definition' errors against the old hand-picked key names (hit1Dmg, chargedDmg, jumpyDumptyBounce (note: GO spells it 'jumpty', not 'jumpy'), sparksDmg). multKey lookups are scoped per-section by damage_evaluator_service.evaluate_build (talent_multipliers_json[path[0]]), so charged/passive1 duplicate the same p3_mult value rather than sharing one. Added passive1/dmg (A1 Sparks 'n' Splash: Charged Attack DMG with a permanent +50% Charged DMG Bonus baked in via the hit-scoped passive1dmg_dmg_ key, self_modifiers_json below; GO's asc>=1 gate and Homework-only lockBadge_mult_ are both always-true/1x for a standard built character and are not modeled separately) and constellation1/chainedReactionsDmg (C1: reuses the burst formula at 120% MV, pre-baked into chainedReactionsDmg_mult = burst p0_mult x 1.2).",
       "assumptions": {
         "constellation": 0,
         "characterLevel": 90,
@@ -195,7 +242,9 @@
     "constellation": {}
   },
   "buffs": {
-    "self_modifiers_json": {},
+    "self_modifiers_json": {
+      "passive1dmg_dmg_": 0.5
+    },
     "self_conditional_modifiers_json": [],
     "team_modifiers_json": {},
     "team_conditional_modifiers_json": []

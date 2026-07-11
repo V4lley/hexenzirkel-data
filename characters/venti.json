@@ -321,6 +321,20 @@
             "multKey": "stormeye_mult"
           }
         ]
+      },
+      "absorb": {
+        "element": "pyro",
+        "dmgBonusKeys": [
+          "burst_dmg_",
+          "pyro_dmg_",
+          "all_dmg_"
+        ],
+        "components": [
+          {
+            "scalingKey": "atk",
+            "multKey": "absorb_mult"
+          }
+        ]
       }
     }
   },
@@ -354,11 +368,12 @@
     },
     "burst": {
       "base_mult": 0.6768,
-      "stormeye_mult": 0.3384
+      "stormeye_mult": 0.3384,
+      "absorb_mult": 0.3384
     },
     "source": {
       "goCharacterKey": "Venti",
-      "note": "Generated from Genshin Optimizer sheets (master) + allStat_gen skillParam. Hit keys match GO target paths; multKey = <hitKey>_mult. Levels: Lv10, except constellation-boosted talents of 4-star characters at Lv13 (C6 assumed). Normal/charged/plunging default to physical unless the sheet overrides the element (infusions are NOT applied). Unparsed GO formulas (add manually if needed): ['burst.absorb: skipped (helper/cond formula)']. 2026-07: added burst.stormeye (GO burst skillParam index 1, Lv10 = 0.3384) — the periodic Stormeye tick, previously missing from hit_definitions_json.",
+      "note": "Generated from Genshin Optimizer sheets (master) + allStat_gen skillParam. Hit keys match GO target paths; multKey = <hitKey>_mult. Levels: Lv10, except constellation-boosted talents of 4-star characters at Lv13 (C6 assumed). Normal/charged/plunging default to physical unless the sheet overrides the element (infusions are NOT applied). 2026-07: added burst.stormeye (GO burst skillParam index 1, Lv10 = 0.3384) — the periodic Stormeye tick, previously missing from hit_definitions_json. 2026-07-11: added burst.absorb (Amber talent id 3 promote params, Lv10 param2 = 0.3384, officially labeled 'Additional Elemental DMG') — the one-time Elemental Absorption bonus DMG dealt if the Stormeye contacts Hydro/Pyro/Cryo/Electro (once per burst use, per the in-game description). The absorbed element is genuinely team-dependent and this evaluator only supports one fixed element per hit definition, so 'pyro' was chosen to match leaderboard #327 'Venti Hypercarry' (paired with Durin/Nicole, both Pyro). If a future leaderboard needs a different absorbed element, add a sibling hit key (e.g. absorbHydro/absorbCryo/absorbElectro) reusing absorb_mult and point that leaderboard's rotation target at it instead.",
       "assumptions": {
         "constellation": 0,
         "characterLevel": 90,

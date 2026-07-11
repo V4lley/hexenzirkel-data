@@ -16,18 +16,18 @@
   },
   "hit_definitions_json": {
     "normal": {
-      "hit1Dmg": {"element": "physical", "dmgBonusKeys": ["normal_dmg_", "physical_dmg_", "all_dmg_"], "components": [{"scalingKey": "atk", "multKey": "hit1_mult"}]},
-      "hit2Dmg": {"element": "physical", "dmgBonusKeys": ["normal_dmg_", "physical_dmg_", "all_dmg_"], "components": [{"scalingKey": "atk", "multKey": "hit2_mult"}]},
-      "hit3Dmg": {"element": "physical", "dmgBonusKeys": ["normal_dmg_", "physical_dmg_", "all_dmg_"], "components": [{"scalingKey": "atk", "multKey": "hit3_mult"}]},
-      "hit4Dmg": {"element": "physical", "dmgBonusKeys": ["normal_dmg_", "physical_dmg_", "all_dmg_"], "components": [{"scalingKey": "atk", "multKey": "hit4_mult"}]}
+      "0": {"element": "physical", "dmgBonusKeys": ["normal_dmg_", "physical_dmg_", "all_dmg_"], "components": [{"scalingKey": "atk", "multKey": "hit1_mult"}]},
+      "1": {"element": "physical", "dmgBonusKeys": ["normal_dmg_", "physical_dmg_", "all_dmg_"], "components": [{"scalingKey": "atk", "multKey": "hit2_mult"}]},
+      "2": {"element": "physical", "dmgBonusKeys": ["normal_dmg_", "physical_dmg_", "all_dmg_"], "components": [{"scalingKey": "atk", "multKey": "hit3_mult"}]},
+      "3": {"element": "physical", "dmgBonusKeys": ["normal_dmg_", "physical_dmg_", "all_dmg_"], "components": [{"scalingKey": "atk", "multKey": "hit4_mult"}]}
     },
     "charged": {
       "dmg": {"element": "physical", "dmgBonusKeys": ["charged_dmg_", "physical_dmg_", "all_dmg_"], "components": [{"scalingKey": "atk", "multKey": "charged_mult"}]}
     },
     "plunging": {
-      "plunge": {"element": "physical", "dmgBonusKeys": ["plunging_dmg_", "physical_dmg_", "all_dmg_"], "components": [{"scalingKey": "atk", "multKey": "plunge_mult"}]},
-      "plungeLow": {"element": "physical", "dmgBonusKeys": ["plunging_dmg_", "physical_dmg_", "all_dmg_"], "components": [{"scalingKey": "atk", "multKey": "plungeLow_mult"}]},
-      "plungeHigh": {"element": "physical", "dmgBonusKeys": ["plunging_dmg_", "physical_dmg_", "all_dmg_"], "components": [{"scalingKey": "atk", "multKey": "plungeHigh_mult"}]}
+      "dmg": {"element": "physical", "dmgBonusKeys": ["plunging_dmg_", "physical_dmg_", "all_dmg_"], "components": [{"scalingKey": "atk", "multKey": "plunge_mult"}]},
+      "low": {"element": "physical", "dmgBonusKeys": ["plunging_dmg_", "physical_dmg_", "all_dmg_"], "components": [{"scalingKey": "atk", "multKey": "plungeLow_mult"}]},
+      "high": {"element": "physical", "dmgBonusKeys": ["plunging_dmg_", "physical_dmg_", "all_dmg_"], "components": [{"scalingKey": "atk", "multKey": "plungeHigh_mult"}]}
     },
     "skill": {
       "skillDmg": {"element": "dendro", "dmgBonusKeys": ["skill_dmg_", "dendro_dmg_", "all_dmg_"], "components": [{"scalingKey": "atk", "multKey": "skillDmg_mult"}]},
@@ -37,6 +37,9 @@
     },
     "burst": {
       "level3Dmg": {"element": "dendro", "dmgBonusKeys": ["burst_dmg_", "dendro_dmg_", "all_dmg_"], "components": [{"scalingKey": "atk", "multKey": "level3Dmg_mult"}]}
+    },
+    "passive1": {
+      "dmg": {"element": "dendro", "dmgBonusKeys": ["dendro_dmg_", "all_dmg_", "passive1dmg_dmg_"], "components": [{"scalingKey": "atk", "multKey": "dmg_mult"}]}
     }
   },
   "talent_multipliers_json": {
@@ -55,16 +58,58 @@
       "thornDmg_mult": 0.69336
     },
     "burst": {"level3Dmg_mult": 3.9096},
+    "passive1": {"dmg_mult": 0.06},
     "source": {
       "provider": "GenshinOptimizer+ProjectAmber",
       "goSheet": "libs/gi/sheets/src/Characters/Emilie",
+      "note": "2026-07 audit: renamed hit_definitions_json.normal keys (hit1Dmg..hit4Dmg -> 0..3) to match GO's actual target paths -- an admin-built rotation using GO's own naming would otherwise fail with 'no hit definition' errors (same bug class as Klee, see klee.json's source note). Added passive1/dmg (A1 Fragrant Purge: 6% ATK dendro elemental DMG, asc>=1 gate always true for a built character, so not modeled separately -- confirmed against allStat_gen.json skillParam.Emilie.passive1[0][0]=6). All other multiplier values were already correct against GO's Lv10 data, verified byte-for-byte. Added the two C1 bonuses tied to this hit/kit (global +20% skill_dmg_, and +20% all_dmg_ scoped to passive1/dmg only via the hit-scoped passive1dmg_dmg_ key, both sourced from the same constellation1[1]=20 raw value) and the A4 Burning-target all_dmg_ bonus (self_conditional_modifiers_json below) and C2 team dendro RES shred (team_conditional_modifiers_json). C6's Dendro Normal/Charged infusion + ATK-scaled dmgInc is NOT modeled -- it would require alternate infused hit variants (element override), out of scope for this pass; same category of niche mechanic as Venti's Hexerei hex0-5.",
       "assumptions": {"constellation": 0, "characterLevel": 90, "autoTalentLevel": 10, "skillTalentLevel": 10, "burstTalentLevel": 10}
-    }
+    },
+    "passive": {},
+    "constellation": {}
   },
   "buffs": {
     "self_modifiers_json": {},
-    "self_conditional_modifiers_json": [],
+    "self_conditional_modifiers_json": [
+      {
+        "conditionKey": "c1SkillDmg",
+        "source": "avatar_10000099",
+        "gating": {"constellationMin": 1},
+        "description": "C1 Bloom of Reason: increases Fragrance Extraction (Elemental Skill) DMG by 20%.",
+        "states": [
+          {"value": "on", "modifiers": {"skill_dmg_": 0.2}}
+        ]
+      },
+      {
+        "conditionKey": "c1PassiveDmgBonus",
+        "source": "avatar_10000099",
+        "gating": {"constellationMin": 1},
+        "description": "C1 Bloom of Reason: also increases Fragrant Purge (A1 passive1/dmg hit) DMG by 20%, scoped to that hit only.",
+        "states": [
+          {"value": "on", "modifiers": {"passive1dmg_dmg_": 0.2}}
+        ]
+      },
+      {
+        "conditionKey": "a4BurningDmg",
+        "source": "avatar_10000099",
+        "description": "A4: while the target is Burning, gain a DMG Bonus equal to min(ATK x 0.015%, 36%). Baked here at the 36% cap (reached at 2400 ATK, common for a built DPS) since the evaluator has no stat-scaled-and-capped DMG% mechanism -- for a build with lower ATK, override this modifier manually with a smaller value.",
+        "states": [
+          {"value": "off", "modifiers": {}},
+          {"value": "on (capped, 2400+ ATK)", "modifiers": {"all_dmg_": 0.36}}
+        ]
+      }
+    ],
     "team_modifiers_json": {},
-    "team_conditional_modifiers_json": []
+    "team_conditional_modifiers_json": [
+      {
+        "conditionKey": "c2DendroResShred",
+        "source": "avatar_10000099",
+        "gating": {"constellationMin": 2},
+        "description": "C2: opponents hit by Emilie's Fragrance Extraction (skill) or Perfumed Gauntlets (burst) have their Dendro RES decreased by 30% for 10s.",
+        "states": [
+          {"value": "on", "modifiers": {"dendro_enemyRes_": -0.3}}
+        ]
+      }
+    ]
   }
 }
