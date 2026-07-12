@@ -20,10 +20,10 @@
   "hit_definitions_json": {
     "normal": {
       "0": {
-        "element": "physical",
+        "element": "geo",
         "dmgBonusKeys": [
           "normal_dmg_",
-          "physical_dmg_",
+          "geo_dmg_",
           "all_dmg_"
         ],
         "components": [
@@ -34,10 +34,10 @@
         ]
       },
       "1": {
-        "element": "physical",
+        "element": "geo",
         "dmgBonusKeys": [
           "normal_dmg_",
-          "physical_dmg_",
+          "geo_dmg_",
           "all_dmg_"
         ],
         "components": [
@@ -48,10 +48,10 @@
         ]
       },
       "2": {
-        "element": "physical",
+        "element": "geo",
         "dmgBonusKeys": [
           "normal_dmg_",
-          "physical_dmg_",
+          "geo_dmg_",
           "all_dmg_"
         ],
         "components": [
@@ -62,10 +62,10 @@
         ]
       },
       "3": {
-        "element": "physical",
+        "element": "geo",
         "dmgBonusKeys": [
           "normal_dmg_",
-          "physical_dmg_",
+          "geo_dmg_",
           "all_dmg_"
         ],
         "components": [
@@ -157,6 +157,9 @@
           "skill_dmg_",
           "geo_dmg_",
           "all_dmg_"
+        ],
+        "mvMultiplierKeys": [
+          "navia_e_shardshot_mult_"
         ],
         "components": [
           {
@@ -265,6 +268,20 @@
         "states": [
           {"value": "1", "modifiers": {"atk_": 0.2}},
           {"value": "2", "modifiers": {"atk_": 0.4}}
+        ]
+      },
+      {
+        "conditionKey": "eShrapnelCharges",
+        "source": "avatar_10000091",
+        "description": "Elemental Skill Ceremonial Crystalshot: firing consumes all held Crystal Shrapnel charges (0/1/2/3+ -> 5/7/9/11 Rosula Shardshots fired) and deals more DMG the more shots strike a single target, up to 200% of the base amount when all 11 land (3+ charges). Every charge consumed beyond 3 adds a further +15% DMG. Select charges consumed at cast, assuming all shots land; 1-2 charge values aren't precisely published and are rarely used since holding to 3+ charges is strictly better.",
+        "states": [
+          {"value": "0", "modifiers": {"navia_e_shardshot_mult_": 1.2}},
+          {"value": "1", "modifiers": {"navia_e_shardshot_mult_": 1.4}},
+          {"value": "2", "modifiers": {"navia_e_shardshot_mult_": 1.6667}},
+          {"value": "3", "modifiers": {"navia_e_shardshot_mult_": 2.0}},
+          {"value": "4", "modifiers": {"navia_e_shardshot_mult_": 2.0, "skill_dmg_": 0.15}},
+          {"value": "5", "modifiers": {"navia_e_shardshot_mult_": 2.0, "skill_dmg_": 0.3}},
+          {"value": "6", "modifiers": {"navia_e_shardshot_mult_": 2.0, "skill_dmg_": 0.45}}
         ]
       }
     ],
