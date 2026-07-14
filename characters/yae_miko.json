@@ -150,7 +150,7 @@
         "gating": {"constellationMin": 1},
         "description": "C1 (6.7 Stellar-Conduct): after Yae Miko triggers a Superconduct or Stellar-Conduct reaction, or deals Stellar-Conduct DMG, nearby party members gain +40% Electro DMG and +40% Stellar-Conduct DMG for 8s.",
         "states": [
-          {"value": "on", "modifiers": {"electro_dmg_": 0.4, "stellarconduct_dmg_": 0.4}}
+          {"value": "on", "modifiers": {"electro_dmg_": 0.5, "stellarconduct_dmg_": 0.5}}
         ]
       },
       {
