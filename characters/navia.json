@@ -301,6 +301,24 @@
           {"value": "5", "modifiers": {"navia_e_shardshot_mult_": 2.0, "skill_dmg_": 0.3}},
           {"value": "6", "modifiers": {"navia_e_shardshot_mult_": 2.0, "skill_dmg_": 0.45}}
         ]
+      },
+      {
+        "conditionKey": "c2ShardBuff",
+        "source": "avatar_10000091",
+        "states": [
+          {"value": "1", "modifiers": {"critRate_": 0.12}},
+          {"value": "2", "modifiers": {"critRate_": 0.24}},
+          {"value": "3", "modifiers": {"critRate_": 0.36}}
+        ]
+      },
+      {
+        "conditionKey": "c6ShardBuff",
+        "source": "avatar_10000091",
+        "states": [
+          {"value": "4", "modifiers": {"critDMG_": 0.45}},
+          {"value": "5", "modifiers": {"critDMG_": 0.9}},
+          {"value": "6", "modifiers": {"critDMG_": 1.35}}
+        ]
       }
     ],
     "team_modifiers_json": {},

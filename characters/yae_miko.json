@@ -52,22 +52,22 @@
       }
     },
     "skill": {
-      "sakuraLevel1": {
+      "dmg1": {
         "element": "electro",
         "dmgBonusKeys": ["skill_dmg_", "electro_dmg_", "all_dmg_"],
         "components": [{"scalingKey": "atk", "multKey": "p0_mult"}]
       },
-      "sakuraLevel2": {
+      "dmg2": {
         "element": "electro",
         "dmgBonusKeys": ["skill_dmg_", "electro_dmg_", "all_dmg_"],
         "components": [{"scalingKey": "atk", "multKey": "p1_mult"}]
       },
-      "sakuraLevel3": {
+      "dmg3": {
         "element": "electro",
         "dmgBonusKeys": ["skill_dmg_", "electro_dmg_", "all_dmg_"],
         "components": [{"scalingKey": "atk", "multKey": "p2_mult"}]
       },
-      "sakuraLevel4": {
+      "dmg4": {
         "element": "electro",
         "dmgBonusKeys": ["skill_dmg_", "electro_dmg_", "all_dmg_"],
         "components": [{"scalingKey": "atk", "multKey": "p3_mult"}]
@@ -83,6 +83,40 @@
         "element": "electro",
         "dmgBonusKeys": ["burst_dmg_", "electro_dmg_", "all_dmg_"],
         "components": [{"scalingKey": "atk", "multKey": "p1_mult"}]
+      }
+    },
+    "lockedPassive": {
+      "dmg1": {
+        "element": "electro",
+        "dmgBonusKeys": ["skill_dmg_", "electro_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p0_mult"}]
+      },
+      "dmg2": {
+        "element": "electro",
+        "dmgBonusKeys": ["skill_dmg_", "electro_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p1_mult"}]
+      },
+      "dmg3": {
+        "element": "electro",
+        "dmgBonusKeys": ["skill_dmg_", "electro_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p2_mult"}]
+      },
+      "dmg4": {
+        "element": "electro",
+        "dmgBonusKeys": ["skill_dmg_", "electro_dmg_", "all_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p3_mult"}]
+      },
+      "dmg": {
+        "element": "cryo",
+        "dmgBonusKeys": ["stellarconduct_dmg_", "reaction_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p4_mult"}]
+      }
+    },
+    "passive1": {
+      "stellarDmg": {
+        "element": "cryo",
+        "dmgBonusKeys": ["stellarconduct_dmg_", "reaction_dmg_"],
+        "components": [{"scalingKey": "atk", "multKey": "p0_mult"}]
       }
     }
   },
@@ -106,6 +140,16 @@
       "p0_mult": 4.68,
       "p1_mult": 6.008688
     },
+    "lockedPassive": {
+      "p0_mult": 1.892096,
+      "p1_mult": 2.16512,
+      "p2_mult": 2.5064,
+      "p3_mult": 2.933,
+      "p4_mult": 2
+    },
+    "passive1": {
+      "p0_mult": 0.5
+    },
     "source": {
       "assumptions": {
         "constellation": 0,
@@ -127,7 +171,9 @@
     }
   },
   "buffs": {
-    "self_modifiers_json": {},
+    "self_modifiers_json": {
+      "skillDmg_from_eleMas": 0.0015
+    },
     "self_conditional_modifiers_json": [
       {
         "conditionKey": "c6SakuraDefIgnore",

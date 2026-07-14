@@ -42,7 +42,7 @@
       },
       "condensedBeamStellarDmg": {
         "element": "cryo",
-        "dmgBonusKeys": ["charged_dmg_", "cryo_dmg_", "stellarconduct_dmg_", "all_dmg_"],
+        "dmgBonusKeys": ["stellarconduct_dmg_", "reaction_dmg_"],
         "components": [{"scalingKey": "atk", "multKey": "p5_mult"}]
       },
       "powerOverdriveDmg": {
@@ -74,7 +74,7 @@
       },
       "prismShotStellarDmg": {
         "element": "cryo",
-        "dmgBonusKeys": ["skill_dmg_", "cryo_dmg_", "stellarconduct_dmg_", "all_dmg_"],
+        "dmgBonusKeys": ["stellarconduct_dmg_", "reaction_dmg_"],
         "components": [{"scalingKey": "atk", "multKey": "p1_mult"}]
       }
     },
@@ -91,7 +91,7 @@
       },
       "convectiveRayStellarDmg": {
         "element": "cryo",
-        "dmgBonusKeys": ["burst_dmg_", "cryo_dmg_", "stellarconduct_dmg_", "all_dmg_"],
+        "dmgBonusKeys": ["stellarconduct_dmg_", "reaction_dmg_"],
         "components": [{"scalingKey": "atk", "multKey": "p2_mult"}]
       }
     }
@@ -164,7 +164,9 @@
         ]
       }
     ],
-    "team_modifiers_json": {},
+    "team_modifiers_json": {
+      "stellarconduct_baseMult": 0.14
+    },
     "team_conditional_modifiers_json": [
       {
         "conditionKey": "c1PartyStellarConduct",
