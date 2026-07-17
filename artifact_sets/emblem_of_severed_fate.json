@@ -5,7 +5,17 @@
     "self_modifiers_json": {
       "enerRech_": 0.2
     },
-    "self_conditional_modifiers_json": [],
+    "self_conditional_modifiers_json": [
+      {
+        "conditionKey": "4pc_increases_elemental_burst_dmg_by_25_of_energy_recharge",
+        "source": "EmblemOfSeveredFate",
+        "description": "4pc: Increases Elemental Burst DMG by 25% of Energy Recharge. A maximum of 75% bonus DMG can be achieved this way.",
+        "modifiers": {
+          "burst_dmg_from_enerRech_": 0.25,
+          "burst_dmg_from_enerRech_cap_": 0.75
+        }
+      }
+    ],
     "team_modifiers_json": {},
     "team_conditional_modifiers_json": []
   }

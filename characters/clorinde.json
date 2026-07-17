@@ -73,11 +73,11 @@
       {
         "conditionKey": "a1DarkShatteringFlame",
         "source": "avatar_10000098",
-        "description": "A1 Dark-Shattering Flame: After a nearby party member triggers an Electro-related reaction against an opponent, Electro DMG dealt by Clorinde's Normal Attacks and Last Lightfall (Burst) is increased by 20% of ATK for 15s. Max 3 stacks, each counted independently (select active stacks).",
+        "description": "A1 Dark-Shattering Flame: After a nearby party member triggers an Electro-related reaction against an opponent, Electro DMG dealt by Clorinde's Normal Attacks and Last Lightfall (Burst) is increased by 20% of ATK for 15s. Max 3 stacks, each counted independently (select active stacks). The maximum DMG increase achievable this way is 1,800.",
         "states": [
-          {"value": "1", "modifiers": {"normal_dmgIncFromAtk_": 0.2, "burst_dmgIncFromAtk_": 0.2}},
-          {"value": "2", "modifiers": {"normal_dmgIncFromAtk_": 0.4, "burst_dmgIncFromAtk_": 0.4}},
-          {"value": "3", "modifiers": {"normal_dmgIncFromAtk_": 0.6, "burst_dmgIncFromAtk_": 0.6}}
+          {"value": "1", "modifiers": {"normal_dmgIncFromAtk_": 0.2, "burst_dmgIncFromAtk_": 0.2, "normal_dmgIncFromAtk_cap_": 1800, "burst_dmgIncFromAtk_cap_": 1800}},
+          {"value": "2", "modifiers": {"normal_dmgIncFromAtk_": 0.4, "burst_dmgIncFromAtk_": 0.4, "normal_dmgIncFromAtk_cap_": 1800, "burst_dmgIncFromAtk_cap_": 1800}},
+          {"value": "3", "modifiers": {"normal_dmgIncFromAtk_": 0.6, "burst_dmgIncFromAtk_": 0.6, "normal_dmgIncFromAtk_cap_": 1800, "burst_dmgIncFromAtk_cap_": 1800}}
         ]
       },
       {
