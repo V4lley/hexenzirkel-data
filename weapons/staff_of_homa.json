@@ -26,7 +26,7 @@
           {
             "value": "below50",
             "modifiers": {
-              "atk_from_maxHp_": 0.010
+              "atk_from_maxHp_": 0.018
             }
           }
         ]
