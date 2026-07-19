@@ -29,9 +29,12 @@
       {
         "conditionKey": "desertPavilionTeamAtk",
         "source": "Makhaira Aquamarine",
-        "description": "Desert Pavilion (support use, assumes R5): nearby party members gain 30% of the wielder's Desert Pavilion buff (=14.4% of the wielder's EM) as flat ATK. Type the support wielder's actual EM into this condition's input for an exact value; the checkbox-only fallback assumes 800 EM. Scoped as 'others' (not 'team') so it only applies when this weapon is on a support, not double-counted alongside the wielder's own self_conditional_modifiers_json conversion when they're the scored main.",
+        "description": "Desert Pavilion (support use): nearby party members gain 30% of the wielder's Desert Pavilion buff (7.2/10.8/14.4% of the wielder's EM at R1/R3/R5) as flat ATK. Type the support wielder's actual EM into this condition's input for an exact value at the weapon's chosen refinement; the checkbox-only fallback assumes 800 EM. Scoped as 'others' (not 'team') so it only applies when this weapon is on a support, not double-counted alongside the wielder's own self_conditional_modifiers_json conversion when they're the scored main.",
+        "refinementTieredEmInput": true,
         "states": {
-          "active": { "atk": 115.2 }
+          "R1": { "atk": 0.072 },
+          "R3": { "atk": 0.108 },
+          "R5": { "atk": 0.144 }
         }
       }
     ]

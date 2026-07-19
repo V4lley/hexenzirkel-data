@@ -27,9 +27,12 @@
       {
         "source": "Xiphos' Moonlight",
         "conditionKey": "jinnisWhisperTeamEnerRech",
-        "description": "Jinni's Whisper (support use, assumes R5): nearby party members gain 30% of the wielder's Jinni's Whisper buff (=0.0216% ER per point of the wielder's EM) as flat Energy Recharge. Type the support wielder's actual EM into this condition's input for an exact value; the checkbox-only fallback assumes 800 EM.",
+        "description": "Jinni's Whisper (support use): nearby party members gain 30% of the wielder's Jinni's Whisper buff (0.0108/0.0162/0.0216% ER per point of the wielder's EM at R1/R3/R5) as flat Energy Recharge. Type the support wielder's actual EM into this condition's input for an exact value at the weapon's chosen refinement; the checkbox-only fallback assumes 800 EM.",
+        "refinementTieredEmInput": true,
         "states": {
-          "active": { "enerRech_": 0.1728 }
+          "R1": { "enerRech_": 0.000108 },
+          "R3": { "enerRech_": 0.000162 },
+          "R5": { "enerRech_": 0.000216 }
         }
       }
     ]
