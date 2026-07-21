@@ -173,8 +173,8 @@
         "conditionKey": "windfavoredState",
         "source": "Wanderer",
         "modifiers": {
-          "normal_base_dmg_": 1.5372,
-          "charged_base_dmg_": 1.42976
+          "normal_base_dmg_": 0.5372,
+          "charged_base_dmg_": 0.42976
         }
       },
       {
