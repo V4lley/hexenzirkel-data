@@ -116,8 +116,10 @@
       "goAllStatFile": "libs/gi/stats/src/allStat_gen.json"
     },
     "passive": {
-      "a0LunarcrystallizeBase_cap": 0.3,
-      "a0LunarcrystallizeBase_perEm": 0.15
+      "a0LunarcrystallizeBase_cap": 0.14,
+      "a0LunarcrystallizeBase_perDefRatio": 0.007,
+      "a1GeoEnemyRes": 0.15,
+      "a1GleamGeoEnemyRes": 0.3
     },
     "constellation": {
       "c1GeoEnemyRes": 6.0,
@@ -132,7 +134,9 @@
       "def_": {
         "formulaRef": "linnea.c4.moondrift.def"
       },
-      "eleMas_from_def_": 0.05
+      "eleMas_from_def_": 0.05,
+      "lunarcrystallize_baseDmg_from_def_": 0.00007,
+      "lunarcrystallize_baseDmg_from_def_cap_": 0.14
     },
     "self_conditional_modifiers_json": [],
     "team_modifiers_json": {},
