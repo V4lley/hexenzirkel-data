@@ -276,7 +276,7 @@
           {
             "value": "active",
             "modifiers": {
-              "charged_dmg_": 0.5
+              "stellarconduct_dmg_": 0.3
             }
           }
         ]
